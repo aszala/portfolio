@@ -42,4 +42,4 @@ dist
 .fusebox/
 .dynamodb/
 .tern-port
-.zip
+*.zip
