@@ -1,0 +1,7 @@
+{
+	"title" : "Genetic Learning Geometry Dash AI",
+	"updated": "3/16/19",
+	"objective" : "This project was created in order to show the potential application of Genetic Algorithms in Video Games. It was created alongside this <a href='project.php?project=not_ready'>research paper</a> as part of my Advanced Studies research. The goal of this AI was to demonstrate how implementing a Genetic Algorithm into Video Games would improve the game and increase its replay value.",
+	"results" : "The resulting project contained 2 parts. The first part was a knock off the popular mobile game, 'Geometry Dash', which was developed using my <a href='project.php?project=game_engine'>Game Engine</a>. The 2nd part was a Genetic Algorithm that was inserted into my games code. Using the Genetic Algorithm the AI in the was able to adapt and solve various levels of increasing difficulty.",
+	"learned" : "Through this project, I was able to see what I had learned from the research in action and was able to also experiment with Genetic Algorithms."
+}

@@ -1,0 +1,7 @@
+{
+	"title" : "MyTSA",
+	"updated": "7/10/19",
+	"objective" : "I was the president of the Technology Student Association (TSA) for my last year of high school and I was a member for the entirety of my high school. Every year the organization would hold a state conference where students from all over North Carolina would compete against each other in technology-based competitions. A lot of this event was conducted by paper and using websites and severs that were made in in the 1990s. Obviously because of This many things were slow and often had errors that couldn't be easily corrected. This caused problems for everyone. This project is in collaboration with several other TSA members in North Carolina. Our goal is to fix this problem by moving all paper information to the cloud and instead of using old servers and websites, we would move them to more recent and faster ones, using Google Firebase and Node.js.",
+	"results" : "This project is still ongoing. As this project was started fairly recently, we only have simple forms and code so far, our goal is to be done before the state conference for this year, occurring in late March 2020.",
+	"learned" : "While I expect to learn much more as the project continues, I have already learned a lot regarding Node.js and Google Firebase."
+}
