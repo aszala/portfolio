@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap');
+
+:root {
+	--body-gradient-degree: 180deg;
+	/*--header-gradient-degree: 45deg;*/
+	--theme-main: rgba(0, 0, 0, 1);
+	--theme-gradient: rgba(19, 19, 19, 1);
+	--header-height: 75px;
+}
+
+body {
+	background: var(--theme-main);
+	background: -moz-linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	background: -webkit-linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	background: linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1d1d1d",GradientType=1);
+
+	color: white;
+	font-family: 'Arimo', sans-serif;
+}
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.fit-container {
+	width: 100%;
+	height: 100%;
+}
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.header {
+	width: 100%;
+	height: var(--header-height);
+}
+
+.header-container {
+	width: 75%;
+	height: 100%;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	/*border-bottom: solid white 1px;
+	background: rgb(0,0,0);
+	background: -moz-linear-gradient(var(--header-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	background: -webkit-linear-gradient(var(--header-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	background: linear-gradient(var(--header-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1d1d1d",GradientType=1);*/
+}
+
+.logo-container, .quick-links-container, .social-links-container {
+	width: 33%;
+	height: 100%;
+}
+
+.logo-container {
+	text-align: left;
+}
+
+.quick-links-container {
+	text-align: center;
+}
+
+.social-links-container {
+	text-align: right;
+}
+
+.header-link {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.logo {
+	width: auto;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	transition: color 200ms;
+}
+
+a:hover {
+	color: rgba(255,255,255,0.5);
+}
+
+.icon {
+	width: 20px;
+	transition: filter 200ms;
+}
+
+.icon:hover {
+	filter: invert(50%);
+}
+
+.main {
+	position: relative;
+	top: var(--header-height);
+}
