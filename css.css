@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
+.quote-container {
+	left: 50%;
+}
+
+.quote-container, .whoami-container {
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+
+.quote-items-container, .whoami-items-container {
+	width: 80%;
+	height: 70%;
+	margin: auto;
+	position: absolute;
+	bottom: 0px;
+}
+
+.quote-items-container>.orange-line {
+	position: absolute;
+	right: 25%;
+}
+
+.quote-items-container {
+ 	right: 5%;
+}
+
+.whoami-items-container {
+	left: 25%;
+}
+
+.quote, .whoami {
+	width: 75%;
+}
+
+.quote {
+	margin-top: 50px;
+}
+
+.quote-text, .whoami-title {
+	font-size: 60px;
+}
+
+.quote-text {
+	text-align: right;
+}
+
+.quote-author, .whoami-description {
+	font-size: 30px;
+	text-align: justify;
+}
+
+.quote-author {
+	text-align: right;
+}
+
+.name-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	z-index: -1;
+}
+
+.name {
+	border: solid white 1px;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 60%;
+	left: 45%;
+	transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+	text-align: center;
+}
+
+.name-text {
+	font-size: 80px;
+	font-weight: 200;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	transform: translateY(-50%) rotateZ(-45deg);
+	line-height: 200%;
+}

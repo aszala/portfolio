@@ -13,13 +13,12 @@ body {
 	background: -moz-linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
 	background: -webkit-linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
 	background: linear-gradient(var(--body-gradient-degree), var(--theme-main) 0%, var(--theme-gradient) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1d1d1d",GradientType=1);
-
+	background-attachment: fixed;
 	color: white;
 	font-family: 'Arimo', sans-serif;
 }
 
-html, body {
+html,body {
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -39,6 +38,7 @@ html, body {
 .header {
 	width: 100%;
 	height: var(--header-height);
+	z-index: 99999;
 }
 
 .header-container {
@@ -104,7 +104,10 @@ a:hover {
 	filter: invert(50%);
 }
 
-.main {
-	position: relative;
-	top: var(--header-height);
+.orange-line {
+	width: 120px;
+	height: 15px;
+	background: orange;
+	border-radius: 3px;
+	margin-bottom: 50px;
 }
