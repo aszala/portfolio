@@ -4,7 +4,7 @@
 	--body-gradient-degree: 180deg;
 	/*--header-gradient-degree: 45deg;*/
 	--theme-main: rgba(0, 0, 0, 1);
-	--theme-gradient: rgba(19, 19, 19, 1);
+	--theme-gradient: rgba(0, 0, 0, 1);
 	--header-height: 75px;
 }
 
@@ -111,3 +111,34 @@ a:hover {
 	border-radius: 3px;
 	margin-bottom: 50px;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+::-webkit-scrollbar-thumb:active {
+  background: orange;
+}
+::-webkit-scrollbar-track {
+  background: rgb(20,20,20);
+}
+/*::-webkit-scrollbar-track:hover {
+  background: black;
+}
+::-webkit-scrollbar-track:active {
+  background: black;
+}
+::-webkit-scrollbar-corner {
+  background: black;
+}*/
