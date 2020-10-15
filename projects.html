@@ -9,6 +9,82 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 	</head>
 	<body>
+		<div class="header">
+			<div class="header-container">
+				<div class="logo-container">
+					<a href="http://aszala.com"><img class="logo" src="logo.png" alt="A/Z Logo"></a>
+				</div>
+				<div class="quick-links-container">
+					<div class="quick-links vertical-center">
+						<a class="header-link underline" href="projects.html">Projects<div class="underline-div"></div></a>
+						<a class="header-link underline" href="#">Publications<div class="underline-div"></div></a>
+						<a class="header-link underline" href="#">About<div class="underline-div"></div></a>
+					</div>
+				</div>
+				<div class="social-links-container">
+					<div class="social-links vertical-center">
+						<a class="header-link" href="https://www.github.com/aszala"><img class="icon" src="imgs/github.png" alt="Github Icon"></a>
+						<a class="header-link" href="https://www.linkedin.com/in/aszala"><img class="icon" src="imgs/linkedin.png" alt="Linkedin Icon"></a>
+						<a class="header-link" href="https://www.instagram.com/abhay_zala_/"><img class="icon" src="imgs/instagram.png" alt="Instagram Icon"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main fit-container">
+			<div class="projects-container">
+				<div class="projects-header">
+					<div class="projects-title heading">
+						Projects
+						<br>
+						<div class="orange-line-thin-long"></div>
+					</div>
+					<div class="filters-containers">
+						<div class="filters-container-container fit-container">
+							<div class="active-filter">
+								Active Filter: Coding
+							</div>
+							<span>
+								|
+							</span>
+							<div class="filter-text">
+								Filter By:
+							</div>
+							<div class="projects-filter">
+								<span class="filter-dropdown">
+									<div class="filter-icon-container icon">
+										<span>Tag</span>
+										<img class="filter-icon" src="imgs/filter-icon.png"></img>
+									</div>
+									<div id="tags-filters" class="dropdown-menu"></div>
+								</span>
+							</div>
+							<span>
+								or
+							</span>
+							<div class="projects-filter">
+								<span class="filter-dropdown">
+									<div class="filter-icon-container icon">
+										<span>Programming Language</span>
+										<img class="filter-icon" src="imgs/filter-icon.png"></img>
+									</div>
+									<div id="language-filters" class="dropdown-menu"></div>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="projects-list-containers">
+					<div class="projects"></div>
+				</div>
+			</div>
+		</div>
 
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+		<script src="config.js" charset="utf-8"></script>
+		<script src="global/global.js" charset="utf-8"></script>
+		<script src="projects.js" charset="utf-8"></script>
 	</body>
 </html>

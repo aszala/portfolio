@@ -116,6 +116,14 @@ a:hover {
 	margin-bottom: 50px;
 }
 
+.orange-line-thin-long {
+	width: 240px;
+	height: 7px;
+	background: orange;
+	border-radius: 3px;
+	margin-bottom: 50px;
+}
+
 .underline-div {
 	position: absolute;
 	bottom: 0;

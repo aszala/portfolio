@@ -6,6 +6,8 @@ var firebaseConfig = {
    storageBucket: "portfolio-4722e.appspot.com",
    messagingSenderId: "344412709404",
    appId: "1:344412709404:web:efc32e40ea3ab2ccd375d9"
- };
- 
- firebase.initializeApp(firebaseConfig);
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
