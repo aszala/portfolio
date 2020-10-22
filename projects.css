@@ -77,6 +77,7 @@
 	padding: 12px 16px;
 	z-index: 1;
 	overflow: hidden;
+	width: 200px;
 }
 
 .filter-dropdown:hover .dropdown-menu {

@@ -9,37 +9,66 @@ $(function() {
 
 		for (let i=0;i<data.categories.length;i++) {
 			tags.push(data.categories[i]);
-			$("#tags-filters").append(`<p class='filter-object icon' onclick='onFilter(this);'>${data.categories[i]}</p>`);
+			$("#tags-filters").append(`<label class="checkbox-container">${data.categories[i]}
+				<input type="checkbox" class='filter-object icon' onclick='onFilter(this, "${data.categories[i]}", "cat");'>
+				<span class="checkmark"></span></label>`);
 		}
 
 		for (let i=0;i<data.languages.length;i++) {
 			languages.push(data.languages[i]);
-			$("#language-filters").append(`<p class='filter-object icon' onclick='onFilter(this);'>${data.languages[i]}</p>`);
+			$("#language-filters").append(`<label class="checkbox-container">${data.languages[i]}
+				<input type="checkbox" class='filter-object icon' onclick='onFilter(this, "${data.languages[i]}", "lang");''>
+				<span class="checkmark"></span>`);
 		}
 
 		getProjects("Coding");
 	});
 });
 
-function onFilter(elm) {
-	getProjects($(elm).html());
+active_cat_filters = []
+active_lang_filters = []
+
+function onFilter(elm, val, type) {
+	if (elm.checked) {
+		if (type === "cat")
+			active_cat_filters.push(val);
+		else if (type === "lang")
+			active_lang_filters.push(val);
+	} else {
+		if (type === "cat") {
+			let index = active_cat_filters.indexOf(val);
+			active_cat_filters.splice(index, 1);
+		} else if (type === "lang") {
+			let index = active_lang_filters.indexOf(val);
+			active_lang_filters.splice(index, 1);
+		}
+	}
+
+	getProjects();
 }
 
-function getProjects(filter) {
-	$(".active-filter").html("Active Filter: " + filter);
-	if (filter === "Any") {
+function getProjects() {
+	if (active_cat_filters.length == 0 && active_lang_filters.length == 0) {
+		console.log("PurpleBeans");
+		$(".active-filter").html("Active Filters: None");
 		projectsReference.get().then(snap => {
 			displayProjects(snap);
 		});
-	} else {
-		let array = "languages";
-
-		if (tags.includes(filter)) {
-			array = "categories";
+	} else if (active_cat_filters.length <= 10 && active_lang_filters.length <= 10) {
+		console.log("Purple");
+		$(".active-filter").html("Active Filters: " + active_cat_filters);
+		if (active_cat_filters.length == 0) {
+			active_cat_filters = [];
+		} else if (active_lang_filters.length == 0) {
+			active_lang_filters = [];
 		}
 
-		projectsReference.where(array, "array-contains", filter).get().then(snap => {
-			displayProjects(snap);
+		console.log(active_cat_filters);
+
+		projectsReference.where("categories", "array-contains-any", active_cat_filters)
+			//.where("languages", "array-contains-any", active_lang_filters)
+			.get().then(snap => {
+				displayProjects(snap);
 		});
 	}
 }
