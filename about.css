@@ -50,3 +50,14 @@
 	text-transform: uppercase;
 	font-weight: 400;
 }
+
+.link-buttons {
+	width: 100%;
+}
+
+.buttons {
+	width: 20%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
