@@ -1,0 +1,52 @@
+.about-me-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.description-container, .image-container {
+	height: 100%;
+	position: relative;
+}
+
+.image-container {
+	width: 40%;
+}
+
+.description-container {
+	width: 60%;
+}
+
+.about-me-description-container {
+	width: 60%;
+	text-align: left;
+	transform: translateX(-50%) translateY(-50%);
+	position: relative;
+	top: 50%;
+	left: 50%;
+}
+
+.profile-image, .image-shadow {
+	width: 350px;
+	height: 350px;
+	transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	left: 15%;
+}
+
+.image-shadow {
+	position: absolute;
+	-webkit-box-shadow: inset 0px 0px 50px 30px #000000;
+	box-shadow: inset 0px 0px 50px 30px #000000;
+}
+
+.about-me-description {
+	font: 20px "Source Sans Pro", sans-serif;
+	width: 100%;
+}
+
+.about-me-title {
+	font: 30px "Montserrat", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+}
