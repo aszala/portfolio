@@ -61,3 +61,14 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.resume-area, .resume-cotent {
+	width: 100%;
+}
+
+ul {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
