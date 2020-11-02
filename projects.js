@@ -49,21 +49,17 @@ function onFilter(elm, val, type) {
 
 function getProjects() {
 	if (active_cat_filters.length == 0 && active_lang_filters.length == 0) {
-		console.log("PurpleBeans");
 		$(".active-filter").html("Active Filters: None");
 		projectsReference.get().then(snap => {
 			displayProjects(snap);
 		});
 	} else if (active_cat_filters.length <= 10 && active_lang_filters.length <= 10) {
-		console.log("Purple");
 		$(".active-filter").html("Active Filters: " + active_cat_filters);
 		if (active_cat_filters.length == 0) {
 			active_cat_filters = [];
 		} else if (active_lang_filters.length == 0) {
 			active_lang_filters = [];
 		}
-
-		console.log(active_cat_filters);
 
 		projectsReference.where("categories", "array-contains-any", active_cat_filters)
 			//.where("languages", "array-contains-any", active_lang_filters)
