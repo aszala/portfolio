@@ -62,13 +62,63 @@
 	justify-content: space-between;
 }
 
-.resume-area, .resume-cotent {
+.resume-area {
+	margin-top: 100px;
+}
+
+.resume-area, .resume-content {
 	width: 100%;
 }
 
 ul {
-	height: 300px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+}
+
+ul>li {
+	margin-top: 10px;
+}
+
+.resume-section {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.resume-section-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.section-title {
+	font-size: 30px;
+	width: 50%;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+}
+
+.section-content {
+	width: 50%;
+}
+
+.resume-part {
+	margin-bottom: 50px;
+}
+
+.resume-part-header {
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+.resume-part-content {
+	color: rgb(200, 200, 200);
+}
+
+.resume-part-content-highlight {
+	color: white;
+	font-weight: 600;
+	font-size: 17px;
 }
