@@ -114,3 +114,23 @@
 	position: absolute;
 	right: 0;
 }
+
+
+@media only screen and (max-width: 725px)  {
+	.publications-header {
+		flex-direction: column-reverse;
+	}
+
+	.publications-header>div {
+		width: 100%;
+	}
+
+	.filters-containers, .filters-containers>div {
+		justify-content: left;
+		margin-bottom: 25px;
+	}
+
+	.publication-header {
+		width: 90%;
+	}
+}
