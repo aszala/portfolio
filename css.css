@@ -98,3 +98,62 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+@media only screen and (max-width: 1500px) {
+	.name {
+		width: 350px;
+		height: 350px;
+	}
+
+	.heading {
+		font-size: 40px !important;
+	}
+}
+
+@media only screen and (max-width: 1207px) {
+	.name {
+		top: 50%;
+	}
+
+	.whoami-container {
+		width: 100%;
+		height: auto;
+		margin-top: var(--header-height);
+		margin-bottom: 50px;
+	}
+
+	.whoami-items-container, .quote-items-container {
+		left: 0;
+		width: 100%;
+		position: relative;
+	}
+
+	.whoami-items-container>div {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.name-container, .image-container, .quote-container {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		margin-bottom: 50px;
+	}
+
+	.quote {
+		width: 100%;
+	}
+
+	.quote>div {
+		text-align: center !important;
+	}
+
+	.quote-items-container>.orange-line {
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
