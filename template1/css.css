@@ -204,8 +204,10 @@ hr {
 .menu-container {
 	position: fixed;
 	top: 0;
-	right: 0;
+	width: 100%;
+	text-align: right;
 	z-index: 11;
+	transition: background, 200ms;
 }
 
 .menu {
@@ -214,6 +216,7 @@ hr {
 	margin-top: 30px;
 	font-size: 1.25rem;
 	cursor: pointer;
+	margin-bottom: 30px;
 }
 
 .nav-menu {
