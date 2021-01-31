@@ -14,15 +14,15 @@ $(function() {
 
 		navOpen = !navOpen;
 	});
-});
 
-let topofDiv = $("#header").offset().top;
-let height = $("#header").outerHeight();
+	let topofDiv = $("#header").offset().top;
+	let height = $("#header").outerHeight();
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > (topofDiv + height - 50)) {
-       $("#menu-container").css("background", "rgb(30, 30, 30)");
-    } else {
-       $("#menu-container").css("background", "transparent");
-    }
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > (topofDiv + height - 50)) {
+		$("#menu-container").css("background", "rgb(30, 30, 30)");
+		} else {
+		$("#menu-container").css("background", "transparent");
+		}
+	});
 });
