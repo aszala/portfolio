@@ -122,3 +122,44 @@ ul>li {
 	font-weight: 600;
 	font-size: 17px;
 }
+
+@media only screen and (max-width: 1200px) {
+	.about-me {
+		margin-top: 100px;
+	}
+	.about-me-container {
+		flex-direction: column;
+	}
+
+	.about-me-container>div {
+		margin: auto;
+		width: 90%;
+	}
+
+	.profile-image, .image-shadow {
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.buttons {
+		width: 50%;
+	}
+
+	.resume-section-container {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 735px) {
+	.about-me-description-container {
+		width: 95%;
+	}
+
+	.buttons {
+		width: 85%;
+	}
+
+	.section-content {
+		width: 90%;
+	}
+}
