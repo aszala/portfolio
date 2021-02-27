@@ -44,6 +44,80 @@ html,body {
 	transition: opacity 200ms;*/
 }
 
+.menu-container {
+	position: absolute;
+	top: 40px;
+	right: 75px;
+}
+
+.menu-container>.text {
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.menu-bars {
+	width: 35px;
+	flex-wrap: wrap;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-100%) translateX(225%);
+}
+
+.menu-bar {
+	width: 100%;
+	background-color: white;
+	height: 5px;
+	transition: transform, background-color 200ms,200ms;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border-radius: 10000px;
+}
+
+.header-dropdown {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--header-height);
+	background: black;
+	z-index: 99999;
+	overflow: hidden;
+	display: none;
+	transition: height, 200ms;
+}
+
+.header-dropdown-container {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	visibility: hidden;
+}
+
+.header-dropdown-container>div {
+	height: 33%;
+	width: 100%;
+}
+
+.header-dropdown-container>.logo-container>a>.logo {
+	height: auto;
+}
+
+.header-dropdown-container>div>.quick-links {
+	height: 50%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.header-dropdown-container>div>.quick-links>a {
+	font-size: 2rem;
+}
+
 .header-container {
 	width: 75%;
 	height: 100%;
@@ -87,6 +161,37 @@ html,body {
 .logo {
 	width: auto;
 	height: 100%;
+}
+
+@media only screen and (max-width: 1640px) {
+	.header-container {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.logo-container {
+		text-align: center;
+		width: 25%;
+	}
+
+	.quick-links-container {
+		width: 50%;
+	}
+
+	.social-links-container {
+		text-align: center;
+		width: 25%;
+	}
+}
+
+@media only screen and (max-width: 870px) {
+	.header {
+		display: none;
+	}
+	.header-dropdown {
+		display: block;
+	}
 }
 
 a {
