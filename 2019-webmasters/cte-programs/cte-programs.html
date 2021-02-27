@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS CTE Programs</title>
+		<link rel="stylesheet" href="../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" onclick="hideShowcase();" tabindex="0" onkeypress="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../navbar/imgs/x.png" />
+				<img alt="" id="showcased-image" src="../navbar/imgs/x.png" />
+				<p id="image-description"></p>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../index.html');" onclick="openLink('../index.html');" src="../navbar/imgs/pc-logo.png" />
+						<div tabindex="0" onkeypress="openLink('../index.html');" onclick="openLink('../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../index.html');">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../tsa-chapter/tsa-chapter.html');">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('cte-programs.html');">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../index.html');">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../tsa-chapter/tsa-chapter.html');">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../index.html');" onclick="openLink('../index.html');" id="navbar-expanded-pchs" src="../navbar/imgs/pc-logo.png" />
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('cte-programs.html');">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img alt="web icon" src="../navbar/imgs/web.png" /></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img alt="twitter icon" src="../navbar/imgs/twitter.png" /></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		
+		<div class="modal">
+			<div class="popup">
+				<div class="popup-close" tabindex="0" onkeypress="hideModal();" onclick="hideModal();">&nbsp;&nbsp;X&nbsp;&nbsp;</div>
+				<br><br>
+				<div class="popup-content">
+					<h2 id="modal-h2">Content</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div id="particles-js"></div>
+		<div id="heading" class="section">
+			<div id="title-super-container">
+				<div id="title-container">
+					<div id="title">Panther Creek CTE</div>
+				</div>
+				<div id="title-info-container">
+					<div id="title-info-content">
+						<div>We Design</div>
+						<div>We Innovate</div>
+						<div>We Engineer Our Future</div>
+					</div>
+				</div>
+				
+				<div id="down-arrow"><i class="down"></i></div>
+			</div>
+		</div>
+		
+		<div id="classes-modules" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Our Classes and Modules</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">PCHS offers a variety of CTE classes that focus on STEM education, and making sure that students are prepared to work with technology in the 21st century.</div>
+			</div>
+			<div id="classes-modules-hexagon-section" class="section">
+				<div id="hexagons">
+					<div tabindex="0" onkeypress="openLink('subpages/bfi.html')" onclick="openLink('subpages/bfi.html')" class="hexagon">
+						<div class="hexagon-text">Business, Finance, and Information Technology</div>
+					</div>
+					<div tabindex="0" onkeypress="openLink('subpages/fcs.html')" onclick="openLink('subpages/fcs.html')" class="hexagon">
+						<div class="hexagon-text">Family and Consumer Science</div>
+					</div>
+					<div tabindex="0" onkeypress="openLink('subpages/me.html')" onclick="openLink('subpages/me.html')" class="hexagon">
+						<div class="hexagon-text">Marketing and Entrepreneurship</div>
+					</div>
+					<div tabindex="0" onkeypress="openLink('subpages/ted.html')" onclick="openLink('subpages/ted.html')" class="hexagon">
+						<div class="hexagon-text">Technology, Engineering, and Design</div>
+					</div>
+					<div tabindex="0" onkeypress="openLink('subpages/tie.html')" onclick="openLink('subpages/tie.html')" class="hexagon">
+						<div class="hexagon-text">Trade and Industrial Education</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div id="teacher-backgrounds" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Our Amazing Teachers</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Teachers are the lifeblood of any school</div>
+			</div>
+			<div id="teachers">
+				<hr>
+				<div id="teacher-profiles">
+					<div style="width: 80px;"></div>
+					<div class="teacher-profile" tabindex="0" onkeypress="teacherClick(this, 0);" onclick="teacherClick(this, 0);" onmouseover="teacherHover(this, 0);" onmouseleave="teacherHoverExit(this, 0);" onfocus="teacherHover(this, 0);" onfocusout="teacherHoverExit(this, 0);">
+						<div class="teacher-profile-name">Brent Curran</div>
+						<img alt="Picture of first teacher" src="imgs/curran1.jpg" />
+					</div>
+					<div class="teacher-profile" tabindex="0" onkeypress="teacherClick(this, 1);" onclick="teacherClick(this, 1);" onmouseover="teacherHover(this, 1);" onmouseleave="teacherHoverExit(this, 1);" onfocus="teacherHover(this, 1);" onfocusout="teacherHoverExit(this, 1);">
+						<div class="teacher-profile-name">Joe Busby</div>
+						<img alt="Picture of second teacher" src="imgs/busby1.jpg" />
+					</div>
+					<div class="teacher-profile" tabindex="0" onkeypress="teacherClick(this, 2);" onclick="teacherClick(this, 2);" onmouseover="teacherHover(this, 2);" onmouseleave="teacherHoverExit(this, 2);" onfocus="teacherHover(this, 2);" onfocusout="teacherHoverExit(this, 2);">
+						<div class="teacher-profile-name">Dana Kaushik</div>
+						<img alt="Picture of thrid teacher" src="imgs/kaushik.jpg" />
+					</div>
+					<div class="teacher-profile" tabindex="0" onkeypress="teacherClick(this, 3);" onclick="teacherClick(this, 3);" onmouseover="teacherHover(this, 3);" onmouseleave="teacherHoverExit(this, 3);" onfocus="teacherHover(this, 3);" onfocusout="teacherHoverExit(this, 3);">
+						<div class="teacher-profile-name">Dan Nolan</div>
+						<img alt="Picture of fourth teacher" src="imgs/nolan.png" />
+					</div>
+					<div class="teacher-profile" tabindex="0" onkeypress="teacherClick(this, 4);" onclick="teacherClick(this, 4);" onmouseover="teacherHover(this, 4);" onmouseleave="teacherHoverExit(this, 4);" onfocus="teacherHover(this, 4);" onfocusout="teacherHoverExit(this, 4);">
+						<div class="teacher-profile-name">Joesph Bizzell</div>
+						<img alt="Picture of fifth teacher" src="imgs/bizzell.PNG" />
+					</div>
+					<div style="width: 80px;"></div>
+				</div>
+				<div id="teacher-background-info" class="section">
+					<div class="teacher-background-info-panel">
+						<h2>Mr. Curran - Game Art Design and Digital Design and Animation Teacher and TSA Advisor</h2>
+						<hr>
+						<p>"Make Good Decisions" - Brent Curran</p>
+						<p>Mr. Curran is in his second year of education and advising at Panther Creek High School. He spent seven years in management before transitioning to education. Mr. Curran's interest in education comes from his work with middle schoolers and Lego robotics in the Lenoir County Public School System. Mr. Curran was the founder of SKATEch for the City of Raleigh Parks and Recreation, a summer camp that blends the art of videography and photography to skateboarding.</p>
+					</div>
+					<div class="teacher-background-info-panel">
+						<h2>Dr. Busby - Technology, Engineering, and Design Teacher and TSA Advisor</h2>
+						<hr>
+						<p>"I recognized a future in education as making a difference in students' lives. I enjoy helping students develop skills that will follow them throughout their careers." - Joe Busby</p>
+						<p>Dr. Joe R. Busby is currently in his 38th year in education. His teaching experience includes middle and high school, undergraduate and graduate education. He also spent 5 years as a teacher supervisor with the Department of Education in Mississippi and State Advisor for TSA in 2 other states. Dr. Busby has served in numerous leadership roles at the local, state, national, and international levels, and has received the honors of Life Member in MS TSA, Laurate Citation in Epsilon Pi Taw, and Distinguished Technology Educator in the International Technology Engineering Educators Association.</p>
+					</div>
+					<div class="teacher-background-info-panel">
+						<h2>Dana Kaushik - Project Management, Marketing, Excel, and Principle of Business and Finance</h2>
+						<hr>
+						<p>"Enjoy the little things in life for one day you'll look back and realize they were big things" - Kurt Vonnegut</p>
+						<p>My dream as a kid was to become a veterinarian. I applied to Purdue University and was accepted in the pre-vet program. During the summer between my freshman and sophomore year I had an internship at Disney World. This experience forever changed my life and I was I immediately went back to school and changed my major to Elementary Education. After college, I accepted a position as a 2nd grade teacher. However, I really had my heart set on teaching 4th grade. The following year a position opened up and I continued to teach 4th grade for the next 10 years. Wanting to challenge myself, I went back to grad school and received an MBA from Florida Tech.</p>
+					</div>
+					<div class="teacher-background-info-panel">
+						<h2>Dan Nolan - Technology, Engineering, and Design Teacher</h2>
+						<hr>
+						<p>"Education is the key to success in life, and teachers make a lasting impact in the lives of their students." - Solomon Ortiz</p>
+						<p>Teaching experience in the inner city of Baltimore. Taught life skills, coping skills and specialized in behavior modification in Child Psychiatry at University of Maryland Medical Center. Started a Non Profit and consult small businesses on Social Media Strategy. High School lacrosse coach and private lacrosse coach.</p>
+					</div>
+					<div class="teacher-background-info-panel">
+						<h2>Joesph Bizzell - Microsoft Word and PowerPoint and Principle of Business and Fianance Teacher</h2>
+						<hr>
+						<p>"I want to share the opportunities that I didn't have while I was in high school with the students of today...students can use them in their lives and there are so many ways to share that information." - Joesph Bizzell</p>
+						<p>Mr. Joseph Bizzell is a CTE teacher at Panther Creek High School. He teaches Microsoft Word and PowerPoint, as well as Principles of Business and Finance. He has an MBA in education, and also teaches as an Adjunct Professor at Saint Augustine's College. He is dedicated to teaching students skills inside the fields of business and technology, and believes that TSA gives students the opportunity to work with technology, and to make a difference in the world.</p>
+					</div>
+				</div>
+				<div id="click-teacher">Hover over a teacher to read more about them</div>
+				<hr>
+			</div>
+		</div>
+		
+		<div id="student-projects" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Student Projects</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">
+						Our students have worked hard to create some amazing projects because they love using engineering skills to create solutions to real world problems and technology gives them the tools to bring their ideas to life</div>
+			</div>
+			<div id="projects-content">
+				<div id="teacher-quotes">
+					<div id="quote-1" class="quote-container">
+						<div class="bubble" tabindex="0" onkeypress="showModal(1);" onclick="showModal(1);">
+							<div class="bubble-text">"10/10, best student projects ever" - Brent Curran</div>
+						</div>
+					</div>
+					<div id="quote-2" class="quote-container">
+						<div class="bubble" tabindex="0" onkeypress="showModal(2);" onclick="showModal(2);">
+							<div class="bubble-text">"Very Creative" - Kalpana Chudasama</div>
+						</div>
+					</div>
+					<div id="quote-3" class="quote-container">
+						<div class="bubble" tabindex="0" onkeypress="showModal(3);" onclick="showModal(3);">
+							<div class="bubble-text">"Clever and Unique in every way" - Joe Busby</div>
+						</div>
+					</div>
+				</div>
+				<div id="student-projects-images">
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<div class="student-projects-images-container">
+								<div class="student-project-image">
+									<img alt="This is a hydraulic pump built by a student as a project for the Technology, Engineering and Design class. It can be used to apply pressure for systems. This project was created for the purpose of a sustainable hydraulics system that could be reused." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/1.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="This is a wooden bench carved by a student for a class project. It is a great way to reuse wood that has been cut down for something that benefits students and teachers, instead of wasting the wood. Not only was it a good learning environment, but it gives the class an extra seat in case there is a shortage of seats." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/2.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="These 2 houses were designed and stenciled for student engineering design projects. It displays the creativity of students, and how they can use this creativity to work on designs for houses and buildings. These students created this project with the intent of using art in combination with technology, showing the true power of STEAM." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/3.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Students used wood blocks to test if their wooden bridge that they built is strong enough to withstand pressure and weight. This allows students to challenge their designs, and to see if the engineering techniques they used allow them to build a sturdy structure that is practical and useable." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/4.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Students in Game Art Design produced fully playable card games. The goal of this project was for students to express their creative game design skills in the form of a card game, and for them to learn how real world card games are built." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/5.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Students used wood blocks to test if their wooden bridge that they built is strong enough to withstand pressure and weight. This allows students to challenge their designs, and to see if the engineering techniques they used allow them to build a sturdy structure that is practical and useable. This bridge design can also be used as a prototype for real life bridge designs, possibly in areas that are in need of better infrastructure. " onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/6.jpg" />
+								</div>
+							</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="student-projects-images-container">
+								<div class="student-project-image">
+									<img alt="This is an image of the car body of a dragster design for the Technology, Engineering, and Design class. It was designed and carved by students, and soon they will attach wheels to the body in order to test the car aerodynamics. Students wanted to create a better, and more efficient car design that would be fast and durable." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/7.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Students built a plane out of popsicle sticks that they will launch using slingshots in order to test the strength of their slingshots. This is a project that students worked on outside of school in order to test the strengths of their slingshots, and to see if their slingshots would be strong enough to launch heavier objects." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/8.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Here is one slingshot that was built by students in order to launch the wooden planes they previously made." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/9.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="This is an image of the Limo Pastoral Kit built by students in the Panther Creek Technological Design class. It consists of many carvings that will create a wooden car once they are broken off and combined together. The idea for this project came from students and CTE teachers wanting to create a newer version of the beloved Pastoral Kits of the 1900’s. Not only does this kit have a newer car design than the old kits of the past, but it is also more environmentally friendly to replicate, and is built with safety in mind." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/10.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="his 3D printed soccer ball is a fun project created by many creative students in Mr. Curran’s SciVis class. They are planning on turning this soccer ball into a cool-looking magnet." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/11.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img alt="Here is the cover of the Limo Pastoral Kit box. It was created by students in the Technological Design class to hold the wooden board that contains the carved car parts." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/12.jpg" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="student-projects-images-container">
+								<div class="student-project-image">
+									<img type="project" alt="This is an image of one of the 3D printed castles that was created by students. It is one part of a larger building, that seeks to model the design of a real castle." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/13.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img type="project" alt=" In Dr. Busby’s technological design class, students were able to carve and create this pen. Not only is it a good use of recycled wood, but it also serves as a tool that can be used for many years." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/14.jpg" />
+								</div>
+								<div class="student-project-image">
+									<img type="project" alt="These are the Arduino components used by students to create an Animatronic tree. The different components are connected to the main Arduino board, and control the movements of the tree. In addition, students were able to build and paint the wooden box that holds all of these parts together. Students that worked on this project wanted an animatronic that could be used to tell children’s stories, and by creating an animatronic tree, it serves the purpose of using a familiar object to tell stories to kids." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/15.JPG" />
+								</div>
+								<div class="student-project-image">
+									<img type="project" alt="This is a picture of an Arduino program that is running on a computer. This student is connecting the correct wires to the correct locations, in order to display the message that he wants on the LED display." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/16.jpeg" />
+								</div>
+								<div class="student-project-image">
+									<img type="project" alt="Here is the message on the LED display after the Arduino program successfully runs! You can also see the wiring of the LED display and board up close in this image. Students wanted to display friendly messages to showcase their knowledge of arduino." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/17.JPG" />
+								</div>
+								<div class="student-project-image">
+									<img type="project" alt="These are posters that Panther Creek Digital Media students created and designed. They showcased the graphical and artistic skills of students in illustrating fonts of their choice." onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/student-projects/18.JPG" />
+								</div>
+							</div>
+						</div>
+						<a class="prev" href="javascript:void(0);" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" href="javascript:void(0);" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<br>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+					</div>
+				</div>
+			</div>
+			<div id="click-to-enlarge">Click to enlarge any image and see description</div>
+		</div>
+		
+		<br><br><br><br>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	</body>
+</html>

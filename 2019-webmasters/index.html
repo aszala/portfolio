@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS Home</title>
+		<link rel="stylesheet" href="navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="navbar/imgs/x.png"></img>
+				<img alt="" id="showcased-image" src="navbar/imgs/x.png"></img>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('index.html');" onclick="openLink('index.html');" src="navbar/imgs/pc-logo.png"></img>
+						<div onclick="openLink('index.html');" tabindex="0" onkeypress="openLink('index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('index.html');">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('tsa-chapter/tsa-chapter.html');">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('cte-programs/cte-programs.html');">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('index.html');">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('tsa-chapter/tsa-chapter.html');">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" onclick="openLink('index.html');" id="navbar-expanded-pchs" src="navbar/imgs/pc-logo.png"></img>
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('cte-programs/cte-programs.html');">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img alt="web icon" src="navbar/imgs/web.png"></img></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img alt="twitter icon" src="navbar/imgs/twitter.png"></img></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		
+		<div id="heading" class="section">
+			<div id="title-super-container">
+				<div id="title-container">
+					<div id="title">Panther Creek High School</div>
+				</div>
+				<div id="title-info-container">
+					<div id="title-info-content">
+						<div>We Design</div>
+						<div>We Innovate</div>
+						<div>We Engineer Our Future</div>
+					</div>
+				</div>
+				
+				<div id="down-arrow"><i class="down"></i></div>
+			</div>
+		</div>
+		<br><br>
+		<div id="chapter-mission" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">PCHS Mission</div>
+				<img alt="section divider image" src="global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Our community will engage students in opportunities and experiences that will prepare them for future challenges.</div>
+			</div>
+			<div class="description-content-for-section" id="mission-content">
+				<div id="detailed-mission-container" class="row">
+					<div id="vision-container">
+						<b><u>PCHS Vision:</u></b>
+						<br>
+						Pursuing excellence through passion, purpose and pride.
+						<br>
+						<img alt="pchs school administrators celebrating" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/Contreras.jpg"></img>
+						<br>
+						Click to Enlarge Image
+					</div>
+					<div id="expectations-container">
+						<b><u><center>PCHS Expectations</center></u></b>
+						<br>
+						<b><u>P</u></b>articipate actively in learning
+						<br>
+						<b><u>C</u></b>elebrate diversity
+						<br>
+						<b><u>H</u></b>onor PCHS and WCPSS procedures and policies
+						<br>
+						<b><u>S</u></b>trive to be a person of character
+					</div>
+				</div>
+				<br><br><br>
+				<div id="welcome">
+					Welcome to Panther Creek High School, the home of the Catamounts!
+					Since its inception in 2006, the Panther Creek High School community has been committed to engaging students in
+					opportunities and experiences that will prepare them for future challenges, and fostered a sense of community
+					through curricular and extra-curricular programs. Here at Panther Creek, we appreciate the ordinary, pursue the
+					extraordinary, and celebrate progress and achievement. Go Catamounts!
+				</div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<div id="tsa-chapter" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Our TSA Chapter</div>
+				<img alt="section divider image" src="global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Our TSA chapter works hard to excel everyday.</div>
+			</div>
+			<div class="description-content-for-section" id="tsa-chapter-content">
+				<div id="tiles-container">
+					<div id="tiles-row-1" class="row">
+						<div class="tsa-tile">
+							<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="goals icon" src="imgs/goals.png"></img>
+							<div>Goals</div>
+							<hr>
+							<div>
+								We work hard and steadily until all goals are met.
+							</div>
+						</div>
+						<div class="tsa-tile">
+							<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="time-icon" src="imgs/time.png"></img>
+							<div>Time</div>
+							<hr>
+							<div>
+								We put the time into all our work to make sure it is the best.
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<div id="tiles-row-2" class="row">
+						<div class="tsa-tile">
+							<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="dedication icon" src="imgs/dedication.png"></img>
+							<div>Dedicated</div>
+							<hr>
+							<div>
+								We keep always keep progress no matter what circumstances we fall into.
+							</div>
+						</div>
+						<div class="tsa-tile">
+							<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="passion icon" src="imgs/passion.png"></img>
+							<div>Passion</div>
+							<hr>
+							<div>
+								Everyday we strive to work our hardest, because we truly love our work.
+							</div>
+						</div>
+					</div>
+				</div>
+				<br><br><br><br>
+				<div class="button" tabindex="0" onkeypress="openLink('tsa-chapter/tsa-chapter.html');" onclick="openLink('tsa-chapter/tsa-chapter.html');">Learn More</div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<div id="cte-programs" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Our CTE Programs</div>
+				<img alt="section divider image" src="global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Our CTE Department strives to teach our students the skills needed to thrive in the world.</div>
+			</div>
+			<div class="description-content-for-section" id="cte-programs-content">
+				<img id="cte-programs-image" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="cte classroom" src="imgs/cte.jpg"></img>
+				<div>Click to Enlarge</div>
+				<br>
+				<div>Every student who comes here finds out CTE program to be quite worthwhile.</div>
+				<br><br><br>
+				<div class="button" tabindex="0" onkeypress="openLink('cte-programs/cte-programs.html')" onclick="openLink('cte-programs/cte-programs.html')">Check it Out!</div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<div id="contact-us" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Contact Us</div>
+				<img alt="section divider image" src="global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Want to learn more about us? We would love to answer your questions</div>
+			</div>
+			<div class="description-content-for-section" id="contact-us-content">
+				<div id="contact-phone"><img alt="phone icon" src="imgs/phone.png"></img> 919-463-8656</div>
+				<br>
+				<div id="contact-urls" class="row">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img alt="web icon" src="navbar/imgs/web.png"></img><br>Website</a><br><br>
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img alt="twitter icon" src="navbar/imgs/twitter.png"></img><br>Twitter</a>
+				</div>
+			</div>
+		</div>
+		
+		<br><br><br><br>
+		
+		<div id="ada-compliance">
+			<div>
+				Our site is in compliance with Web Content Accessibility Guidelines.
+			</div>
+			<div class="button" tabindex="0" onkeypress="hideCompliance();" onclick="hideCompliance();">
+				Got it!
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>

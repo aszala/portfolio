@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS Technology, Engineering, and Design</title>
+		<link rel="stylesheet" href="../../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="shortcut icon" href="../../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" tabindex="0" onkeypress="hideShowcase();" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../../navbar/imgs/x.png"></img>
+				<img alt="" id="showcased-image" src="../../navbar/imgs/x.png"></img>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+						<div tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" id="navbar-expanded-pchs" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img src="../../navbar/imgs/web.png"></img></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img src="../../navbar/imgs/twitter.png"></img></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		<br><br><br><br>
+		
+		<div class="modules-section">
+			<div class="section-header">
+				<div class="section-header-title">Technology, Engineering, and Design</div>
+				<img alt="section divider image" src="../../global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">The Technology Engineering and Design program is designed to provide middle and high school students essential and enduring 21st century skills. Technology Engineering and Design is a STEM (Science, Technology, Engineering, and Math) program that uses the arts, engineering, languages, technologies, AND sciences to understand, communicate, and design.</div>
+			</div>
+			<br>
+			<center><div tabindex="0" onkeypress="openLink('../cte-programs.html');" onclick="openLink('../cte-programs.html');" class="button">Return to CTE Page</div></center>
+			<br><br>
+			<div class="drop-down-list">
+				<div class="drop-down-container">
+					<div class="drop-down" index="0">
+						<div>Game Art and Design Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">With graphics, models and visual fidelity ever increasing with newer and more powerful technologies, the future needs talented and trained graphic artists on the job. This introduction to Game Art Design utilizes virtual modeling and mathematical modeling to build skills focused on the video game industry portion of the larger world of technical visualization. This course also builds upon concepts learned in Scientific and Technical Visualization, providing one of the many specific disciplines that the first class offers.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="1">
+						<div>Scientific Visualization I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Visualization of engineered products or animated concepts requires a skilled professional to be done with professional accuracy. Scientific and Technical Visualization offers students a head start with hands on exploration of 2D Graphics, animation, editing and image analysis. These concepts are at the core understanding of the craft, and are a solid first step into the shifting professional landscape of Scientific and Technical Visualization.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="2">
+						<div>Technology, Engineering and Design</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Technology, Engineering and Design are all closely related, and are becoming ever more so in an integrating world. This class builds models on all three disciplines and gives students a first look at key engineering mindsets, thought processes and principles by working with microcontrollers and modeling software and being exposed to lab work and basic coding. More important than any of these individual skills focused on, however, is the overall experience in thinking like an engineer that this course offers. Being a problem solver is key in Technology, Engineering, & Design, and the class’s main focus is to teach future engineers how to be problem solvers.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="3">
+						<div>Technological Design Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">This class is another extension of Technology, Engineering & Design. It focuses on engineering concepts that are important for Engineering majors in College. More over than other courses, this one’s main goal is to prepare for college level engineering classes, and is even more thought based than its predecessor. Instead of learning through individual aspects of technology such as microcontrollers and modeling software, Technological Design bridges the three keystones of the previous class and doubles down on the engineering mindset to prepare students to be solutions for not only engineering problems in college, but in their careers.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="4">
+						<div>Technology Advanced Studies</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Visualization of engineered products or animated concepts requires a skilled professional to be done with professional accuracy. Scientific and Technical Visualization offers students a head start with hands on exploration of 2D Graphics, animation, editing and image analysis. These concepts are at the core understanding of the craft, and are a solid first step into the shifting professional landscape of Scientific and Technical Visualization.</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>

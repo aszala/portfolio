@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+	    <title>PCHS TSA Chapter</title>
+		<link rel="stylesheet" href="../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" tabindex="0" onkeypress="hideShowcase();" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../navbar/imgs/x.png" />
+				<img alt="" id="showcased-image" src="../navbar/imgs/x.png" />
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../index.html');" onclick="openLink('../index.html');" src="../navbar/imgs/pc-logo.png" />
+						<div tabindex="0" onkeypress="openLink('../index.html');" onclick="openLink('../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../index.html');">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('tsa-chapter.html');">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs/cte-programs.html');">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../index.html');">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('tsa-chapter.html');">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" onclick="openLink('../index.html');" id="navbar-expanded-pchs" src="../navbar/imgs/pc-logo.png" />
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs/cte-programs.html');">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img alt="web icon" src="../navbar/imgs/web.png" /></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img alt="twitter icon" src="../navbar/imgs/twitter.png" /></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		
+		<div id="heading" class="section">
+			<div id="title-super-container">
+				<div id="title-container">
+					<div id="title">Panther Creek TSA</div>
+				</div>
+				<div id="title-info-container">
+					<div id="title-info-content">
+						<div>We Design</div>
+						<div>We Innovate</div>
+						<div>We Engineer Our Future</div>
+					</div>
+				</div>
+				
+				<div id="down-arrow"><i class="down"></i></div>
+			</div>
+		</div>
+		
+		<div id="tsa-motto-creed" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">The TSA Motto and Creed</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">"Learning to lead in a technical world"</div>
+			</div>
+			<div id="motto-creed-content" class="description-content-for-section">
+				<div id="motto-creed-content-container">
+				    <div class="column-half" id="importantance-of-motto">
+						<h3 class="column-title">Importance to Us</h3>
+						<div>
+					    	The TSA motto and creed are very important to our chapter. Our chapter focuses on creating students who are not only
+					    	proficient in technology, but who also are leaders - whether in creating student projects or bringing their ideas to life.
+					    	Finally, our students know the importance of using technology to benefit society and our school, and try their best to use their
+					    	skills to help out in the community.
+				    	</div>
+				    </div>
+				    <div class="column-half" id="creed-text">
+						<h3 class="column-title">Creed</h3>
+						<div>
+					    	I believe that Technology Education holds an important place in my life in the technical world.
+					    	I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
+					    	Guided by my teachers, artisans from industry, and my own initiative...
+				    	</div>
+				    	<br>
+				    	<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" tabindex="0" onkeypress="openLink('https://tsaweb.org/about/about-tsa/mission')" onclick="openLink('https://tsaweb.org/about/about-tsa/mission')">continue reading -></a>
+							<div class="underline"></div>
+						</div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<div id="chapter-history" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Chapter History</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">The history of our chapter</div>
+			</div>
+			<div id="chapter-history-content" class="description-content-for-section">
+			    The Panther Creek Chapter was founded in 2011 by Mr. William R. Hollar, a Sci-Vis Teacher. At the time of its conception, it consisted only of a Robotics team. Over the next few years, the TSA program gained support as more and more students showed interest in supporting the team. This year we have 76 registered participants, and all over the board our chapter has shown growth in population, performance, awards and attendance at nationals.
+				<br><br><br>
+				<center><img class="pointer" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" src="imgs/history.jpeg" alt="Old animatronics team holding winning trophy" /></center>
+			</div>
+		</div>
+		<div id="chapter-officers" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Chapter Officers</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Our 2018-2019 TSA Chapter officers</div>
+			</div>
+			<div id="chapter-officer-content" class="description-content-for-section">
+				<a href="javascript:void(0);" class="prev" id="scrollOfficersLeft" tabindex="0" onkeypress="scrollOfficersLeft();" onclick="scrollOfficersLeft();">&#10094;</a>
+			    <div id="officer-list">
+			    	<div class="officer">
+			    		<h6 style="font-size:16px;">Sergeant-At-Arms</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA Sergeant-At-Arms, Manas Takalpati" src="imgs/manas.jpg" />
+			    		<div>Manas Takalpati</div>
+			    	</div>
+			    	<div class="officer">
+			    		<h6>Reporter</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA Reporter, Nick Lisi" src="imgs/nick.jpg" />
+			    		<div>Nick Lisi</div>
+			    		<br>
+			    	</div>
+			    	<div class="officer">
+			    		<h6>President</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA President, Abhay Zala" src="imgs/abhay.jpg" />
+			    		<div>Abhay Zala</div>
+			    		<br>
+			    	</div>
+			    	<div class="officer">
+			    		<h6>Secretary</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA Secretary, Sanchit Tamboli" src="imgs/sanchit.jpg" />
+			    		<div>Sanchit Tamboli</div>
+			    	</div>
+			    	<div class="officer">
+			    		<h6>Treasurer</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA Treasurer, Sushrit Pasumarthy" src="imgs/sushrit.jpg" />
+			    		<div>Sushrit Pasumarthy</div>
+			    	</div>
+			    	<div class="officer">
+			    		<h6>Vice President</h6>
+			    		<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="PCTSA Vice President, Matthew Martin" src="imgs/matthew.jpg" />
+			    		<div>Matthew Martin</div>
+			    	</div>
+			    </div>
+			    <a href="javascript:void(0);" class="next" id="scrollOfficersRight" tabindex="0" onkeypress="scrollOfficersRight();" onclick="scrollOfficersRight();">&#10095;</a>
+				<div id="hover-to-see-officers-color" class="click-to-enlarge">Hover to see in color</div>
+			</div>
+		</div>
+		<div id="community-service" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Community Service Projects</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">In addition to competing in the highest levels of competition, PCTSA also serves the community. We participate in fundraisers, volunteer work, and maintains in active presence in community affairs.</div>
+			</div>
+			<div id="community-service-content" class="description-content-for-section">
+				<div id="service-projects">
+			    	<div class="slideshow-container">
+						<div class="mySlides fade">
+							<div class="service-projects-images-container">
+								<img class="service-image" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="teaching students at lufkin middle school" src="imgs/lufkin_tutoring.jpg" />
+								<br>
+								PCTSA is now working to educate and tutor Middle School chapters such as the Lufkin Road Middle School Chapter. Not only does this ensure education for the middle school TSA members, but it also allows PCTSA to introduce middle schoolers to the world of TSA and the possibilities that await.
+							</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="service-projects-images-container">
+								<img class="service-image" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="showcasing tsa to incoming students" src="imgs/expo.jpg" />
+								<br>
+								Panther Creek Chapter Team at an expo showcasing TSA to incoming students
+							</div>
+						</div>
+						<div class="mySlides fade">
+							<div class="service-projects-images-container">
+								<img class="service-image" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="cleaning computers at Kramden" src="imgs/kramden.jpg" />
+								<br>
+								Our chapter has volunteered at Kramden Institute in Durham, NC. While at Kramden Institute our members have helped in the process of cleaning and restoring computers so that they may be used buy kids that currently are unable to get a computer of their own.
+							</div>
+						</div>
+						<a href="javascript:void(0);" class="prev" tabindex="0" onkeypress="plusSlides(-1)" onclick="plusSlides(-1)">&#10094;</a>
+						<a href="javascript:void(0);" class="next" tabindex="0" onkeypress="plusSlides(1)" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<br>
+					<div style="text-align:center">
+						<span class="dot" tabindex="0" onkeypress="currentSlide(1)" onclick="currentSlide(1)"></span>
+						<span class="dot" tabindex="0" onkeypress="currentSlide(2)" onclick="currentSlide(2)"></span>
+						<span class="dot" tabindex="0" onkeypress="currentSlide(3)" onclick="currentSlide(3)"></span>
+					</div>
+			    </div>
+			</div>
+		</div>
+		<div id="awards" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Awards</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Despite being a relatively young chapter, we have won numerous awards</div>
+			</div>
+			<div id="awards-section" class="description-content-for-section">
+				<div>2016</div>
+				<br>
+				<table>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Childrens Stories</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Engineering Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">1st</td>
+						<td class="awards-td">Manufacturing Prototype</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Video Game Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Webmasters</td>
+					</tr>
+				</table>
+				<br><br>
+				<div>2017</div>
+				<br>
+				<table>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Architectural Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">1st</td>
+						<td class="awards-td">Animatronics</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">3D Animation</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Coding</td>
+					</tr>
+					<tr>
+						<td class="awards-td">1st</td>
+						<td class="awards-td">Engineering Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Engineering Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Music Production</td>
+					</tr>
+				</table>
+				<br><br>
+				<div>2018</div>
+				<br>
+				<table>
+					<tr weight="2">
+						<td colspan="2">States</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">3D Animation</td>
+					</tr>
+					<tr>
+						<td class="awards-td">1st</td>
+						<td class="awards-td">Animatronics</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Animatronics</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Chapter Team</td>
+					</tr>
+					<tr>
+						<td class="awards-td">2nd</td>
+						<td class="awards-td">Digital Video Production</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">Engineering Design</td>
+					</tr>
+					<tr>
+						<td class="awards-td">3rd</td>
+						<td class="awards-td">On Demand Video</td>
+					</tr>
+					<tr>
+						<td class="awards-td">1st</td>
+						<td class="awards-td">Webmasters</td>
+					</tr>
+					<tr>
+						<td colspan="2">Nationals</td>
+					</tr>
+					<tr>
+						<td class="awards-td">10th</td>
+						<td class="awards-td">3D Animation</td>
+					</tr>
+					<tr>
+						<td class="awards-td">10th</td>
+						<td class="awards-td">Computer Integrated Manufacturing</td>
+					</tr>
+				</table>
+				<br><br>
+				<div>And many more prior to 2016</div>
+			</div>
+		</div>
+		<div id="state-competitions" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">State Competitions</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Every year we attend the State Conference and place in many events</div>
+			</div>
+			<div id="state-comps-section" class="description-content-for-section">
+				<div id="states-container">
+					<div id="states-images">
+						<img src="imgs/koury_convention_center_1.jpg" class="pointer" tabindex="0" onkeypress="showcaseImage(this);" alt="Image of the Koury Convention Center" />
+					</div>
+					<div id="states-content">
+						<br><br><br><br>
+						At the NCTSA State Conference not only does our chapter involve our members in various events but we also like to do our own activities.We have a pizza night as a group inna meeting area, and spend the night enjoying ourselves with friends. We also hold chapter office elections during this time so that when next year starts we already have our chapter team hitting the ground running. 
+						<br><br>
+						2018 State Conference:
+						<br><br>
+						<u>Panther Creek candidates that ran for office:</u>
+						<br>
+						Arush S. - Rising Sophmore who ran for the position of Treasurer
+						<br>
+						Nick L. - Rising Junior who ran for the position of Reporter 
+						<br><br>
+						2019 State Conference:
+						<br><br>
+						<u>Panther Creek candidates that are going to run for office:</u>
+						<br>
+						Sreya K. - Rising Junior
+						<br>
+						Nick L. - Rising Senior
+						<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="national-competitions" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">National Competitions</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Every year we attend the National Conference and place in many events</div>
+			</div>
+			<div id="nationals-comps-section" class="description-content-for-section">
+				<div class="nationals-container">
+					<div class="nationals-content">
+						<h4><u>TSA National Conference 2017</u></h4>
+						Date: June 21-25, 2017
+						<br><br>
+						Location: Rosen Shingle Creek, Orlando, Florida
+						<br>
+						Theme: "Defining Your Future"
+						<br><br>
+						With our abundance of members that attend the National Conference each year our chapter likes to celebrate our achievements. During the 2016-2017 National Conference in Orlando, Florida, we, as a chapter, went to Epcot in Disney for a day to relax and celebrate to achievement of attending the National Conference.
+						<br><br>
+						<u>Nationals Training</u>
+						<br>
+						<ul>
+							<li>Professional Leadership Training at the national TSA conference</li>
+							<li>On-site training was offered at the 2018 national TSA conference in Atlanta, Georgia.</li>
+							<li>These free sessions, open on a first-come, first serve basis, were offered to middle school and high school students, and advisors.</li>
+							<li>Sessions were tailored to each audience, but they will be consistent in terms of the integration of The Student Leadership Challenge -
+							Five Practices for Becoming an Exemplary Leader in TSA competitions and the LEAP Legacy Chapter program.</li>
+						</ul>
+						<br>
+						<br>
+					</div>
+					<div class="nationals-images">
+						<img src="imgs/rosen_shingle_creek.jpeg" class="pointer" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="Picture of Rosen Shingle Creek" />
+					</div>
+				</div>
+				<div class="nationals-container">
+					<div class="nationals-content">
+						<h4><u>TSA National Conference 2018</u></h4>
+						Date: June 22-26, 2018
+						<br><br>
+						Location: Georgia World Congress Center, Atlanta
+						<br>
+						Theme: "A Celebration of Success"
+						<br><br>
+						In 2018, 25 members of our chapter were fortunate enough to compete at TSA Nationals in Atlanta, Georgia. Our chapter not only was competitive in our events, but we were able to enjoy the beautiful city and its many tourist attractions - notably the CNN Building and the Puppet Museum. We had 7 teams qualify as national semi-finalist and 2 teams as finalist, which gave our chapter members a learning experience that they would never forget.
+					</div>
+					<div class="nationals-images">
+						<img src="imgs/atlanta.png" class="pointer" onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" alt="Picture of Atlanta" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="beyond-competitions" class="section">
+		    <div class="section-header">
+				<div class="section-header-title">Beyond the Conferences</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg" />
+				<div class="section-header-description">Though we work hard for competitions we also work hard outside of them</div>
+			</div>
+			<div id="beyond-comps-section" class="description-content-for-section">
+				Though we work hard for competitions we also work hard outside of them. TSA members work hard in school to get good grades, and to also serve their communities. Our members are model citizens, and all have bright futures ahead.
+				<br><br><br>
+				<div id="beyond-images">
+					<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" class="pointer" src="imgs/beyond-conference-1.JPG" alt="PCTSA meeting together to discuss future community service activities." />
+					<img onclick="showcaseImage(this);" tabindex="0" onkeypress="showcaseImage(this);" class="pointer" src="imgs/beyond-conference-2.jpeg" alt="PCTSA crouching in the Binto Pose" />
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+		<br><br>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>

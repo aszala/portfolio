@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	transform: translateY(-50px);
+	transition: all 1s;
+	opacity: 0;
+}
+
+body {
+	overflow-x: hidden;
+	background: #333333;
+	color: white;
+	font-family: Raleway;
+}
+
+#navbar {
+	width: 100%;
+	height: 75px;
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+
+#navbar-container {
+	display: flex;
+	width: 95%;
+	margin: auto;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#logo {
+	height: 75px;
+}
+
+#logo>img {
+	height: 50%;
+	position: relative;
+	top: 20%;
+}
+
+#nav-links {
+	text-align: center;
+}
+
+a {
+	color: white;
+	transition: color 200ms;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
+.section {
+	width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header-title {
+    font-size: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 20px;
+}
+
+#heading-section {
+	height: 80%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%), url('imgs/mic1.JPG') no-repeat;
+	background-size: cover;
+}
+
+#heading-icon {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 25px;
+	line-height: 200%;
+}
+
+#internal-nav-section {
+	background: #f86749;
+	height: 75px;
+	z-index: 199;
+}
+
+#internal-nav-container {
+	width: 80%;
+	margin: auto;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 30px;
+	height: 100%;
+}
+
+#internal-nav-container>div {
+	border-right: solid 1px white;
+	height: 50px;
+	width: 1px;
+}
+
+#internal-nav-container>span>a {
+	cursor: pointer;
+}
+
+#tour-table {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 19px;
+}
+
+.tour-row {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.cell {
+	width: 25%;
+	height: 100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 10px;
+}
+
+.first-column {
+	border-right: solid 3px #56b1ff;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.second-last-column {
+	text-align: right;
+}
+
+.last-column {
+	padding-left: 10px;
+	border-left: solid 3px #56b1ff;
+}
+
+#header-row {
+	border-bottom: solid 3px #56b1ff;
+	font-size: 25px;
+}
+
+.ticket-button {
+	padding: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background: #ab41f6;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+#album-container {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.album-column {
+	width: 40%;
+}
+
+.album {
+	width: 100%;
+	height: 350px;
+	text-align: center;
+	margin-bottom: 100px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.album>img {
+	width: 300px;
+	height: 300px;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.album-title {
+	width: 300px;
+	margin: auto;
+	height: 30px;
+	transform: translateY(-100%);
+	background: linear-gradient(0deg, #000000, rgba(0,0,0,0.5));
+}
+
+.listen-to-album-container {
+	transform: translateY(-60%);
+	width: 300px;
+	margin: auto;
+	height: 50px;
+	background: #ab41f6;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	overflow: hidden;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	border: solid 1px black;
+	overflow-x: hidden;
+}
+
+.listen-to-album-container>img {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	transition: transform 200ms;
+	transform: translateY(10px) translateX(25%) !important;
+}
+
+.listen-to-album-container>img:hover {
+	transform: scale(1.2) translateY(10px) translateX(25%);
+}
+
+.listen-to-album-container>div {
+	transform: translateY(27%) translateX(-30%);
+}
+
+#album-column-2 {
+	margin-top: 100px;
+}
+
+#merch-container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.merch-item {
+	width: 30%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.merch-item-container {
+	width: 80%;
+	margin: auto;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.merch-item-container>img {
+	width: 100%;
+	height: 325px;
+}
+
+.merch-purchase-box {
+	width: 100%;
+	height: 175px;
+	text-align: center;
+	background: #ab41f6;
+}
+
+.merch-buy-text {
+	font-size: 20px;
+	line-height: 200%;
+}
+
+.merch-purchase-button {
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	border: solid black 1px;
+	padding: 20px;
+	width: 50%;
+	cursor: pointer;
+}
+
+#biography-container {
+	width: 60%;
+	margin: auto;
+}
+
+#name-pic {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 60%;
+	margin: auto;
+}
+
+#name-pic>div {
+	font-size: 25px;
+	transform: translateY(100px);
+}
+
+#name-pic>img {
+	width: 200px;
+	height: 200px;
+}
+
+#isaiah-biography {
+	line-height: 200%;
+	font-size: 20px;
+}
+
+#fan-posts-container {
+	width: 50%;
+	margin: auto;
+}
+
+.fan-post {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.fan-name {
+	font-size: 25px;
+}
+
+hr {
+	width: 80%;
+	color: #ab41f6;
+	border: solid 1px #ab41f6;
+}
+
+.fan-content {
+	font-size: 20px;
+}
+
+#footer {
+	background: #f86749;
+	height: 75px;
+}
+
+#footer>img {
+	height: 60%;
+	margin-left: 20px;
+	position: relative;
+	top: 30%;
+	transform: translateY(-50%);
+	float: left;
+}
+
+#footer>div {
+	font-size: 25px;
+	float: right;
+	margin-right: 20px;
+	transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+}
+
+.modal {
+	position: fixed;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	transition: all 1s;
+	z-index: 1000;
+}
+
+.popup {
+	background: #ab41f6;
+	width: 45%;
+	height: 45%;
+	min-width: 300px;
+	min-height: 200px;
+	border-radius: 50px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+}
+
+.popup-content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.popup-content>a {
+	text-decoration: underline;
+}
+
+.popup-close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+#about {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+#about>a:hover, #return-arrow:hover {
+	color: #f86749;
+}
+
+#return-arrow {
+	font-size: 40px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1460px) {
+	.merch-buy-text {
+		font-size: 15px;
+	}
+	.merch-purchase-button {
+		font-size: 15px;
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 1350px) {
+	.cell {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.album {
+		margin-bottom: 300px;
+	}
+	#album-column-2 {
+		margin-top: 300px;
+	}
+	.album-column {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1120px) {
+	#merch-container {
+		flex-wrap: wrap;
+	}
+	.merch-item {
+		width: 70%;
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	#footer {
+		height: 150px;
+	}
+	#footer>img {
+		height: 30%;
+	}
+}
+
+@media only screen and (max-width: 833px) {
+	#internal-nav-section {
+		height: 180px;	
+	}
+}
+
+@media only screen and (max-width: 815px) {
+	#heading-icon>img {
+		width: 90%;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 745px) {
+	#biography-container {
+		width: 80%;
+	}
+	#name-pic {
+		flex-wrap: wrap;
+	}
+	#name-pic>div {
+		transform: translateY(0px);
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.album {
+		margin-bottom: 30px;
+		height: 200px;
+	}
+	.album>img {
+		width: 150px;
+		height: 150px;
+	}
+	.album>div {
+		width: 150px;
+	}
+	.album>div>div {
+		transform: translateY(24%);
+	}
+	#album-container {
+		flex-wrap: wrap;
+	}
+	#album-column-1 {
+		width: 100%;
+	}
+	#album-column-2 {
+		width: 100%;
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#navbar {
+		height: 150px;
+	}
+	#about {
+		width: 100%;
+	}
+	#nav-links {
+		width: 50%;
+		text-align: center;
+	}
+	.merch-item {
+		width: 90%;
+		height: 350px;
+	}
+	.merch-item-container>img {
+		height: 200px;
+	}
+	#footer>img {
+		height: 30%;
+		width: 90%;
+		top: 0px;
+		transform: translateY(20px);
+	}
+	#return-arrow {
+		position: absolute;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	#logo {
+		text-align: center;
+		width: 100%;
+		height: 50px;
+	}
+	#internal-nav-section {
+		height: 245px;	
+	}
+}

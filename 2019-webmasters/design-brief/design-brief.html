@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Isaiah Salek - Musician</title>
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="imgs/isaiah_favicon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="navbar">
+			<div id="navbar-container">
+				<a herf="javascript:void(0);" href="../index.html" id="return-arrow">&larr;</a>
+				<div id="logo"><img src="imgs/isaiah_salek_logo.png" alt="Isaiah Salek's logo"></img></div>
+				<div id="nav-links">
+					<div id="about"><a href="javascript:void(0);" onclick="showReturnPopup();">About</a></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="text-modal" class="modal">
+			<div id="text-popup" class="popup">
+				<div class="popup-close" onkeypress="hidePopup();" onclick="hidePopup();">X</div>
+				<div id="popup-text" class="popup-content">
+					Purple
+				</div>
+			</div>
+		</div>
+		
+		<div id="return-modal" class="modal">
+			<div id="return-popup" class="popup">
+				<div class="popup-close" onkeypress="hideReturnPopup();" onclick="hideReturnPopup();">X</div>
+				<div class="popup-content">
+					This Design Brief was developed by Panther Creek TSA
+					<br><br>
+					<a herf="javascript:void(0);" href="../cte-programs/cte-programs.html">Return to CTE Programs</a>
+					<br>
+					<a herf="javascript:void(0);" href="../tsa-chapter/tsa-chapter.html">Return to TSA Chapter</a>
+					<br>
+					<a herf="javascript:void(0);" href="../index.html">Return to Homepage</a>
+					<br>
+				</div>
+			</div>
+		</div>
+		
+		<br><br><br>
+		
+		<div id="heading-section" class="section">
+			<div id="heading-icon">
+				<img src="imgs/isaiah_salek_logo.png" alt="Isaiah Salek's logo"></img>
+				<br>
+				<div>Music Extraordinaire</div>
+			</div>
+		</div>
+		<div id="internal-nav-section" class="section">
+			<br>
+			<div id="internal-nav-container">
+				<span><a href="javascript:void(0);" onclick="scrollToId('about-isaiah');">About Isaiah</a></span>
+				<div></div>
+				<span><a href="javascript:void(0);" onclick="scrollToId('tour-dates');">Tour Dates</a></span>
+				<div></div>
+				<span><a href="javascript:void(0);" onclick="scrollToId('albums');">Albums</a></span>
+				<div></div>
+				<span><a href="javascript:void(0);" onclick="scrollToId('merch');">Merch</a></span>
+				<div></div>
+				<span><a href="javascript:void(0);" onclick="scrollToId('fan-posts');">Fan Posts</a></span>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+		<br><br>
+		<div id="about-isaiah" class="section">
+			<div class="section-header">
+				<div class="section-header-title">About Isaiah</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg"></img>
+			</div>
+			<div class="section-content">
+				<div id="biography-container">
+					<div id="name-pic">
+						<div>Isaiah Salek</div>
+						<img src="imgs/isaiah.jpg" alt="Isaiah Salek's Face"></img>
+					</div>
+					<br>
+					<br>
+					<div id="isaiah-biography">
+						Isaiah Salek is a musical artist from Cary, North Carolina. He found his passion for making music through Panther Creek TSA’s Music Production event, and eventually combined his instrumental talent with his vocal abilities to write songs that speak to the younger generation.
+						Isaiah wants to spread positivity in the world, and to uplift anyone that feels down. He has always wanted to use his voice to create positive change in society, and now music gives him a platform to do so.
+						Even with his recent success, Isaiah still remains dedicated to his school, as well as his local town of Cary, where he performs at local events and gives away free concert tickets and music to fans.
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+		<div id="tour-dates" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Tours</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg"></img>
+			</div>
+			<div class="section-content">
+				<div id="tour-table">
+					<div id="header-row" class="tour-row">
+						<div id="dates-title" class="cell first-column">Dates</div>
+						<div id="venue-title" class="cell">Venue</div>
+						<div id="city-title" class="cell second-last-column">City</div>
+						<div id="tickets-title" class="cell last-column">Tickets</div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">10 Apr 19</div>
+						<div class="cell">Panther Creek High School</div>
+						<div class="cell second-last-column">Cary</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">27 Apr 19</div>
+						<div class="cell">Carter-Finley Stadium</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">16 May 19</div>
+						<div class="cell">PNC Arena</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">3 Jul 19</div>
+						<div class="cell">O'Kelly-Riddick Stadium</div>
+						<div class="cell second-last-column">Durham</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">20 Jul 19</div>
+						<div class="cell">J.S. Dorton Arena</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">7 Aug 2019</div>
+						<div class="cell">Bank of America Stadium</div>
+						<div class="cell second-last-column">Charlotte</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">23 Aug 19</div>
+						<div class="cell">Panther Creek High School</div>
+						<div class="cell second-last-column">Cary</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">13 Sep 19</div>
+						<div class="cell">Carter-Finley Stadium</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">29 Sep 19</div>
+						<div class="cell">PNC Arena</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">3 Oct 19</div>
+						<div class="cell">J.S. Dorton Arena</div>
+						<div class="cell second-last-column">Raleigh</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">22 Oct 19</div>
+						<div class="cell">O'Kelly-Riddick Stadium</div>
+						<div class="cell second-last-column">Durham</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+					<div class="tour-row">
+						<div class="cell first-column">9 Nov 19</div>
+						<div class="cell">Panther Creek High School</div>
+						<div class="cell second-last-column">Cary</div>
+						<div class="cell last-column"><a href="javascript:void(0);" onclick="showPopup()" class="ticket-button">Buy</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+		<div id="albums" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Albums</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg"></img>
+			</div>
+			<div class="section-content">
+				<div id="album-container">
+					<div id="album-column-1" class="album-column">
+						<div class="album">
+							<img src="imgs/album1.png" alt="First Album Cover"></img>
+							<div class="album-title">Album #1</div>
+							<div class="listen-to-album-container">
+								<img onkeypress="showPopup(2);" onclick="showPopup(2);" src="imgs/play-button.png" alt="play button"></img>
+								<div>Click to play</div>
+							</div>
+						</div>
+						<div class="album">
+							<img src="imgs/album2.png" alt="Second Album Cover"></img>
+							<div class="album-title">Album #2</div>
+							<div class="listen-to-album-container">
+								<img onkeypress="showPopup(2);" onclick="showPopup(2);" src="imgs/play-button.png" alt="play button"></img>
+								<div>Click to play</div>
+							</div>
+						</div>
+						<div class="album">
+							<img src="imgs/album3.png" alt="Thrid Album Cover"></img>
+							<div class="album-title">Album #3</div>
+							<div class="listen-to-album-container">
+								<img onkeypress="showPopup(2);" onclick="showPopup(2);" src="imgs/play-button.png" alt="play button"></img>
+								<div>Click to play</div>
+							</div>
+						</div>
+					</div>
+					<div id="album-column-2" class="album-column">
+						<div class="album">
+							<img src="imgs/album4.png" alt="Fourth Album Cover"></img>
+							<div class="album-title">Album #4</div>
+							<div class="listen-to-album-container">
+								<img onkeypress="showPopup(2);" onclick="showPopup(2);" src="imgs/play-button.png" alt="play button"></img>
+								<div>Click to play</div>
+							</div>
+						</div>
+						<div class="album">
+							<img src="imgs/album5.png" alt="Fifth Album Cover"></img>
+							<div class="album-title">Album #5</div>
+							<div class="listen-to-album-container">
+								<img onkeypress="showPopup(2);" onclick="showPopup(2);" src="imgs/play-button.png" alt="play button"></img>
+								<div>Click to play</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="merch" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Merch</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg"></img>
+			</div>
+			<div class="section-content">
+				<div id="merch-container">
+					<div class="merch-item">
+						<div class="merch-item-container">
+							<img src="imgs/Shirt.png" alt="Isaiah Logo on a T-Shirt"></img>
+							<div class="merch-purchase-box">
+								<div class="merch-buy-text">Isaiah's Logo on a T-Shirt!<br>Buy Now! Only $15</div>
+								<br>
+								<br>
+								<a href="javascript:void(0);" class="merch-purchase-button" onclick="showPopup(1);">Purchase</a>
+							</div>
+						</div>
+					</div>
+					<div class="merch-item">
+						<div class="merch-item-container">
+							<img src="imgs/Mug.png" alt="Isaiah Logo on a Coffee Mug"></img>
+							<div class="merch-purchase-box">
+								<div class="merch-buy-text">Isaiah's Logo on a Coffee Mug!<br>Buy Now! Only $10</div>
+								<br>
+								<br>
+								<a href="javascript:void(0);" class="merch-purchase-button" onclick="showPopup(1);">Purchase</a>
+							</div>
+						</div>
+					</div>
+					<div class="merch-item">
+						<div class="merch-item-container">
+							<img src="imgs/Hat.png" alt="Isaiah Logo on a Cap"></img>
+							<div class="merch-purchase-box">
+								<div class="merch-buy-text">Isaiah's Logo on a Cap!<br>Buy Now! Only $18</div>
+								<br>
+								<br>
+								<a href="javascript:void(0);" class="merch-purchase-button" onclick="showPopup(1);">Purchase</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+		<div id="fan-posts" class="section">
+			<div class="section-header">
+				<div class="section-header-title">Fan Posts</div>
+				<img alt="section divider image" src="../global-imgs/heading-divider.svg"></img>
+			</div>
+			<div class="section-content">
+				<div id="fan-posts-container">
+					<div class="fan-post">
+						<div class="fan-name">Roisin Griffith</div>
+						<hr>
+						<div class="fan-content">Thank you so much for making positive and uplifting music! You have inspired me to pursue my own career as an artist, and I hope to someday work with you on song collaborations. I hope to also spread positively through my music, and to make the world a better place!</div>
+					</div>
+					<div class="fan-post">
+						<div class="fan-name">Brook Massey</div>
+						<hr>
+						<div class="fan-content">Thanks for a great experience at your last concert. It was great that you gave the proceeds of the concert back to the community, and that you took the time to inspire the kids at my school. You are a really great role model, and I hope to also help out people when I grow up. Good luck on continuing to make music, and I will definitely look forward to your new album!</div>
+					</div>
+					<div class="fan-post">
+						<div class="fan-name">Zac Chen</div>
+						<hr>
+						<div class="fan-content">Your music has helped me get through some tough events in my life. Listening to your music, I felt as if someone understood what I was going through, and was willing to help me with my problems. Your music always cheered me up whenever I was down, and I would like to thank you for being such a great person and artist!</div>
+					</div>
+					<div class="fan-post">
+						<div class="fan-name">Aroush Rankin</div>
+						<hr>
+						<div class="fan-content">I really enjoyed your latest album! It was not only good lyrically, but I enjoyed the experimentation with the musical instruments. It takes courage to try something new, and that's why you are my favorite artist. You are bold, creative, experimental, and are always in the pursuit of creating something truly unique.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="section">
+			<img src="imgs/isaiah_salek_logo.png" alt="Isaiah Salek's logo"></img>
+			<div>Panther Creek High School : 2920-1</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>
