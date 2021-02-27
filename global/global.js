@@ -27,6 +27,7 @@ $(".menu-container").click(function() {
 
 		$(".header-dropdown").css({"position" : "absolute", "height" : "100%"});
 		$(".header-dropdown-container").css("visibility", "visible");
+		$(".logo-pre-dropdown").css("display", "none");
 	} else {
 		$("#menu-bars").css("transform", "");
 		$(".menu-bar.1").css("transform", "");
@@ -38,5 +39,6 @@ $(".menu-container").click(function() {
 
 		$(".header-dropdown-container").css("visibility", "hidden");
 		$(".header-dropdown").css({"position" : "relative", "height" : "var(--header-height)"});
+		$(".logo-pre-dropdown").css("display", "block");
 	}
 });
