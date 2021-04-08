@@ -1,4 +1,4 @@
-let sectionContents = [ "", "", "", "", "", "" ];
+let sectionContents = [ "", "", "", "", "", "", "" ];
 
 $(function() {
 	db.collection("data").doc("resume").get().then((doc) => {
@@ -15,7 +15,7 @@ $(function() {
 
 		sectionContents[0] = makeSection("Skills", `<ul style='height:500px;'><li>${data.skills.join("</li><li>")}</li></ul>`);
 		sectionContents[1] = makeSection("Education", educationList);
-		sectionContents[5] = makeSection("Coursework", `<ul><li>${data.coursework.join("</li><li>")}</li></ul>`);
+		sectionContents[6] = makeSection("Coursework", `<ul><li>${data.coursework.join("</li><li>")}</li></ul>`);
 
 		sync();
 	});
@@ -43,6 +43,22 @@ $(function() {
 		sync();
 	});
 
+	db.collection("publications").orderBy("year", "desc").get().then(snap => {
+		let finalContent = "";
+
+		snap.forEach(doc => {
+			let data = doc.data();
+
+			finalContent += makePart(data.title, `<span class="resume-part-content-highlight">Publication Year: </span>${data.year}<br>
+												<span class="resume-part-content-highlight">View on
+													<a style="text-decoration:underline;" href='${data.url}'>axriv</a></span>`);
+		});
+
+		sectionContents[3] = makeSection("Publications", finalContent);
+
+		sync();
+	});
+
 	db.collection("certifications").orderBy("rank").get().then((snap) => {
 		let finalContent = "";
 
@@ -53,7 +69,7 @@ $(function() {
 			finalContent += makePart(data.title, `<span class="resume-part-content-highlight">${parts[0]}: </span>${parts[1]}`);
 		});
 
-		sectionContents[3] = makeSection("Certifications", finalContent);
+		sectionContents[4] = makeSection("Certifications", finalContent);
 
 		sync();
 	});
@@ -81,7 +97,7 @@ $(function() {
 			}
 		});
 
-		sectionContents[4] = makeSection("Awards", finalContent);
+		sectionContents[5] = makeSection("Awards", finalContent);
 
 		sync();
 	});
