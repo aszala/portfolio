@@ -51,7 +51,7 @@ $(function() {
 
 			finalContent += makePart(data.title, `<span class="resume-part-content-highlight">Publication Year: </span>${data.year}<br>
 												<span class="resume-part-content-highlight">View on
-													<a style="text-decoration:underline;" href='${data.url}'>axriv</a></span>`);
+													<a style="text-decoration:underline;" href='${data.url}'>arxiv</a></span>`);
 		});
 
 		sectionContents[3] = makeSection("Publications", finalContent);

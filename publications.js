@@ -66,7 +66,7 @@ function displayPublications(snap) {
 
 		element += `<div class='publication-contents'><div class='publications-meta-data'>
 			<div class='publication-tags'>Publication Year: ${data.year}</div>
-			<div class='project-url'>View on <a style="text-decoration:underline" href='${data.url}'>axriv</a></div></div>
+			<div class='project-url'>View on <a style="text-decoration:underline" href='${data.url}'>arxiv</a></div></div>
 			<br>
 			<div class='project-description'>${data.abstract}</div></div></div>`;
 
