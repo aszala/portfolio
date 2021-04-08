@@ -37,6 +37,10 @@
 	height: 15px;
 }
 
+.publication {
+	margin-bottom: 50px;
+}
+
 .filter-dropdown {
 	cursor: default;
 	position: relative;
