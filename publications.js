@@ -37,7 +37,7 @@ function onFilter(elm, val, type) {
 function getProjects() {
 	if (active_year_filters.length == 0) {
 		$(".active-filter").html("Active Filters: None");
-		publicationsReference.get().then(snap => {
+		publicationsReference.orderBy("year", "desc").get().then(snap => {
 			displayPublications(snap);
 		});
 	} else if (active_year_filters.length <= 10) {
