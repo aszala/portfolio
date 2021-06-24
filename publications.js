@@ -46,11 +46,7 @@ function getProjects() {
 			active_year_filters = [];
 		}
 
-		let query = publicationsReference.where("year", "==", active_year_filters[0]);
-
-		for (var i=1;i<active_year_filters.length;i++) {
-			query = query.where("year", "==", active_year_filters[i]);
-		}
+		let query = publicationsReference.where("year", "in", active_year_filters);
 
 		query.get().then(snap => {
 			displayPublications(snap);
