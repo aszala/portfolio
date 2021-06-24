@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
 </head>
 
 <body>
@@ -30,8 +29,8 @@
                 <a href="https://github.com/aszala/">Github</a>
               </p>
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%;border-radius:100%;overflow:hidden;">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="abhay2.jpg" class="hoverZoomLink" style="">
+            <td style="padding:2.5%;width:40%;max-width:40%;border-radius:200%;overflow:hidden;">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="abhay.jpg" class="hoverZoomLink" style="">
             </td>
           </tr>
         </tbody>
@@ -162,6 +161,8 @@
 			$("#publications").html("");
 			snap.forEach(doc => {
 				let data = doc.data();
+
+				let abs = data.abstract.split('.')[0] + '.' + data.abstract.split('.')[1];
 				let element =
 					`<tr>
 		              <td style="padding:20px;width:25%;vertical-align:middle">
@@ -183,7 +184,7 @@
 		                /
 		                <a href="${data.url}">arXiv</a>
 		                <p></p>
-		                <p>By placing priors on illumination and materials, we can recover NeRF-like models of the intrinsics of a scene from a single multi-image capture.</p>
+		                <p>${abs}.</p>
 		              </td>
 		  		  </tr>
 				`;
