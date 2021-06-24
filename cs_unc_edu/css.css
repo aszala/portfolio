@@ -25,6 +25,7 @@ html,body {
 
 .filter-dropdown {
 	cursor: default;
+	width: 250px;
 }
 
 .main-container {
@@ -126,4 +127,16 @@ a:hover {
 
 .titlecase {
 	text-transform: capitalize;
+}
+
+@media only screen and (max-width: 900px) {
+	.header-container {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.header-container>div {
+		width: 100%;
+		text-align: center;
+	}
 }
