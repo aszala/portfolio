@@ -1,198 +1,196 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Abhay Zala</title>
-		<link rel="stylesheet" href="css.css">
-	</head>
-	<body>
-		<div class="main-container">
-			<div class="section" style="border: none;">
-				<div class="header-container">
-					<div class="profile-image">
-						<img src="abhay2.jpg" alt="Abhay Zala profile picture">
-					</div>
-					<div class="information">
-						<div class="name">
-							Abhay Zala
-						</div>
-						<div class="job">
-							MURGe-Lab, UNC NLP
-						</div>
-						<div class="contact">
-							<div class="email">
-								<b>Email:</b> aszala@cs.unc.edu / zala.abhay@gmail.com
-							</div>
-							<div class="table-of-contents">
-								<a href="#research-interest">[Research Interest]</a>
-								<a href="#education">[Education]</a>
-								<a href="#publications">[Publications]</a>
-								<a href="https://github.com/aszala">[Github]</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="about">
-					I am a Junior (3rd year) undergraduate student at The University of North Carolina at Chapel Hill,
-					advised by <a href="https://www.cs.unc.edu/~mbansal/">Prof. Mohit Bansal</a>.
-				</div>
-			</div>
-			<a name="research-interest"></a>
-			<div class="section">
-				<div class="section-title">
-					Research Interest
-				</div>
-				<div class="section-content">
-					<ul>
-						<li>I am interested in work on integrating Natural Language Processing with other areas such as Computer Vision.</li>
-					</ul>
-				</div>
-			</div>
-			<a name="education"></a>
-			<div class="section">
-				<div class="section-title">
-					Education
-				</div>
-				<div class="section-content">
-					<ul id="education-list">
-					</ul>
-				</div>
-			</div>
-			<a name="publications"></a>
-			<div class="section">
-				<div class="section-title">
-					Publications
-				</div>
-				<div class="section-content">
-					<div class="filter-dropdown">
-						Filter by year <span style="font-size:12px;">&#9660;</span>: <span class="filter-years">All</span>
-					</div>
-					<div id="tags-filters" class="dropdown-menu"></div>
-					<div class="publications-list-containers">
-						<ul class="publications"></ul>
-					</div>
-				</div>
-			</div>
-		</div>
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-		<script type="text/javascript">
-			var firebaseConfig = {
-			   apiKey: "AIzaSyDq9wo9Jdn4PDhbHPVg0btkYUVVwsCatdU",
-			   authDomain: "portfolio-4722e.firebaseapp.com",
-			   databaseURL: "https://portfolio-4722e.firebaseio.com",
-			   projectId: "portfolio-4722e",
-			   storageBucket: "portfolio-4722e.appspot.com",
-			   messagingSenderId: "344412709404",
-			   appId: "1:344412709404:web:efc32e40ea3ab2ccd375d9"
-			};
+  <title>Abhay Zala</title>
 
-			firebase.initializeApp(firebaseConfig);
+  <meta name="author" content="Abhay Zala">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			var db = firebase.firestore();
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+</head>
 
-		</script>
-		<script type="text/javascript">
-			let publicationsReference = db.collection("publications");
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Abhay Zala</name>
+              </p>
+              <p>I am a Junior (3rd year) undergraduate student at The University of North Carolina at Chapel Hill,
+			  advised by <a href="https://www.cs.unc.edu/~mbansal/">Prof. Mohit Bansal</a>.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:aszala@cs.unc.edu">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://twitter.com/AbhayZala7">Twitter</a> &nbsp/&nbsp
+                <a href="https://github.com/aszala/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%;border-radius:100%;overflow:hidden;">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="abhay2.jpg" class="hoverZoomLink" style="">
+            </td>
+          </tr>
+        </tbody>
+	</table>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+		<tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
+              <p>
+                I am interested in work on integrating Natural Language Processing with other areas such as Computer Vision.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+	</table>
+	<div class="filter-dropdown">
+		Filter by year <span style="font-size:12px;">&#9660;</span>: <span class="filter-years">All</span>
+	</div>
+	<div id="tags-filters" class="dropdown-menu"></div>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+		<tbody id="publications">
 
-			let tags = [];
+    	</tbody>
+	</table>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+	<script type="text/javascript">
+		var firebaseConfig = {
+		   apiKey: "AIzaSyDq9wo9Jdn4PDhbHPVg0btkYUVVwsCatdU",
+		   authDomain: "portfolio-4722e.firebaseapp.com",
+		   databaseURL: "https://portfolio-4722e.firebaseio.com",
+		   projectId: "portfolio-4722e",
+		   storageBucket: "portfolio-4722e.appspot.com",
+		   messagingSenderId: "344412709404",
+		   appId: "1:344412709404:web:efc32e40ea3ab2ccd375d9"
+		};
 
-			$(function() {
-				db.collection("data").doc("resume").get().then((doc) => {
-					let data = doc.data();
+		firebase.initializeApp(firebaseConfig);
 
-					let education = data.education;
-					let educationList = "";
+		var db = firebase.firestore();
 
-					for (let i=0;i<education.length;i++) {
-						let school = education[i].split('|');
+	</script>
+	<script type="text/javascript">
+		let publicationsReference = db.collection("publications");
 
-						educationList += `<li>${school[2]}: <span class="titlecase">${school[0]}</span>, ${school[1]}</li>`;
-					}
+		let tags = [];
 
-					$("#education-list").append(educationList);
-				});
+		$(function() {
+			db.collection("data").doc("resume").get().then((doc) => {
+				let data = doc.data();
 
-				$(".filter-dropdown,.dropdown-menu").hover(function() {
-					$(".dropdown-menu").css("display", "block");
-				}, function() {
-					$(".dropdown-menu").css("display", "none");
-				});
+				let education = data.education;
+				let educationList = "";
 
-				db.collection("data").doc("publication_data").get().then(doc => {
-					let data = doc.data();
+				for (let i=0;i<education.length;i++) {
+					let school = education[i].split('|');
 
-					for (let i=0;i<data.years.length;i++) {
-						tags.push(data.years[i]);
-						$("#tags-filters").append(`<input type="checkbox" class='filter-object icon' onclick='onFilter(this, "${data.years[i]}", "year");' >
-													<label class="checkbox-container">${data.years[i]}</label>`);
-					}
-
-					getPublications();
-				});
-			});
-
-			active_year_filters = []
-
-			function onFilter(elm, val, type) {
-				if (elm.checked) {
-					if (type === "year")
-						active_year_filters.push(val);
-				} else {
-					if (type === "year") {
-						let index = active_year_filters.indexOf(val);
-						active_year_filters.splice(index, 1);
-					}
+					educationList += `<li>${school[2]}: <span class="titlecase">${school[0]}</span>, ${school[1]}</li>`;
 				}
 
-				if (active_year_filters.length == 0) {
-					$(".filter-years").html("All");
-				} else {
-					$(".filter-years").html(active_year_filters.join());
+				$("#education-list").append(educationList);
+			});
+
+			$(".filter-dropdown,.dropdown-menu").hover(function() {
+				$(".dropdown-menu").css("display", "block");
+			}, function() {
+				$(".dropdown-menu").css("display", "none");
+			});
+
+			db.collection("data").doc("publication_data").get().then(doc => {
+				let data = doc.data();
+
+				for (let i=0;i<data.years.length;i++) {
+					tags.push(data.years[i]);
+					$("#tags-filters").append(`<input type="checkbox" class='filter-object icon' onclick='onFilter(this, "${data.years[i]}", "year");' >
+												<label class="checkbox-container">${data.years[i]}</label>`);
 				}
 
 				getPublications();
-			}
+			});
+		});
 
-			function getPublications() {
-				if (active_year_filters.length == 0) {
-					publicationsReference.orderBy("year", "desc").get().then(snap => {
-						displayPublications(snap);
-					});
-				} else if (active_year_filters.length <= 10) {
-					if (active_year_filters.length == 0) {
-						active_year_filters = [];
-					}
+		active_year_filters = []
 
-					let query = publicationsReference.where("year", "in", active_year_filters);
-
-					query.get().then(snap => {
-						displayPublications(snap);
-					});
+		function onFilter(elm, val, type) {
+			if (elm.checked) {
+				if (type === "year")
+					active_year_filters.push(val);
+			} else {
+				if (type === "year") {
+					let index = active_year_filters.indexOf(val);
+					active_year_filters.splice(index, 1);
 				}
 			}
 
-			function displayPublications(snap) {
-				$(".publications").html("");
-				snap.forEach(doc => {
-					let data = doc.data();
-					let element = `<li class='publication'>
-										<div class='publication-header'>
-											<a class='title' href='${data.url}'>${data.title}</a>
-										</div>
-										<div class='publication-contents'>
-											<div class='publications-meta-data'>
-												<div class='publication-authors'>${data.authors}</div>
-												<div class='publication-conference'>${data.conference}</div>
-											</div>
-										</div>
-									</li>`;
+			if (active_year_filters.length == 0) {
+				$(".filter-years").html("All");
+			} else {
+				$(".filter-years").html(active_year_filters.join());
+			}
 
-					$(".publications").append(element);
+			getPublications();
+		}
+
+		function getPublications() {
+			if (active_year_filters.length == 0) {
+				publicationsReference.orderBy("year", "desc").get().then(snap => {
+					displayPublications(snap);
+				});
+			} else if (active_year_filters.length <= 10) {
+				if (active_year_filters.length == 0) {
+					active_year_filters = [];
+				}
+
+				let query = publicationsReference.where("year", "in", active_year_filters);
+
+				query.get().then(snap => {
+					displayPublications(snap);
 				});
 			}
-		</script>
-	</body>
+		}
+
+		function displayPublications(snap) {
+			$("#publications").html("");
+			snap.forEach(doc => {
+				let data = doc.data();
+				let element =
+					`<tr>
+		              <td style="padding:20px;width:25%;vertical-align:middle">
+		                <div class="one">
+		                  <div class="two" id='nerfactor_image'>
+		                    <img src='${data.image_name}' width="160"></div>
+		                </div>
+		              </td>
+		              <td style="padding:20px;width:75%;vertical-align:middle">
+		                <a href="https://people.csail.mit.edu/xiuming/projects/nerfactor/">
+		                <papertitle>${data.title}</papertitle>
+		                </a>
+		                <br>
+		                ${data.authors}
+		                <br>
+		                ${data.conference}
+		                <br>
+		                <a href="${data.project_url}">project page</a>
+		                /
+		                <a href="${data.url}">arXiv</a>
+		                <p></p>
+		                <p>By placing priors on illumination and materials, we can recover NeRF-like models of the intrinsics of a scene from a single multi-image capture.</p>
+		              </td>
+		  		  </tr>
+				`;
+
+				$("#publications").append(element);
+			});
+		}
+	</script>
+
+</body>
+
 </html>
