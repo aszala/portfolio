@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: white;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+}
+
+.side-pane {
+	width: 15%;
+	height: 100%;
+	background: #222831;
+	position: relative;
+}
+
+.flex-container-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-container-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-content {
+	width: 85%;
+	height: 100%;
+	background: white;
+	overflow: auto;
+}
+
+.section {
+	width: 100%;
+	border: solid red 1px;
+}
+
+.center-all {
+	margin: auto;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.profile-img {
+	width: 200px;
+	height: 200px;
+	background: url('imgs/abhay.jpg');
+	background-position:center;
+	background-size: cover;
+	overflow: hidden;
+	border-radius: 50%;
+	border: solid gray 10px;
+}
+
+.profile-img-section {
+	height: 25%;
+}
+
+.profile-name {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 1.5em;
+}
+
+.nav-menu {
+	position: relative;
+	top: 50px;
+	height: 60%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.nav-menu-item {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: inherit;
+	transition: color, 200ms;
+}
+
+.nav-menu-item:hover {
+	color: #18b500;
+}
+
+.socials-side {
+	position: absolute;
+	bottom: 5px;
+}
+
+.socials-side-container {
+	justify-content: space-around;
+	height: 15%;
+}
+
+.social-icon {
+	width: 15px;
+}
+
+.home {
+	height: 100%;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('imgs/background.jpg');
+	background-size: cover;
+}
