@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
+:root {
+	--accent-color: #66ffb0;
+}
+
 html, body {
 	margin: 0;
 	width: 100%;
@@ -40,11 +44,11 @@ body {
 	height: 100%;
 	background: white;
 	overflow: auto;
+	position: relative;
 }
 
 .section {
 	width: 100%;
-	border: solid red 1px;
 }
 
 .center-all {
@@ -94,7 +98,7 @@ body {
 }
 
 .nav-menu-item:hover {
-	color: #18b500;
+	color: var(--accent-color);
 }
 
 .socials-side {
@@ -109,10 +113,120 @@ body {
 
 .social-icon {
 	width: 15px;
+	transition: filter 200ms;
+}
+
+
+.social-icon:hover {
+	filter: invert(50%);
+}
+
+.home-background {
+	height: 100%;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55) ), url('imgs/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	filter: blur(8px);
+	position: relative;
 }
 
 .home {
+	background: transparent;
 	height: 100%;
-	background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('imgs/background.jpg');
-	background-size: cover;
+	position: absolute;
+	top: 0;
+}
+
+.home-container {
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	justify-content: center;
+}
+
+.home-container>div {
+	margin-bottom: 50px;
+}
+
+.my-name {
+	font-size: 3em;
+}
+
+.button {
+	background-color:transparent;
+	border-radius:28px;
+	border:1px solid var(--accent-color);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--accent-color);
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	transition: background 200ms, color 200ms;
+}
+.button:hover {
+	background-color: var(--accent-color);
+	color: black;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.about {
+	height: 75%;
+	background: #212529;
+}
+
+
+.section-title {
+	position: relative;
+	font-size: 3em;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
+	padding-top: 50px;
+	height: 75px;
+}
+
+hr {
+	width: 100px;
+	background-color: var(--accent-color);
+	height: 3px;
+	border: none;
+}
+
+.section-content {
+	height: calc(75% - 75px);
+	justify-content: space-between;
+}
+
+.bio {
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	color: gray;
+}
+
+.stats {
+	width: 80%;
+	margin: auto;
+	justify-content: space-between;
+}
+
+.stats>div {
+	width: 25%;
+	text-align: center;
+	border-right: solid var(--accent-color) 1px;
+	border-left: solid var(--accent-color) 1px;
+}
+
+.stat-big {
+	font-size: 2em;
+}
+
+.stat-small {
+	color: gray;
 }
