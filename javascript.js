@@ -19,7 +19,7 @@ $(function() {
 		sectionContents[1] = makeSection("Education", educationList);
 
 		cols = Math.round(data.coursework.length / 5);
-		sectionContents[6] = makeSection("Coursework", `<ul style="columns: ${cols}"><li>${data.coursework.join("</li><li>")}</li></ul>`);
+		sectionContents[4] = makeSection("Coursework", `<ul style="columns: ${cols}"><li>${data.coursework.join("</li><li>")}</li></ul>`);
 
 		sync();
 	});
@@ -44,7 +44,7 @@ $(function() {
 			total_publications += 1;
 		});
 
-		sectionContents[3] = makeSection("Publications", finalContent);
+		sectionContents[6] = makeSection("<a id='publications'></a>Publications", finalContent);
 
 		sync();
 
@@ -84,13 +84,14 @@ $(function() {
 			finalContent += makePart(data.title, `<span class="resume-part-content-highlight">${parts[0]}: </span>${parts[1]}`);
 		});
 
-		sectionContents[4] = makeSection("Certifications", finalContent);
+		sectionContents[3] = makeSection("Certifications", finalContent);
 
 		sync();
 	});
 
 	db.collection("awards").orderBy("rank").get().then((snap) => {
 		let total_awards = 0;
+		let finalContent = "";
 
 		snap.forEach(doc => {
 			let data = doc.data();
@@ -100,14 +101,47 @@ $(function() {
 				total_awards += data.state.length;
 				total_awards += data.robotics.length;
 
-			} else {
 
+				let cols = Math.round(data.national.length / 5);
+				let cols2 = Math.round(data.state.length / 5);
+				let cols3 = Math.round(data.robotics.length / 1);
+
+				let content = `<ul style="list-style-type: none;">
+									<li>National Awards:</li>
+									<br>
+									<ul style="columns: ${cols};list-style-type: none;"><li>${data.national.join("</li><li>")}</li></ul>
+									<br><br>
+									<li>State Awards:</li>
+									<br>
+									<ul style="columns: ${cols2};list-style-type: none;"><li>${data.state.join("</li><li>")}</li></ul>
+									<br><br>
+									<li>Regional Robotics Awards:</li>
+									<br>
+									<ul style="columns: ${cols3};list-style-type: none;"><li>${data.robotics.join("</li><li>")}</li></ul>
+								</ul>`
+
+				finalContent += makePart("Technology Student Association (TSA): ", content);
+			} else {
+				let cols = Math.round(data.awards.length / 5);
+
+				let x = [];
+
+				for (let i=0;i<data.awards.length;i++) {
+					let lastIndex = data.awards[i].lastIndexOf(" ");
+					x.push(data.awards[i].substring(0, lastIndex));
+				}
+
+				finalContent += makePart(doc.id, `<ul style="columns: ${cols};list-style-type: none;"><li>${x.join("</li><li>")}</li></ul>`);
 				total_awards += data.awards.length;
 			}
 		});
 
 
 		$("#award-count").html(total_awards);
+
+		sectionContents[5] = makeSection("<a id='awards'></a>Awards", finalContent);
+
+		sync();
 	});
 
 	db.collection("projects").get().then(snap => {
@@ -129,8 +163,8 @@ function sync() {
 
 	for (let i=0;i<sectionContents.length;i++) {
 		if (sectionContents[i].length <= 1) {
-			//final = "";
-			//return;
+			final = "";
+			return;
 		} else {
 			final += sectionContents[i];
 		}
