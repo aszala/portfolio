@@ -77,7 +77,7 @@ body {
 	width: 100%;
 	text-align: center;
 	margin-top: 50px;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 .nav-menu {
@@ -90,11 +90,13 @@ body {
 
 .nav-menu-item {
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 20px;
 	text-decoration: none;
 	color: inherit;
 	transition: color, 200ms;
+	margin-left: 25%;
+	font-size: 1.5em;
 }
 
 .nav-menu-item:hover {
@@ -150,7 +152,7 @@ body {
 }
 
 .my-name {
-	font-size: 3em;
+	font-size: 4em;
 }
 
 .button {
@@ -183,12 +185,26 @@ body {
 
 .section-title {
 	position: relative;
+	font-size: 5em;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
+	padding-top: 50px;
+	height: 75px;
+}
+
+.section-sub-title {
+	position: relative;
 	font-size: 3em;
 	width: 100%;
 	text-align: center;
 	margin-bottom: 25px;
 	padding-top: 50px;
 	height: 75px;
+}
+
+.resume-section-content {
+	font-size: 1.2em;
 }
 
 hr {
@@ -229,4 +245,63 @@ hr {
 
 .stat-small {
 	color: gray;
+}
+
+
+.resume {
+	background: #343a40;
+}
+
+ul {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.resume-section-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	justify-content: center;
+}
+
+.resume-part-header {
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+.resume-part {
+	text-align: center;
+}
+
+.project-description {
+	width: 80%;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.dots {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+::-webkit-scrollbar-thumb:active {
+  background: var(--accent-color);
+}
+::-webkit-scrollbar-track {
+  background: rgb(20,20,20);
 }
