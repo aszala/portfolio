@@ -177,11 +177,30 @@ body {
 	top:1px;
 }
 
-.about {
-	height: 75%;
+.about, .projects {
 	background: #212529;
 }
 
+.about {
+	height: 75%;
+}
+
+.project-contents>a {
+	display: inline;
+	font-size: 1.2em;
+}
+
+.project-contents>div, .contact-contents>div {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.make-white {
+	color: white !important;
+}
 
 .section-title {
 	position: relative;
@@ -248,7 +267,7 @@ hr {
 }
 
 
-.resume {
+.resume, .contact {
 	background: #343a40;
 }
 
