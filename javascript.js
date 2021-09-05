@@ -1,4 +1,29 @@
 let sectionContents = [ "", "", "", "", "", "", "" ];
+let sections = [ "home", "about", "resume", "awards", "publications", "projects", "contact" ];
+
+$(".main-content").scroll(function() {
+	updateNavScroll();
+});
+
+function updateNavScroll() {
+	for (let i=0;i<sections.length;i++) {
+		let top = $(".main-content").scrollTop();
+
+		let height2 = 0;
+
+		if (i == sections.length-1) {
+			height2 = top+10;
+		} else {
+			height2 = document.getElementById(sections[i+1]).offsetTop;
+		}
+
+		if (top > document.getElementById(sections[i]).offsetTop - (screen.height-100)  && top < height2) {
+		   $("#" + sections[i] + "-nav").css("color", "var(--accent-color)");
+		} else{
+		   $("#" + sections[i] + "-nav").css("color", "white");
+		}
+	}
+}
 
 $(function() {
 	db.collection("data").doc("resume").get().then((doc) => {
@@ -44,7 +69,7 @@ $(function() {
 			total_publications += 1;
 		});
 
-		sectionContents[6] = makeSection("<a id='publications'></a>Publications", finalContent);
+		sectionContents[6] = "<a id='publications'></a>" + makeSection("Publications", finalContent);
 
 		sync();
 
@@ -139,7 +164,7 @@ $(function() {
 
 		$("#award-count").html(total_awards);
 
-		sectionContents[5] = makeSection("<a id='awards'></a>Awards", finalContent);
+		sectionContents[5] = "<a id='awards'></a>" + makeSection("Awards", finalContent);
 
 		sync();
 	});

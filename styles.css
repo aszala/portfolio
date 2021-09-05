@@ -100,6 +100,10 @@ body {
 }
 
 .nav-menu-item:hover {
+	color: var(--accent-color) !important;
+}
+
+#home-nav {
 	color: var(--accent-color);
 }
 
@@ -323,4 +327,42 @@ ul {
 }
 ::-webkit-scrollbar-track {
   background: rgb(20,20,20);
+}
+
+
+@media only screen and (max-width: 1515px) {
+	.nav-menu-item {
+		margin-left: 5%;
+	}
+}
+
+
+@media only screen and (max-width: 1470px) {
+
+	.profile-img {
+		width: 150px;
+		height: 150px;
+	}
+
+	.profile-name {
+		font-size: 1.5em;
+		margin-top: 25%;
+	}
+
+}
+
+@media only screen and (max-width: 1160px) {
+	.side-pane {
+		width: 250px;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+		z-index: 100;
+	}
+
+	.main-content {
+		width: 100%;
+	}
 }
