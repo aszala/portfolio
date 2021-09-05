@@ -15,6 +15,7 @@ html, body {
 body {
 	font-family: "Poppins", sans-serif;
 	color: white;
+	background: #222831;
 }
 
 .main {
@@ -27,6 +28,7 @@ body {
 	height: 100%;
 	background: #222831;
 	position: relative;
+	transition: transform 200ms;
 }
 
 .flex-container-row {
@@ -105,6 +107,30 @@ body {
 
 #home-nav {
 	color: var(--accent-color);
+}
+
+.nav-pullout {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	width: 50px;
+	height: 50px;
+	background: #222831;
+	z-index: 100;
+	line-height: 5px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 2.5em;
+	cursor: pointer;
+	display: none;
+	transition: color 200ms;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
 .socials-side {
@@ -354,7 +380,6 @@ ul {
 @media only screen and (max-width: 1160px) {
 	.side-pane {
 		width: 250px;
-		overflow: hidden;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -364,5 +389,9 @@ ul {
 
 	.main-content {
 		width: 100%;
+	}
+
+	#pullout-icon {
+		display: block !important;
 	}
 }

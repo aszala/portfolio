@@ -25,7 +25,29 @@ function updateNavScroll() {
 	}
 }
 
+$( window ).resize(function() {
+	let element = document.querySelector('.side-pane');
+	element.style.transform = null;
+});
+
 $(function() {
+	$("#pullout-icon").on('click', function() {
+		let element = document.querySelector('.side-pane');
+
+		let style = window.getComputedStyle(element);
+		let matrix = new WebKitCSSMatrix(style.transform);
+
+		if (matrix.m41 == -250) {
+			$(".side-pane").css("transform", "translateX(0px)");
+			$("#pullout-icon").html("X");
+			$("#pullout-icon").css({"line-height": "100%", "color" : "red"});
+		} else {
+			$(".side-pane").css("transform", "translateX(-100%)");
+			$("#pullout-icon").html("_<br>_<br>_<br>");
+			$("#pullout-icon").css({"line-height": "5px", "color" : "white"});
+		}
+	});
+
 	db.collection("data").doc("resume").get().then((doc) => {
 		let data = doc.data();
 
