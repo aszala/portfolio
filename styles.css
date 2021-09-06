@@ -20,6 +20,7 @@ body {
 
 .main {
 	width: 100%;
+	scroll-behavior: smooth;
 	height: 100%;
 }
 
@@ -47,6 +48,7 @@ body {
 	background: white;
 	overflow: auto;
 	position: relative;
+	scroll-behavior: smooth;
 }
 
 .section {
@@ -272,6 +274,7 @@ hr {
 	text-align: center;
 	width: 80%;
 	margin: auto;
+	font-size: 1.3em;
 	color: gray;
 }
 

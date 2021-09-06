@@ -1,5 +1,5 @@
 let sectionContents = [ "", "", "", "", "", "", "" ];
-let sections = [ "home", "about", "resume", "awards", "publications", "projects", "contact" ];
+let sections = [ "home", "about", "resume", "publications", "awards", "projects", "contact" ];
 
 $(".main-content").scroll(function() {
 	updateNavScroll();
@@ -66,7 +66,7 @@ $(function() {
 		sectionContents[1] = makeSection("Education", educationList);
 
 		cols = Math.round(data.coursework.length / 5);
-		sectionContents[4] = makeSection("Coursework", `<ul style="columns: ${cols}"><li>${data.coursework.join("</li><li>")}</li></ul>`);
+		sectionContents[6] = makeSection("Coursework", `<ul style="columns: ${cols}"><li>${data.coursework.join("</li><li>")}</li></ul>`);
 
 		sync();
 	});
@@ -91,7 +91,7 @@ $(function() {
 			total_publications += 1;
 		});
 
-		sectionContents[6] = "<a id='publications'></a>" + makeSection("Publications", finalContent);
+		sectionContents[4] = "<a id='publications'></a>" + makeSection("Publications", finalContent);
 
 		sync();
 
@@ -103,6 +103,10 @@ $(function() {
 
 		snap.forEach(doc => {
 			let data = doc.data();
+
+			if (data.rank == -1) {
+				return;
+			}
 
 			let roles = data.roles;
 
