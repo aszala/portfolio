@@ -51,6 +51,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+.resume-button-holder {
+	width:100%;text-align:center;
+}
+
 .section {
 	width: 100%;
 }
