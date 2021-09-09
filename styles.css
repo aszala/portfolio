@@ -30,6 +30,7 @@ body {
 	background: #222831;
 	position: relative;
 	transition: transform 200ms;
+	justify-content:
 }
 
 .flex-container-row {
@@ -66,9 +67,13 @@ body {
 	top: 50%;
 }
 
+.center-hor {
+	margin: auto;
+}
+
 .profile-img {
-	width: 200px;
-	height: 200px;
+	width: 75%;
+	padding-bottom: 75%;
 	background: url('imgs/abhay.jpg');
 	background-position:center;
 	background-size: cover;
@@ -78,14 +83,16 @@ body {
 }
 
 .profile-img-section {
-	height: 25%;
+	height: 30%;
+	position: relative;
 }
 
 .profile-name {
 	width: 100%;
 	text-align: center;
-	margin-top: 50px;
 	font-size: 2em;
+	position: relative;
+	top: 10px;
 }
 
 .nav-menu {
@@ -371,15 +378,24 @@ ul {
 
 
 @media only screen and (max-width: 1470px) {
-
+/*
 	.profile-img {
 		width: 150px;
 		height: 150px;
-	}
+	}*/
 
 	.profile-name {
 		font-size: 1.5em;
-		margin-top: 25%;
+	}
+
+}
+
+
+@media only screen and (max-height: 915px) {
+
+	.profile-img {
+		width: 20vh;
+		padding-bottom: 20vh;
 	}
 
 }
