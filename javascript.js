@@ -1,46 +1,270 @@
-let i = 1;
+let sectionContents = [ "", "", "", "", "", "", "" ];
+let sections = [ "home", "about", "resume", "publications", "awards", "projects", "contact" ];
 
-setImage();
-setInterval(setImage, 5000);
+$(".main-content").scroll(function() {
+	updateNavScroll();
+});
 
-function setImage() {
-	$(".images").fadeOut(function() {
-		$(".images").css("background-image",
-			"linear-gradient(0deg, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 100%), linear-gradient(90deg, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 100%), url('imgs/friends/friends" + i + ".jpg')");
-		$(".images").fadeIn();
-		i++;
+function updateNavScroll() {
+	for (let i=0;i<sections.length;i++) {
+		let top = $(".main-content").scrollTop();
 
-		if (i == 8) {
-			i = 1;
+		let height2 = 0;
+
+		if (i == sections.length-1) {
+			height2 = top+10;
+		} else {
+			height2 = document.getElementById(sections[i+1]).offsetTop;
+		}
+
+		if (top > document.getElementById(sections[i]).offsetTop - (screen.height-100)  && top < height2) {
+		   $("#" + sections[i] + "-nav").css("color", "var(--accent-color)");
+		} else{
+		   $("#" + sections[i] + "-nav").css("color", "white");
+		}
+	}
+}
+
+$( window ).resize(function() {
+	let element = document.querySelector('.side-pane');
+	element.style.transform = null;
+});
+
+$(function() {
+	$("#pullout-icon").on('click', function() {
+		let element = document.querySelector('.side-pane');
+
+		let style = window.getComputedStyle(element);
+		let matrix = new WebKitCSSMatrix(style.transform);
+
+		if (matrix.m41 == -250) {
+			$(".side-pane").css("transform", "translateX(0px)");
+			$("#pullout-icon").html("X");
+			$("#pullout-icon").css({"line-height": "100%", "color" : "red"});
+		} else {
+			$(".side-pane").css("transform", "translateX(-100%)");
+			$("#pullout-icon").html("_<br>_<br>_<br>");
+			$("#pullout-icon").css({"line-height": "5px", "color" : "white"});
 		}
 	});
+
+	db.collection("data").doc("resume").get().then((doc) => {
+		let data = doc.data();
+
+		let education = data.education;
+		let educationList = "";
+
+		for (let i=0;i<education.length;i++) {
+			let school = education[i].split('|');
+
+			educationList += makePart(school[0], `<span class="resume-part-content-highlight">${school[1]}: </span>${school[2]}<br><br>`);
+		}
+
+		cols = Math.round(data.skills.length / 10);
+
+		sectionContents[0] = makeSection("Skills", `<ul style="columns: ${cols}"><li>${data.skills.join("</li><li>")}</li></ul>`);
+		sectionContents[1] = makeSection("Education", educationList);
+
+		cols = Math.round(data.coursework.length / 5);
+		sectionContents[6] = makeSection("Coursework", `<ul style="columns: ${cols}"><li>${data.coursework.join("</li><li>")}</li></ul>`);
+
+		sync();
+	});
+
+	$("#year-count").html((parseInt(new Date().getFullYear()) - 2015) + "+");
+
+	db.collection("publications").orderBy("year", "desc").get().then(snap => {
+		let total_publications = 0;
+		let finalContent = "";
+
+		snap.forEach(doc => {
+			let data = doc.data();
+
+			finalContent += makePart(data.title, `${data.authors}<br>${data.conference}<br><br>
+												<span class="resume-part-content-highlight">View on
+													<a style="text-decoration:underline;color:white !important;" href='${data.url}'>Arxiv</a></span>,
+													<a style="text-decoration:underline;color:white !important;" href='${data.project_page}'>Project Page</a></span>
+													<br>
+													<div class='project-description'>${data.abstract}</div><br><br><br>`);
+
+
+			total_publications += 1;
+		});
+
+		sectionContents[4] = "<a id='publications'></a>" + makeSection("Publications", finalContent);
+
+		sync();
+
+		$("#publication-count").html(total_publications);
+	});
+
+	db.collection("experience").orderBy("rank").get().then((snap) => {
+		let finalContent = "";
+
+		snap.forEach(doc => {
+			let data = doc.data();
+
+			if (data.rank == -1) {
+				return;
+			}
+
+			let roles = data.roles;
+
+			for (let i=0;i<roles.length;i++) {
+				let parts = roles[i].split(": ");
+				roles[i] = `<span class="resume-part-content-highlight">${parts[0]}: </span>${parts[1]}`;
+			}
+
+			roles = roles.join("<br>");
+
+			finalContent += makePart(data.title, `${roles}`);
+		});
+
+		sectionContents[2] = makeSection("Experience", finalContent);
+
+		sync();
+	});
+
+	db.collection("certifications").orderBy("rank").get().then((snap) => {
+		let finalContent = "";
+
+		snap.forEach(doc => {
+			let data = doc.data();
+			let parts = data.provider.split(": ");
+
+			finalContent += makePart(data.title, `<span class="resume-part-content-highlight">${parts[0]}: </span>${parts[1]}`);
+		});
+
+		sectionContents[3] = makeSection("Certifications", finalContent);
+
+		sync();
+	});
+
+	db.collection("awards").orderBy("rank").get().then((snap) => {
+		let total_awards = 0;
+		let finalContent = "";
+
+		snap.forEach(doc => {
+			let data = doc.data();
+
+			if (doc.id === "tsa") {
+				total_awards += data.national.length;
+				total_awards += data.state.length;
+				total_awards += data.robotics.length;
+
+
+				let cols = Math.round(data.national.length / 5);
+				let cols2 = Math.round(data.state.length / 5);
+				let cols3 = Math.round(data.robotics.length / 1);
+
+				let content = `<ul style="list-style-type: none;">
+									<li>National Awards:</li>
+									<br>
+									<ul style="columns: ${cols};list-style-type: none;"><li>${data.national.join("</li><li>")}</li></ul>
+									<br><br>
+									<li>State Awards:</li>
+									<br>
+									<ul style="columns: ${cols2};list-style-type: none;"><li>${data.state.join("</li><li>")}</li></ul>
+									<br><br>
+									<li>Regional Robotics Awards:</li>
+									<br>
+									<ul style="columns: ${cols3};list-style-type: none;"><li>${data.robotics.join("</li><li>")}</li></ul>
+								</ul>`
+
+				finalContent += makePart("Technology Student Association (TSA): ", content);
+			} else {
+				let cols = Math.round(data.awards.length / 5);
+
+				let x = [];
+
+				for (let i=0;i<data.awards.length;i++) {
+					let lastIndex = data.awards[i].lastIndexOf(" ");
+					x.push(data.awards[i].substring(0, lastIndex));
+				}
+
+				finalContent += makePart(doc.id, `<ul style="columns: ${cols};list-style-type: none;"><li>${x.join("</li><li>")}</li></ul>`);
+				total_awards += data.awards.length;
+			}
+		});
+
+
+		$("#award-count").html(total_awards);
+
+		sectionContents[5] = "<a id='awards'></a>" + makeSection("Awards", finalContent);
+
+		sync();
+	});
+
+	db.collection("projects").get().then(snap => {
+		let total_projects = 0;
+
+		snap.forEach(doc => {
+			let data = doc.data();
+
+			total_projects += 1;
+		});
+
+		$("#project-count").html(total_projects);
+	});
+});
+
+
+function sync() {
+	let final = "";
+
+	for (let i=0;i<sectionContents.length;i++) {
+		if (sectionContents[i].length <= 1) {
+			final = "";
+			return;
+		} else {
+			final += sectionContents[i];
+		}
+	}
+
+	sectionContents = ["", "", "", "", "", "", "" ];
+
+	$("#resume-content-holder").append(final);
 }
 
 
-let whoami = "$ whoami";
-let whoamiIndex = 2;
+function makePart(title, content) {
+	let part = `<div class='resume-part'>
+					<div class="resume-part-container">
+						<h3 class="resume-part-header">${title}</h3>
+						<div class="resume-part-content">${content}</div>
+					</div>
+				</div>`
 
-$(".whoami-description").fadeOut(0);
+	return part;
+}
 
-var cursorFlicker = setInterval(function() {
-	$("#cursor").fadeOut();
-	$("#cursor").fadeIn();
-}, 100);
+function makeSection(title, content) {
+	let section = `
+		<div class="resume-section section">
+			<div class="resume-section-container section flex-container-column">
+				<div class="section-sub-title">
+					${title}
+					<hr>
+				</div>
+				<div class="resume-section-content">
+					${content}
+				</div>
+			</div>
+		</div>
+	`;
 
-var whoamiInterval;
-whoamiInterval = setInterval(function() {
-	$(".whoami-title").html(whoami.substring(0, whoamiIndex) + "<span id='cursor'> I</span>");
-	whoamiIndex++;
+	return section;
+}
 
-	if (whoamiIndex == whoami.length+1) {
-		clearInterval(whoamiInterval);
-		setTimeout(function() {
-			$(".whoami-description").fadeIn();
-			setTimeout(function() {
-				$(".name").fadeIn();
-			}, 500);
-		}, 1000);
-	}
-}, 200);
 
-$(".name").fadeOut(0);
+function expand(id) {
+	$('#more-' + id).css('display', 'inline');
+	$('#dots-' + id).css('display', 'none');
+	$('#anti-dots-' + id).css('display', 'inline');
+}
+
+function collapse(id) {
+	$('#more-' + id).css('display', 'none');
+	$('#dots-' + id).css('display', 'inline');
+	$('#anti-dots-' + id).css('display', 'none');
+}
