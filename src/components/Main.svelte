@@ -11,6 +11,5 @@ function scrollTo(elem) {
 
 <main>
 	<Header />
-	<hr>
 	<About />
 </main>

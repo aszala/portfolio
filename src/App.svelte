@@ -18,6 +18,10 @@ router.start()
 <svelte:component this="{page}" />
 
 <style>
+	:global(:root) {
+		--accent-color: #00a78e;
+	}
+
 	:global(html) {
 		scroll-behavior: smooth;
 	}
@@ -27,7 +31,6 @@ router.start()
 	}
 
 	:global(main) {
-		width: 80%;
-		margin: auto;
+		width: 100%;
 	}
 </style>
