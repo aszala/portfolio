@@ -1,12 +1,11 @@
 <script>
 import router from 'page';
-import Home from './components/Home.svelte'
+import Main from './components/Main.svelte'
 
 let page;
 let title;
 
-router('/', () => { page = Home; title = "Abhay Zala Profolio"; });
-// router('/colloquium', () => { page = Colloquium; title = "Colloquium Series"; });
+router('/', () => { page = Main; title = "Abhay Zala Portfolio"; });
 router.start()
 
 </script>
@@ -17,3 +16,18 @@ router.start()
 </svelte:head>
 
 <svelte:component this="{page}" />
+
+<style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
+	:global(body) {
+		padding: 0;
+	}
+
+	:global(main) {
+		width: 80%;
+		margin: auto;
+	}
+</style>
