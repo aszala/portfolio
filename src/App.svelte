@@ -18,8 +18,10 @@ router.start()
 <svelte:component this="{page}" />
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400&display=swap');
+
 	:global(:root) {
-		--accent-color: #00a78e;
+		--accent-color: #45ff4b;
 	}
 
 	:global(html) {
@@ -28,6 +30,7 @@ router.start()
 
 	:global(body) {
 		padding: 0;
+		font-family: 'Asap', sans-serif;
 	}
 
 	:global(main) {
