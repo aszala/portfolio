@@ -1,12 +1,15 @@
 <script>
 import router from 'page';
 import Main from './components/Main.svelte'
+import { initFirebase } from './Firebase.svelte'
 
 let page;
 let title;
 
 router('/', () => { page = Main; title = "Abhay Zala Portfolio"; });
 router.start()
+
+initFirebase();
 
 </script>
 

@@ -5,10 +5,10 @@
 		</div>
 		<div id="links-container" class="nav-container">
 			<ul id="links-list">
-				<li><a data-hover="About" href="#about">about</a></li>
-				<li><a data-hover="Experience" href="#experience">experience</a></li>
-				<li><a data-hover="Resume/CV" href="/resume">resume/cv</a></li>
-				<li><a data-hover="Projects" href="/projects">projects</a></li>
+				<li><a data-hover="about" href="#about">about</a></li>
+				<li><a data-hover="resume/cv" href="/resume">resume/cv</a></li>
+				<li><a data-hover="publications" href="/publications">publications</a></li>
+				<li><a data-hover="projects" href="/projects">projects</a></li>
 			</ul>
 		</div>
 	</nav>
