@@ -35,6 +35,7 @@ initFirebase();
 		padding: 0;
 		font-family: 'Asap', sans-serif;
 		background: rgba(2,3,5);
+		color: #cccccc;
 	}
 
 	:global(main) {

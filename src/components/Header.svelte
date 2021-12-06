@@ -100,7 +100,6 @@
 		width: 80%;
 		margin: auto;
 		display: flex;
-		color: #cccccc;
 		font-size: 1.5em;
 	}
 
