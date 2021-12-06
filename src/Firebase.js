@@ -1,4 +1,3 @@
-<script context="module">
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, getDoc } from "firebase/firestore";
@@ -38,5 +37,3 @@ export async function getDocument(collection, docID) {
 		return data;
 	}
 }
-
-</script>

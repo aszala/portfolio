@@ -22,11 +22,8 @@
 			Undergraduate Research Assistant | Upcoming Software Development Intern at Capital One
 			<br>
 			<br>
-			Email: <a href="mailto:aszala.cs.unc.edu">aszala.cs.unc.edu</a> |
-					<a href="mailto:zala.abhay@gmail.com">zala.abhay@gmail.com</a>
-		</div>
-		<div id="modal-picture">
-			<img src="https://p.w3layouts.com/demos/sep-2016/15-09-2016/preface/web/images/img1.jpg" alt="Picture of Abhay Zala" />
+			Email: <a href="mailto:aszala.cs.unc.edu" data-hover="aszala.cs.unc.edu">aszala.cs.unc.edu</a> |
+					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
 		</div>
 	</div>
 </header>
@@ -34,8 +31,11 @@
 <style>
 	header {
 		width: 100%;
-		height: 650px;
-		background: url('https://p.w3layouts.com/demos/sep-2016/15-09-2016/preface/web/images/header-bg.jpg') no-repeat center top;
+		height: 100%;
+		background:
+	    	linear-gradient(to bottom, rgba(2,3,5,0.5), rgba(2,3,5,1)),
+			url('https://wallpaperaccess.com/full/1393482.jpg')
+			no-repeat center top;
 		background-size: cover;
 		position: relative;
 	}
@@ -81,7 +81,7 @@
 	}
 
 	#links-list>li>a {
-		font-size: 1em;
+		font-size: 1.1em;
 		color: white;
 		text-transform: uppercase;
 		padding: 10px 0;
@@ -92,37 +92,16 @@
 		font-family: 'Open Sans', sans-serif
 	}
 
-	#links-list>li>a::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: hidden;
-		padding: 10px 0;
-		max-width: 0;
-		border-bottom: 3px solid var(--accent-color);
-	    color: var(--accent-color);
-		content: attr(data-hover);
-		-webkit-transition: max-width 200ms;
-		-moz-transition: max-width 200ms;
-		transition: max-width 200ms;
-	}
-
-	#links-list>li>a:hover::before {
-		max-width: 100%;
-	}
-
 	#modal {
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
-		bottom: 0;
+		transform: translateX(-50%) translateY(50%);
+		bottom: 50%;
 		width: 80%;
 		margin: auto;
 		display: flex;
 		color: #cccccc;
-		background: rgba(0, 0, 0, 0.45);
-		border-top-right-radius: 20px;
-		border-top-left-radius: 20px;
+		font-size: 1.5em;
 	}
 
 	#modal>div {
@@ -130,22 +109,23 @@
 	}
 
 	#modal-info {
-		width: 60%;
+		/* width: 60%; */
+		width: 50%;
 	}
-
+/*
 	#modal-picture {
 		width: 40%;
 	}
 
 	#modal img {
-		width: 250px;
-		height: 250px;
+		width: 300px;
+		height: 300px;
 		margin: auto;
 		position: relative;
 		top: 50%;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
-	}
+	} */
 
 	#name {
 		font-size: 1.5em;
@@ -159,8 +139,15 @@
 	}
 
 	#modal a {
+		position: relative;
 		color: inherit;
 		text-decoration: underline;
+	}
+
+	#modal-info>a::before {
+		top: -10px;
+		text-decoration: underline;
+		border-bottom: none;
 	}
 
 </style>
