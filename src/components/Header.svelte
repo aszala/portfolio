@@ -22,7 +22,7 @@
 			Undergraduate Research Assistant | Upcoming Software Development Intern at Capital One
 			<br>
 			<br>
-			Email: <a href="mailto:aszala.cs.unc.edu" data-hover="aszala.cs.unc.edu">aszala.cs.unc.edu</a> |
+			Email: <a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala.cs.unc.edu</a> |
 					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
 		</div>
 	</div>
