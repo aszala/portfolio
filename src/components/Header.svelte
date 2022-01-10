@@ -6,9 +6,9 @@
 		<div id="links-container" class="nav-container">
 			<ul id="links-list">
 				<li><a data-hover="about" href="#about">about</a></li>
-				<li><a data-hover="resume/cv" href="/resume">resume/cv</a></li>
-				<li><a data-hover="publications" href="/publications">publications</a></li>
-				<li><a data-hover="projects" href="/projects">projects</a></li>
+				<li><a data-hover="resume/cv" href="#resume">resume/cv</a></li>
+				<li><a data-hover="publications" href="#publications">publications</a></li>
+				<li><a data-hover="projects" href="#projects">projects</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -34,7 +34,7 @@
 		height: 100%;
 		background:
 	    	linear-gradient(to bottom, rgba(2,3,5,0.5), rgba(2,3,5,1)),
-			url('https://wallpaperaccess.com/full/1393482.jpg')
+			url('../images/header_background.jpg')
 			no-repeat center top;
 		background-size: cover;
 		position: relative;

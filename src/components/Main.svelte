@@ -1,10 +1,9 @@
 <script>
 import Header from './Header.svelte';
 import About from './About.svelte';
+import Resume from './Resume.svelte';
+import Twitter from './TwitterFeed.svelte';
 
-function scrollTo(elem) {
-	document.getElementById(elem).scrollIntoView();
-}
 
 </script>
 
@@ -12,4 +11,6 @@ function scrollTo(elem) {
 <main>
 	<Header />
 	<About />
+	<Resume />
+	<Twitter />
 </main>

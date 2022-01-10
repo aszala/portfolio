@@ -21,14 +21,6 @@ getDocument("data", "about").then((data) => {
 
 
 <style>
-
-section {
-	display: flex;
-	max-width: 2000px;
-	margin: auto;
-	padding: 50px;
-}
-
 section>div {
 	width: 50%;
 }

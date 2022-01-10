@@ -1,12 +1,21 @@
+
 <script>
 import router from 'page';
 import Main from './components/Main.svelte'
-import { initFirebase } from './Firebase.js'
 
-let page;
-let title;
+import { initFirebase } from './Firebase'
 
-router('/', () => { page = Main; title = "Abhay Zala Portfolio"; });
+let page = Main;
+let title = "Abhay Zala Portfolio";
+
+function scrollTo(elem) {
+	document.getElementById(elem).scrollIntoView();
+}
+
+router('/:path', (ctx, next) => {
+	router.redirect("/");
+});
+
 router.start()
 
 initFirebase();
@@ -15,7 +24,7 @@ initFirebase();
 
 <svelte:head>
 	<title>{title}</title>
-	<script async defer src="https://platform.twitter.com/widgets.js"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </svelte:head>
 
 <svelte:component this="{page}" />
@@ -24,7 +33,8 @@ initFirebase();
 	@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400&display=swap');
 
 	:global(:root) {
-		--accent-color: #F9bA00;
+		--accent-color: #3dd7fd;
+		--main-bg-color: rgba(2, 3, 5, 1);
 	}
 
 	:global(html) {
@@ -34,7 +44,7 @@ initFirebase();
 	:global(body) {
 		padding: 0;
 		font-family: 'Asap', sans-serif;
-		background: rgba(2,3,5);
+		background: var(--main-bg-color);
 		color: #cccccc;
 	}
 
@@ -61,4 +71,29 @@ initFirebase();
 	:global(a:hover::before) {
 		max-width: 100%;
 	}
+
+	:global(section) {
+		display: flex;
+		max-width: 2000px;
+		margin: auto;
+		padding: 50px;
+	}
+
+	:global(button) {
+		background-color: transparent;
+		border: 2px solid var(--accent-color);
+		display: inline-block;
+		cursor: pointer;
+		color: var(--accent-color);
+		font-size: 1.2em;
+		padding: 16px 32px;
+		text-decoration: none;
+		transition: color 200ms, background-color 200ms;
+	}
+
+	:global(button:hover) {
+		background-color: var(--accent-color);
+		color: var(--main-bg-color);
+	}
+
 </style>
