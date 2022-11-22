@@ -8,10 +8,6 @@ import { initFirebase } from './Firebase'
 let page = Main;
 let title = "Abhay Zala Portfolio";
 
-function scrollTo(elem) {
-	document.getElementById(elem).scrollIntoView();
-}
-
 router('/:path', (ctx, next) => {
 	router.redirect("/");
 });
@@ -33,8 +29,9 @@ initFirebase();
 	@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400&display=swap');
 
 	:global(:root) {
-		--accent-color: #3dd7fd;
-		--main-bg-color: rgba(2, 3, 5, 1);
+		--accent-color: rgb(24, 24, 24);
+		--link-color: rgb(54, 54, 54);
+		--main-bg-color: white;
 	}
 
 	:global(html) {
@@ -45,12 +42,25 @@ initFirebase();
 		padding: 0;
 		font-family: 'Asap', sans-serif;
 		background: var(--main-bg-color);
-		color: #cccccc;
+		color: black;
 	}
 
 	:global(main) {
 		width: 100%;
 		height: 100%;
+	}
+
+	:global(a) {
+		color: var(--link-color);
+		cursor: pointer;
+		
+		-webkit-transition: color 300ms;
+		-moz-transition: color 300ms;
+		transition: color 300ms;
+	}
+
+	:global(a:visited) {
+		color: var(--link-color);
 	}
 
 	:global(a::before) {
@@ -66,10 +76,15 @@ initFirebase();
 		-webkit-transition: max-width 300ms;
 		-moz-transition: max-width 300ms;
 		transition: max-width 300ms;
+		height: fit-content;
 	}
 
 	:global(a:hover::before) {
 		max-width: 100%;
+	}
+
+	:global(a:hover) {
+	    color: var(--accent-color);
 	}
 
 	:global(section) {
@@ -85,7 +100,6 @@ initFirebase();
 		display: inline-block;
 		cursor: pointer;
 		color: var(--accent-color);
-		font-size: 1.2em;
 		padding: 16px 32px;
 		text-decoration: none;
 		transition: color 200ms, background-color 200ms;
@@ -96,4 +110,25 @@ initFirebase();
 		color: var(--main-bg-color);
 	}
 
+	:global(::-webkit-scrollbar) {
+		width: 10px;
+		height: 10px;
+	}
+	:global(::-webkit-scrollbar-button) {
+		width: 0px;
+		height: 0px;
+	}
+	:global(::-webkit-scrollbar-thumb) {
+		background: var(--accent-color);
+		border-radius: 50px;
+	}
+	:global(::-webkit-scrollbar-thumb:hover) {
+		background: var(--accent-color);
+	}
+	:global(::-webkit-scrollbar-thumb:active) {
+		background: var(--accent-color);
+	}
+	:global(::-webkit-scrollbar-track) {
+		background: var(--main-bg-color);
+	}
 </style>

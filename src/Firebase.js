@@ -21,7 +21,8 @@ export function initFirebase() {
 
 export async function getDocument(collection, docID) {
 	const refID = `${collection}-${docID}`;
- 	const cache = sessionStorage.getItem(refID);
+ 	// const cache = sessionStorage.getItem(refID);
+	const cache = false;
 
 	if (cache) {
 		return new Promise((resolve, reject) => {
