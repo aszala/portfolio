@@ -6,7 +6,7 @@ import Main from './components/Main.svelte'
 import { initFirebase } from './Firebase'
 
 let page = Main;
-let title = "Abhay Zala Portfolio";
+let title = "Abhay Zala";
 
 router('/:path', (ctx, next) => {
 	router.redirect("/");
@@ -30,7 +30,7 @@ initFirebase();
 
 	:global(:root) {
 		--accent-color: rgb(24, 24, 24);
-		--link-color: rgb(54, 54, 54);
+		--link-color: rgb(94, 94, 94);
 		--main-bg-color: white;
 	}
 
@@ -49,6 +49,12 @@ initFirebase();
 		width: 100%;
 		height: 100%;
 	}
+
+	:global(h1) {
+        font-size: 2em;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
 
 	:global(a) {
 		color: var(--link-color);
@@ -92,20 +98,21 @@ initFirebase();
 		max-width: 2000px;
 		margin: auto;
 		padding: 50px;
+		flex-direction: column;
 	}
 
-	:global(button) {
+	:global(.button) {
 		background-color: transparent;
 		border: 2px solid var(--accent-color);
 		display: inline-block;
 		cursor: pointer;
 		color: var(--accent-color);
 		padding: 16px 32px;
-		text-decoration: none;
+		text-decoration: none !important;
 		transition: color 200ms, background-color 200ms;
 	}
 
-	:global(button:hover) {
+	:global(.button:hover) {
 		background-color: var(--accent-color);
 		color: var(--main-bg-color);
 	}

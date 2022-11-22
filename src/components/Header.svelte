@@ -24,7 +24,7 @@ getDocument("data", "about").then((data) => {
 	</nav>
 	<div id="modal">
 		<div id="profile-image">
-			<img src="./images/abhay.png" alt="Picture of Abhay">
+			<img src="./images/abhay.png" alt="Abhay Zala">
 		</div>
 		<div id="modal-info">
 			<div id="name">Abhay Zala</div>
@@ -39,7 +39,7 @@ getDocument("data", "about").then((data) => {
 			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra">Google Scholar</a>
 								| <a href="https://twitter.com/AbhayZala7">Twitter</a> | <a href="https://github.com/aszala/">Github</a>
 			<br><br>
-			<button>Download CV</button>
+			<a class="button" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
 		</div>
 	</div>
 </header>
@@ -111,8 +111,14 @@ getDocument("data", "about").then((data) => {
 		width: 80%;
 		margin: auto;
 		display: flex;
-		font-size: 1.5em;
+		font-size: 1.2em;
 		display: flex;
+	}
+
+	#profile-image>img {
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
 	}
 
 	#modal>div {
@@ -124,7 +130,7 @@ getDocument("data", "about").then((data) => {
 	}
 
 	#name {
-		font-size: 1.5em;
+		font-size: 1.2em;
 		margin: 10px 0;
 		font-weight: bold;
 	}

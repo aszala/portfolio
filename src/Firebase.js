@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { doc, getDoc } from "firebase/firestore";
+import { getFirestore, orderBy, query } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 const sessionStorage = window.sessionStorage;
 export let db;
@@ -32,6 +32,35 @@ export async function getDocument(collection, docID) {
 		const docRef = doc(db, collection, docID);
 		const docSnap = await getDoc(docRef);
 		const data = docSnap.data();
+
+		sessionStorage.setItem(refID, JSON.stringify(data));
+
+		return data;
+	}
+}
+
+
+export async function getPublications() {
+	const collectionName = "publications"
+
+	const refID = `${collectionName}`;
+ 	// const cache = sessionStorage.getItem(refID);
+	const cache = false;
+
+	if (cache) {
+		return new Promise((resolve, reject) => {
+			resolve(JSON.parse(cache));
+		});
+	} else {
+		const publicationsRef = collection(db, collectionName);
+		const q = query(publicationsRef, orderBy("year", "desc"));
+		const querySnapshot = await getDocs(q);
+	
+		let data = {};
+
+		querySnapshot.forEach((doc) => {
+			data[doc.id] = doc.data();
+		});
 
 		sessionStorage.setItem(refID, JSON.stringify(data));
 
