@@ -23,8 +23,8 @@ let y;
 <style>
 	#scroll-to-top {
 		position: fixed;
-		bottom: 100px;
-		right: 100px;
+		bottom: 50px;
+		right: 50px;
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
@@ -35,5 +35,12 @@ let y;
 		line-height: 130%;
 		cursor: pointer;
 		font-family: 'Patrick Hand', cursive;
+	}
+
+    @media only screen and (max-width: 1380px) {
+		#scroll-to-top {
+			bottom: 20px;
+			right: 20px;
+		}
 	}
 </style>
