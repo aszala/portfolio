@@ -21,8 +21,7 @@ export function initFirebase() {
 
 export async function getDocument(collectionName, docID) {
 	const refID = `${collectionName}-${docID}`;
- 	// const cache = sessionStorage.getItem(refID);
-	const cache = false;
+ 	const cache = sessionStorage.getItem(refID);
 
 	if (cache) {
 		return new Promise((resolve, reject) => {
@@ -41,11 +40,10 @@ export async function getDocument(collectionName, docID) {
 
 
 export async function getPublications() {
-	const collectionName = "publications"
+	const collectionName = "publications";
 
 	const refID = `${collectionName}`;
- 	// const cache = sessionStorage.getItem(refID);
-	const cache = false;
+ 	const cache = sessionStorage.getItem(refID);
 
 	if (cache) {
 		return new Promise((resolve, reject) => {
@@ -69,11 +67,10 @@ export async function getPublications() {
 }
 
 export async function getExperiences() {
-	const collectionName = "experience_new"
+	const collectionName = "experience_new";
 
 	const refID = `${collectionName}`;
- 	// const cache = sessionStorage.getItem(refID);
-	const cache = false;
+ 	const cache = sessionStorage.getItem(refID);
 
 	if (cache) {
 		return new Promise((resolve, reject) => {
