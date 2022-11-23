@@ -1,0 +1,130 @@
+.projects-container {
+	width: 90%;
+	margin: auto;
+}
+
+.projects-header {
+	width: 100%;
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.projects-title {
+	font-size: 40px;
+	font-weight: 100;
+}
+
+.project {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.project-header {
+	width: 50%;
+	border-bottom: solid white 1px;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.project-description {
+	width: 90%;
+	margin-top: 20px;
+}
+
+.filter-icon {
+	width: 15px;
+	height: 15px;
+}
+
+.filter-dropdown {
+	cursor: default;
+	position: relative;
+}
+
+.filters-containers {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.filter-icon-container {
+	width: 100%;
+}
+
+.filters-container-container {
+	position: relative;
+	top: 15%;
+	display: flex;
+	justify-content: center;
+}
+
+.filter-text {
+	margin-right: 10px;
+}
+
+.filters-container-container>span {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	float: right;
+	background-color: black;
+	border: solid rgba(255,165,0,1) 1px;
+	padding: 12px 16px;
+	z-index: 1;
+	overflow: hidden;
+	width: 200px;
+}
+
+.filter-dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.filter-object {
+	width: auto;
+	cursor: pointer;
+}
+
+.projects-list-containers {
+	width: 90%;
+	margin: auto;
+}
+
+.project-tags {
+	margin-bottom: 5px;
+}
+
+.button-container {
+	width: 100%;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.buttons {
+	margin-top: 50px;
+	margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 725px)  {
+	.projects-header {
+		flex-direction: column-reverse;
+	}
+
+	.projects-header>div {
+		width: 100%;
+	}
+
+	.filters-containers, .filters-containers>div {
+		justify-content: left;
+		margin-bottom: 25px;
+	}
+
+	.project-header {
+		width: 90%;
+	}
+
+}

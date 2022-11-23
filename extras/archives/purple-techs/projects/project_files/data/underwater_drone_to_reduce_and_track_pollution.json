@@ -1,0 +1,7 @@
+{
+	"title" : "Underwater Drone To Reduce And Track Pollution",
+	"updated": "6/25/18",
+	"objective" : "Water Pollution is a major issue all around the world. In many cases, the source of the pollution can be hard to follow as it comes from so many different sources. In places where people get their water directly from streams and rivers without filtration, it is even more of an issue. If a scientist had real-time data on the location of pollution and the types of contaminants, as well as a location of the source then it would be easy to remove the pollution and stop the source from making more. With the real-time data, a scientist working to clean the water will have knowledge of the exact composition of what they are cleaning, so then they can clean it more effectively and if anything changes while they clean, then they will be immediately notified so they can act accordingly. This was a group project.",
+	"results" : "We were able to successfully create a working prototype. We made the shell of the drone using a 3D printer, and then we placed various sensors around the drone to detect the pollution types. We also place 2 different turbines on the drone. We won 3rd place at the state level and top 12 at the national level for the competition.",
+	"learned" : "Through this project, I was able to learn all about the different kinds of pollution and the many problems that it creates. I was able to learn more on how to attach and use sensors for practical uses, and how to use small turbines to propel the drone through the water."
+}

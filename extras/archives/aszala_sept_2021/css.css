@@ -1,0 +1,159 @@
+.quote-container {
+	left: 50%;
+}
+
+.quote-container, .whoami-container {
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+
+.quote-container {
+	height: 90%;
+}
+
+.quote-items-container, .whoami-items-container {
+	width: 80%;
+	height: 70%;
+	margin: auto;
+	position: absolute;
+	bottom: 0px;
+}
+
+.quote-items-container>.orange-line {
+	position: absolute;
+	right: 25%;
+}
+
+.quote-items-container {
+ 	right: 5%;
+}
+
+.whoami-items-container {
+	left: 25%;
+}
+
+.quote, .whoami {
+	width: 75%;
+}
+
+.quote {
+	margin-top: 50px;
+}
+
+.quote-text, .whoami-title {
+	font-size: 60px;
+}
+
+.quote-text {
+	text-align: right;
+}
+
+.quote-author, .whoami-description {
+	font-size: 30px;
+	text-align: justify;
+}
+
+.quote-author {
+	text-align: right;
+}
+
+.name-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	z-index: -1;
+}
+
+.name {
+	border: solid white 1px;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 60%;
+	left: 45%;
+	transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+	text-align: center;
+}
+
+.name-text {
+	transform: translateY(-50%) rotateZ(-45deg);
+	line-height: 200%;
+}
+
+.image-container {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 50%;
+	height: 100%;
+}
+
+.images {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1500px) {
+	.name {
+		width: 350px;
+		height: 350px;
+	}
+
+	.heading {
+		font-size: 40px !important;
+	}
+}
+
+@media only screen and (max-width: 1207px) {
+	.name {
+		top: 50%;
+	}
+
+	.whoami-container {
+		width: 100%;
+		height: auto;
+		margin-top: var(--header-height);
+		margin-bottom: 50px;
+	}
+
+	.whoami-items-container, .quote-items-container {
+		left: 0;
+		width: 100%;
+		position: relative;
+	}
+
+	.whoami-items-container>div {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.name-container, .image-container, .quote-container {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		margin-bottom: 50px;
+	}
+
+	.quote {
+		width: 100%;
+	}
+
+	.quote>div {
+		text-align: center !important;
+	}
+
+	.quote-items-container>.orange-line {
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

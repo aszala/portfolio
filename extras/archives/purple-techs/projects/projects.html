@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Abhay's Projects</title>
+		<link rel="stylesheet" href="../global/global.css">
+		<link rel="stylesheet" href="projects.css">
+		<link rel="shortcut icon" href="../favicon.ico" />
+	</head>
+	<body>
+		<div id="page-cover"></div>
+		<div id="navbar">
+			<div id="navbar-container" class="flex-row">
+				<div id="name-container">
+					<div id="name" class="noselect">
+						<img src="../logo.png" alt="logo" onclick="openLink('../index.html');">
+					</div>
+				</div>
+				<div id="menu" class="flex-row">
+					<div id="menu-items" class="flex-row">
+						<div class="menu-item underline-container" onclick="openLink('../index.html');">
+							<div class="noselect">home</div>
+							<div class="underline"></div>
+						</div>
+						<div class="menu-item underline-container" onclick="openLink('projects.html');">
+							<div class="noselect">projects</div>
+							<div class="underline"></div>
+						</div>
+						<div class="menu-item underline-container" onclick="openLink('../about/about.html');">
+							<div class="noselect">about</div>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div id="menu-button-container">
+						<div id="menu-container" class="noselect flex-row">
+							<div id="menu-button" class="noselect">
+								menu
+							</div>
+							<div id="menu-bars" class="noselect flex-row">
+								<div class="menu-bar 1"></div>
+								<div class="menu-bar 2"></div>
+								<div class="menu-bar 3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-dropdown">
+			<div id="dropdown-container">
+				<div id="dropdown-menu-items" class="flex-row">
+					<div class="menu-item underline-container" onclick="openLink('../index.html');">
+						<div class="noselect">home</div>
+						<div class="underline"></div>
+					</div>
+					<div class="menu-item underline-container" onclick="openLink('projects.html');">
+						<div class="noselect">projects</div>
+						<div class="underline"></div>
+					</div>
+					<div class="menu-item underline-container" onclick="openLink('../about/about.html');">
+						<div class="noselect">about</div>
+						<div class="underline"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="header">
+			<div id="title">
+				Projects
+			</div>
+		</div>
+		<br><br><br><br>
+		<div id="circles-section" class="section">
+			<div class="section-header">
+				<div class="section-header-container">
+					<div class="section-header-title">project count</div>
+					<hr>
+				</div>
+			</div>
+			<div class="section-content-container flex-center">
+				<div class="wrapper" data-anim="base wrapper">
+					<div class="circle-wrapper">
+						<div class="circle" data-anim="base left"></div>
+						<div class="circle" data-anim="base right"></div>
+					</div>
+					<div id="publications-count" class="circle-value"></div>
+					<div class="circle-title">Publications</div>
+				</div>
+				<div class="wrapper" data-anim="base wrapper">
+					<div class="circle-wrapper">
+						<div class="circle" data-anim="base left"></div>
+						<div class="circle" data-anim="base right"></div>
+					</div>
+					<div id="code-project-count" class="circle-value"></div>
+					<div class="circle-title">Coding Projects</div>
+				</div>
+				<div class="wrapper" data-anim="base wrapper">
+					<div class="circle-wrapper">
+						<div class="circle" data-anim="base left"></div>
+						<div class="circle" data-anim="base right"></div>
+					</div>
+					<div id="tsa-project-count" class="circle-value"></div>
+					<div class="circle-title">TSA Projects</div>
+				</div>
+				<div class="wrapper" data-anim="base wrapper">
+					<div class="circle-wrapper">
+						<div class="circle" data-anim="base left"></div>
+						<div class="circle" data-anim="base right"></div>
+					</div>
+					<div id="model-project-count" class="circle-value"></div>
+					<div class="circle-title">Miscellaneous Projects</div>
+				</div>
+				<!--<div id="but-wait-theres-more">And many more to come.</div>-->
+			</div>
+		</div>
+		<div id="publications" class="section">
+			<div class="project-section-title">
+				Publications
+				<hr class="semi-underline">
+			</div>
+			<div class="section-content-container">
+				<div class="column-row-container row-1 flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Paper Pending Anonymous Review. Will be added soon.</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Paper Pending Anonymous Review. Will be added soon.</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div id="pub-expand" style="visibility: hidden;" class="button">expand to see all</div>
+			</div>
+		</div>
+		<div id="code-projects" class="section">
+			<div class="project-section-title">
+				Coding Projects
+				<hr class="semi-underline">
+			</div>
+			<div class="section-content-container">
+				<div class="column-row-container row-1 flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/dawn_ai/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Dawn AI</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/presentation_ai/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Presentaion AI</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=presentation_ai')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/battle_ai/thumb.png" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Battle AI</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=battle_ai')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Trials of Light</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/game_engine/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Java Game Engine</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=game_engine')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/genetic_learning_geometry_dash_ai/thumb.png" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Genetic Learning Geometry Dash AI</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=genetic_learning_geometry_dash_ai')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/personal_portfolio/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">personal portfolio</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=personal_portfolio')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/milkshake_guardian/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Milkshake Guardian</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=milkshake_guardian')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/space_raiders/thumb.png" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Space Raiders</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=space_raiders')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/mytsa/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">MyTSA</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=mytsa')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Duel</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Tron</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">ACL Protect</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="code-expand" class="button">expand to see all</div>
+			</div>
+		</div>
+		<div id="tsa-projects" class="section">
+			<div class="project-section-title">
+				TSA Projects
+				<hr class="semi-underline">
+			</div>
+			<div class="section-content-container">
+				<div class="column-row-container row-1 flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/underwater_drone_to_reduce_and_track_pollution/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Underwater Drone to Reduce and Track Pollution</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=underwater_drone_to_reduce_and_track_pollution')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/reverse_osmosis_bottle_for_impoverished_nations/thumb.png" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Reverse Osmosis Bottle for Impoverished Nations</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=reverse_osmosis_bottle_for_impoverished_nations')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="project_files/data/gallery/implementation_of_genetic_algorithms_in_industrial_practices/thumb.png" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Research: Implementation of Genetic Algorithms in Industrial Practices</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=implementation_of_genetic_algorithms_in_industrial_practices')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Research: Applications of Self-Driving Cars in our city's</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Development of Self Driving Car</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Fully Automatic Parking Garage</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Webmasters</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">LOGOS Mental Training App</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">3D Animation Ancient Technology</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">VEX Robotics</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Research: Elon Musk's Hyperloop applications</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Modern Pythagoras Cup</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Self Replenishing Grocery Store</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tsa-expand" class="button">expand to see all</div>
+			</div>
+		</div>
+		<div id="3d-projects" class="section">
+			<div class="project-section-title">
+				Miscellaneous Projects
+				<hr class="semi-underline">
+			</div>
+			<div class="section-content-container">
+				<div class="column-row-container row-1 flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Research: Application of Genetic Algorithms in Video Games</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Roman Chariot Construction</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 3">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Automated Garden for High School Garden</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Brightness Sensor for all monitors</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">Surrond Sound Systems from collection of old speakers</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">8K 3D renderings</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-row-container flex-center">
+					<div class="column">
+						<div class="image-container">
+							<img src="https://static.vecteezy.com/system/resources/previews/000/404/405/non_2x/vector-modern-mosaic-wallpaper-in-black-and-gold.jpg" alt="project 1">
+							<div class="image-overlay">
+								<div class="image-overlay-content">
+									<div class="project-title">see through technology</div>
+									<div class="button" onclick="openLink('project_files/project.php?project=not_ready')">view project</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="misc-expand" class="button">expand to see all</div>
+			</div>
+		</div>
+		<footer class="section">
+			<div id="footer-section-container" class="section-content-container">
+				<div id="footer-menu-items" class="flex-center">
+					<div class="menu-item underline-container" onclick="openLink('../index.html');">
+						<div class="noselect">home</div>
+						<div class="underline"></div>
+					</div>
+					<div class="menu-item underline-container" onclick="openLink('projects.html');">
+						<div class="noselect">projects</div>
+						<div class="underline"></div>
+					</div>
+					<div class="menu-item underline-container" onclick="openLink('../about/about.html');">
+						<div class="noselect">about</div>
+						<div class="underline"></div>
+					</div>
+				</div>
+				<br>
+				<div id="social-media-container" class="flex-center">
+					<div id="social-media-content">
+						<div id="email-phone">
+							<div id="phone">&phone; 919-656-7462</div>
+							<div id="email">&#9993; zala.abhay@gmail.com</div>
+						</div>
+						<div id="social-media" class="flex-center">
+							<img src="../imgs/linkedin.png" onclick="openLink('https://www.linkedin.com/in/aszala/');" alt="linkedin aszala">
+							<img src="../imgs/instagram.png" onclick="openLink('https://www.instagram.com/abhay_zala_/');" alt="instagram aszala">
+							<img src="../imgs/github.png" onclick="openLink('https://www.github.com/aszala');" alt="github aszala">
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../global/global.js" charset="utf-8"></script>
+		<script type="text/javascript" src="projects.js" charset="utf-8"></script>
+	</body>
+</html>

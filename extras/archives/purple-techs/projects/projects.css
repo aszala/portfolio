@@ -1,0 +1,146 @@
+.project-section-title {
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	font-size: 30px;
+	padding-left: 50px;
+}
+
+#circles-section {
+	width: 80%;
+	margin: auto;
+}
+
+#publications {
+	margin-top: 200px;
+}
+
+#but-wait-theres-more {
+	position: absolute;
+	bottom: 100px;
+	font-size: 20px;
+}
+
+.circle-value {
+	font-size: 25px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.wrapper {
+	width: 100px;
+	height: 100px;
+	clip: rect(0px, 100px, 100px, 50px);
+	margin: 40px;
+	margin-bottom: 0;
+	position: relative;
+	text-align: center;
+}
+
+.wrapper>.circle-title {
+	position: absolute;
+	bottom: -60px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid rgb(0, 150, 150);
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+div[data-anim~=base] {
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function:linear;
+}
+
+.wrapper[data-anim~=wrapper] {
+  -webkit-animation-duration: 0.01s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-name: close-wrapper;
+}
+
+.circle[data-anim~=left] {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: left-spin;
+}
+
+.circle[data-anim~=right] {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: right-spin;
+}
+
+@-webkit-keyframes right-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+
+@media only screen and (max-width: 1610px) {
+	.section-content-container>.button {
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 875px) {
+	.wrapper {
+		margin: 0;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	#but-wait-theres-more {
+		bottom: 175px;
+	}
+	.project-section-title {
+		text-align: center;
+		width: 100%;
+		padding: 0;
+	}
+	hr {
+		margin: auto !important;
+		margin-top: 10px !important;
+		text-align: center !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.circle {
+		width: 50px;
+		height: 50px;
+	}
+	.circle-wrapper {
+		position: relative;
+		top: 15%;
+		left: 50%;
+		transform: translateY(-100%) translateX(-50%);
+	}
+	.circle-title {
+		font-size: 15px !important;
+	}
+}

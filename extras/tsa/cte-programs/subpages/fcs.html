@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS Family and Consumer Science</title>
+		<link rel="stylesheet" href="../../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="shortcut icon" href="../../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" tabindex="0" onkeypress="hideShowcase();" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../../navbar/imgs/x.png"></img>
+				<img alt="" id="showcased-image" src="../../navbar/imgs/x.png"></img>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+						<div tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" id="navbar-expanded-pchs" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img src="../../navbar/imgs/web.png"></img></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img src="../../navbar/imgs/twitter.png"></img></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		<br><br><br><br>
+		
+		<div class="modules-section">
+			<div class="section-header">
+				<div class="section-header-title">Family and Consumer Science</div>
+				<img alt="section divider image" src="../../global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Family and Consumer Sciences Education provides students with knowledge and skills needed to realize human potential and prepare for career success. Family and Consumer Sciences content is a complex set of knowledge and skills that builds human literacy and leads to quality of life for individuals and families.</div>
+			</div>
+			<br>
+			<center><div tabindex="0" onkeypress="openLink('../cte-programs.html');" onclick="openLink('../cte-programs.html');" class="button">Return to CTE Page</div></center>
+			<br><br>
+			<div class="drop-down-list">
+				<div class="drop-down-container">
+					<div class="drop-down" index="0">
+						<div>Apparel I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Apparel I is a foundation course that understands in order to understand clothing and fashion one must understand it’s base components, fabric. While there is much to go in depth in on the subject of fabrics alone there are also many not so widely known applications of the class. Apparel I even covers such topics as fire resistant clothes and even shock resistant ones. Apparel I is a basic course, like any first step a professional must take to become an expert in their craft. It is essential to learn the fundamentals to be able for the students to apply them through the rest of their career as students in fashion, and professionals in fashion.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="1">
+						<div>Apparel II Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Apparel II Enterprise adds a whole new dimension to students’ understanding of the clothing industry. This class tackles consumer buying habits and the textile industry as a whole. Not only that, but students also learn to manufacture products that match the demands of the market. Fashion is and always has been a shifting cultural landscape, and learning to halde those shifts and factor in the swings into your work is a key concept ever successful fashion designer</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="2">
+						<div>Foods I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">For those with a culinary interest, Foods I is a starting point to understand the baseline of all cooking and dishes, food. Foods offers an in depth look at the tastes and culinary properties of all kinds of raw ingredients in order to build a foundation of understanding on how to craft the perfect dish. The knowledge of food is the first step to knowing how to mastering any style or culture of cuisine. And while mastering culinary arts takes many years, Foods I offers an introductory course for anyone that get get them started on their journey.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="3">
+						<div>Foods II Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Foods II Enterprise picks up with more ingredients, more processes, and more dishes. Students learn to make beverages, salads, cake, and many other different forms culinary expression. Students will also learn proper safety and sanitary cooking techniques as well as how to store food and/ore prepare it to prevent the spread of pathogens and contamination. Foods II Enterprise also is more oriented to showing pupils what to expect in a real world kitchen, by means of working with different types of ovens and stoves, professional sanitization techniques, general workflow and business organization. Foods II is more than just knowing how to make good meals, it’s about learning to be a chef. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="4">
+						<div>Interior Design I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Interior Design I provides the essential principles to understand what makes an aesthetically pleasing room. Design principles from many different applications can find themselves in an Interior Design classroom, and exploring the countless styles opens up an eye that can turn any interior into a work of art. Students also take field trips to local architectural facilities for inspiration on designs. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="5">
+						<div>Interior Design II</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">This course transitions from learning of interior design into entry-level and technical work opportunities. Students learn design fundamentals and theory of interior plans and apply them to the world. Interior Design II prepares those seriously interested in a similar career to be a part of it by further expanding their eye for fashionable living spaces and working through many projects and display to show off what they have learned. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="6">
+						<div>Principles of Family and Human Services</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Individual, family, and community systems are helpful to understand in anyone’s life. This course is about understanding these systems and is sure to better prepare any high school student for the world they face after graduation. On top of this students also learn professional skills, human ecology, analyzing community issues, and life management skills. All put together these things are often what many new adults have to figure out themselves, and the course is aimed to make the transition a lot easier and less confusing. This is a class for everyone and is helpful in endless scenarios. </div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>

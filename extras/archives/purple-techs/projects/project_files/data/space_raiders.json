@@ -1,0 +1,7 @@
+{
+	"title" : "Space Raiders",
+	"updated": "8/15/18",
+	"objective" : "This projected started when I was first learning Java development and when I first started to play around with Java Graphics. The project initially started as a modified version of the old arcade game Space Invaders. As I continued working, it expanded to a more fully-fledged game.",
+	"results" : "The first version of the game turned out rather successful, the overall reviews from my friends and family that played the game were good, and even after several weeks after I had finished my younger siblings and cousins continued playing. Shortly after making the first version of the game, I expanded it to a full game with a basic story and more advanced gameplay. During this 2nd version was the first time that I started to mess with the application of physics and more advanced rendering techniques in my game. The 2nd version of the game never made it out to everyone else but it more so served as a place for me to learn. I hope that as I get more free time in the future I will be able to further work on it and possibly make a 3rd version that could potentially go beyond my friends and family.",
+	"learned" : "While this project is one of my least advanced projects, it was one of my first. This project was the one that I learned a lot of the core knowledge of Java and game development. The knowledge that I gained from this is still applied to many of my more advanced projects that also use Java."
+}

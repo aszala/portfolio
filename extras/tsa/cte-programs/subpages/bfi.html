@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS Business, Finance, and Information Technology</title>
+		<link rel="stylesheet" href="../../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="shortcut icon" href="../../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" tabindex="0" onkeypress="hideShowcase();" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../../navbar/imgs/x.png"></img>
+				<img alt="" id="showcased-image" src="../../navbar/imgs/x.png"></img>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+						<div tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" id="navbar-expanded-pchs" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img src="../../navbar/imgs/web.png"></img></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img src="../../navbar/imgs/twitter.png"></img></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		<br><br><br><br>
+		
+		<div class="modules-section">
+			<div class="section-header">
+				<div class="section-header-title">Business, Finance, and Information Technology</div>
+				<img alt="section divider image" src="../../global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">Business, Finance, and Information Technology Education empowers students to use business principles and concepts while they manage their current and future responsibilities as informed consumers and productive workers in the 21st century.</div>
+			</div>
+			<br>
+			<center><div tabindex="0" onkeypress="openLink('../cte-programs.html');" onclick="openLink('../cte-programs.html');" class="button">Return to CTE Page</div></center>
+			<br><br>
+			<div class="drop-down-list">
+				<div class="drop-down-container">
+					<div class="drop-down" index="0">
+						<div>Accounting I Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Accounting I is about the fundamental concepts of having a career in accounting. THis includes the accounting cycle, business transactions, financial statements, and banking activities. It provides a solid introduction to the principles of finance in both personal and business settings. Students learn what is expected of them on the job and beings to expose them to the many facets of background information on economic theories that an accountant should know. While the job of an accountant is much too vast to cover in 18 weeks, it provides a good starting point, one to be picked up later on.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="1">
+						<div>Accounting II Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">This accounting course builds on the first by exploring different levels of accounting such as corporate accounting, departmental accounting, and cost accounting while also looking into budgeting and other economic tools. Accounting II begins to diverge into these different disciplines and how the jobs differ. This class goes along well with Personal Finance, or a more business focused approach like Entrepreneurship. Any individual in life can benefit from learning how to manage money, and Accounting is about so much more than that, so by covering all bases and then some, Accounting is a curriculum path that benefits just about any high school student. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="2">
+						<div>Business Law Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Business Law offers a gateway to an important position in any large corporation or business. It also is important to understand for even the smallest of businesses, as the law applies to all. Ethics, as well as law, is explained in this course, as it is important to master both to run a business properly and effectively. The course works with business ownership, international laws, intellectual property, and other important legislation that business owners need to know.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="3">
+						<div>Computer Programming I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Through Visual Basic, Computer Programming I provides a first step into a skill that many experts say is becoming a skill everyone should have in the 21st Century. Programming is more widely used than ever before, and Computer Programming I, over the course of 18 weeks, ensures students have a solid understanding of key object oriented programing concepts such as loops, control flow, functions, classes and objects. Visual Basic is a famously simple language to grasp and help students get off on the right foot to master other languages later on and become the programming prodigies of tomorrow.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="4">
+						<div>Computer Programming II Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">The next level of computer programming shifts the language to the more functional and applicable C# language, often found in real world software being developed today. As well as learning a more solid, albeit complex language, students also delve into more advanced concepts such as try catch blocks, and focus on individual and class projects where the true merit of a programer, application, is practiced and developed. Computer Programming II also challenges students to think about why their programs behave the way they do, by constructing flowcharts and diagrams to explain the logic behind the lines. Computer Programming II solidifies and builds on the foundation of its predecessor. and prepares students for AP level programming courses where they have a chance to earn college credit for their work on official AP exams. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="5">
+						<div>Multi-Media Web page Design</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Web design is how business interact with their customers for an ever increasing amount of transactions. The first thing many consumers do to investigate a company is look at their webpage, so it is often their first and most important impression. Businesses are always in need of expert web developers to construct and maintain clean, professional and inviting fronts for their craft. This introductory course teaches the essentials of what truly makes a website pop, and offers a great way to prepare for a rewarding career of professional web design.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="6">
+						<div>Microsoft Excel Academic and Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">On the more advanced side of the Microsoft Office Suite is Excel and Access. Students learn to use these tools to incorporate spreadsheets and databases into their understanding of fundamental business softwares. Step by step approaches are taken in this course with each concept being tackled in a linear fashion. Once again preparation and the opportunity for official certified is provided at the end of the course. These essential tools have endless applications in the world of business and finance.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="7">
+						<div>Microsoft Word and PowerPoint Academic and Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Microsoft Word and PowerPoint certification is a strong addition to any resume or application. In the modern world it is also almost a necessity to have a solid understanding of both softwares and their features. Microsoft Word and PowerPoint engages students through lessons, drills, and projects to teach the lesser known fine points of the programs as well as many conventions and guidelines to create an effective presentation or professional document. Throughout the course, preparation for the aforementioned certification is given to ensure every student leaves the class certified and prepared for any career application of Word and PowerPoint technologies.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="8">
+						<div>Personal Finance</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Personal Finance is a course for everyone, as personal finance is something all people face in their daily lives. This course teaches students how to track their own finances and expenditures, necessary tools for everyone. It also dives into taxes and working with your money to ensure that you are spending it properly. Understanding personal finance and microeconomics is also important because it connects to so many other facets of understanding business finance as a while as well.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="9">
+						<div>Principles of Business</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">A large proportion of highschool graduates will go into business schools and professions, and just about any career in the 21st century has an understanding of business principles at its core. Panther Creek’s Principles of Business & Finance program prepares students for the wide world of corporate climbing and career success. Topics covered include communication, promotion, business plans, trade, goals, and other introductory business topics important for entrepreneurs. This course is also a great springboard to enroll into extracurricular activities like DECA, MUN and even TSA.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="10">
+						<div>Project Management</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Team management is imperative to a successful project. This course teaches students the necessities of running a team, a family, and managing a client in terms of projects. It also works with the operations of a project and the ways of closing a project authentically. Project management is important for all members of any team, but is critical for the leader. Project Management teaches all future business leaders and followers the fundamentals of getting the job done, quickly, effectively, efficiently, and together.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="11">
+						<div>SAS Programming</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Sorting and manipulating data sets is something almost all languages can do, but when it’s a major focus of a job then SAS is the way to go, and SAS Programming I is all about teaching students how to use this effective and highly applicable language. Students collect data and complete projects, reports, and exercises to help understand the language and how it works. Not only is understanding the language helpful for those headed for data based careers, but a highly credible certification is also offered at the end of the SAS Programming I course to decorate any application or resume. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="12">
+						<div>AP Computer Science</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">The most advanced programming course at Panther Creek, AP Computer Science uses Java to explore all major programing concepts and adapts them to the students growing experience and knowledge. Students are often asked to demonstrate and apply the concepts though labs, discussions, projects and many activities. College credit though the AP program is also provided with an exam.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="13">
+						<div>AP Computer Science Principles</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">AP Computer Science Principles is the introductory AP course that covers the history of computing as well as the future of computer technology. The class’s main focus, however, is providing a segway from basic programming skills and concepts to more in depth understanding of what the computer is doing and how it works to produce desired outputs. Being knowledgeable in the principles of computer science is important for the next course, which is all about application of these ideas, processes and principles. The AP exam is also offered for this course which provides students with the opportunity to earn college credit.</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>

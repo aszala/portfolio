@@ -1,0 +1,265 @@
+.section {
+	width: 100%;
+	transform: translateY(100px);
+	transition: transform 1s;
+}
+
+img {
+	transform: translateY(-50px);
+	transition: all 1s;
+	opacity: 0;
+}
+
+.section-header {
+	text-align: center;
+}
+
+.section-header-title {
+	font-size: 50px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	margin-bottom: 20px;
+}
+
+.section-header>img {
+	margin-bottom: 20px;
+}
+
+.section-header-description {
+	font-family: Georgia, serif;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+#heading {
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 100%), url('imgs/pchs.jpg') no-repeat;
+	background-size: cover;
+}
+
+#title-super-container {
+	width: 100%;
+	height: 50%;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#title-container {
+	width: 100%;
+	text-align: center;
+	font-size: 70px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-transform: uppercase;
+}
+
+#title-info-container {
+	width: 100%;
+}
+
+#title-info-content {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	font-family: Georgia, serif;
+	font-size: 40px;
+	margin-top: 100px;
+}
+
+#title-info-content>div {
+	width: 33.333%;
+	text-align: center;
+}
+
+i {
+  border: solid black;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#down-arrow {
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+}
+
+.description-content-for-section {
+	font-size: 25px;
+	font-family: Georgia, serif;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.tsa-tile {
+	width: 50%;
+}
+
+.tsa-tile>img {
+	cursor: pointer;
+	transition: transform 200ms;
+}
+
+.tsa-tile>img:hover {
+	transform: scale(1.1);
+}
+
+#cte-programs-image {
+	max-width: 75%;
+	cursor: pointer;
+	max-height: 500px;
+}
+
+#detailed-mission-container>div {
+	width: 50%;
+	line-height: 200%;
+}
+
+#expectations-container {
+	text-align: justify;
+}
+
+#vision-container>img {
+	width: 75%;
+	cursor: pointer;
+}
+
+#contact-phone>img {
+	width: 25px;
+	height: 25px;
+	transform: translateX(-5px) translateY(7px);
+}
+
+#ada-compliance {
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#ada-compliance>div {
+	font-size: 25px;
+	position: relative;
+	transform: translateY(25%);
+	left: 5%;
+}
+
+#ada-compliance>.button {
+	transform: translateY(0%);
+}
+
+#contact-urls>a {
+	color: black;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1395px) {
+	#title-info-content {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 1025px) {
+	#title-info-content {
+		width: 80%;
+		font-size: 25px;
+	}
+	#ada-compliance>div {
+		width: 40%;
+		font-size: 20px;
+	}
+	#ada-compliance>.button {
+		width: initial;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#title-container {
+		font-size: 50px;
+	}
+	.section-header-description {
+		font-size: 25px;
+	}
+	.section-header-title {
+		font-size: 45px;
+	}
+	#detailed-mission-container {
+		font-size: 20px;
+	}
+	#welcome {
+		font-size: 20px;
+	}
+	#ada-compliance {
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#title-info-content {
+		font-size: 20px;
+	}
+	#title-container {
+		font-size: 40px;
+	}
+	#detailed-mission-container {
+		font-size: 15px;
+	}
+	#ada-compliance {
+		height: 170px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.section-header-description {
+		font-size: 20px;
+	}
+	.section-header-title {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+	#down-arrow {
+		bottom: -40px;
+	}
+	#title-info-content {
+		margin-top: 30px;
+	}
+}
+
+#loadOverlay{display: none;}

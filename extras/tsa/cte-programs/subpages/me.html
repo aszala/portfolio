@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<div id="loadOverlay" style="background-color:#fff; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+		<title>PCHS Marketing and Entrepreneurship</title>
+		<link rel="stylesheet" href="../../navbar/navbar.css" type="text/css" />
+		<link rel="stylesheet" href="css.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="shortcut icon" href="../../navbar/imgs/pc-logo16x16.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="site-navbar-menu" class="navbar">
+			<div id="animated-transition"></div>
+			<div id="image-showcase" tabindex="0" onkeypress="hideShowcase();" onclick="hideShowcase();">
+				<img alt="close the show case image overlay" id="showcase-close" src="../../navbar/imgs/x.png"></img>
+				<img alt="" id="showcased-image" src="../../navbar/imgs/x.png"></img>
+			</div>
+			<div id="navbar-container">
+				<div id="navbar-pchs">
+					<div id="navbar-pchs-container">
+						<img alt="Panther Creek High School Logo" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+						<div tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');">PCHS</div>
+					</div>
+				</div>
+				<div id="navbar-links">
+					<div id="navbar-free-links">
+						<div id="navbar-free-links-container">
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+								<div class="underline"></div>
+							</div>
+							<div class="navbar-free-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+								<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+								<div class="underline"></div>
+							</div>
+						</div>
+					</div>
+					<div id="navbar-contained-links">
+						<div id="navbar-contained-links-container">
+							<div id="navbar-contained-menu-button" tabindex="0" onkeypress="toggleMenuOverlay();" onclick="toggleMenuOverlay();" class="menu-button">
+								<div id="navbar-bar-1" class="navbar-bar"></div>
+								<div id="navbar-bar-2" class="navbar-bar"></div>
+								<div id="navbar-bar-3" class="navbar-bar"></div>
+							</div>
+							<div id="navbar-contained-link-title">menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar-expanded">
+			<div id="navbar-expanded-links">
+				<div id="navbar-expanded-links-containter">
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../index.html')">home</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../tsa-chapter/tsa-chapter.html')">tsa chapter</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					
+					<img alt="Panther Creek High School Logo" id="navbar-expanded-pchs" tabindex="0" onkeypress="openLink('../../index.html');" onclick="openLink('../../index.html');" src="../../navbar/imgs/pc-logo.png"></img>
+			
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../cte-programs.html')">cte programs</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+					<div class="navbar-expanded-links-link-container">
+						<div class="navbar-expanded-links-link" onmouseover="showUnderline(this);" onmouseleave="hideUnderline(this);" onfocus="showUnderline(this);" onfocusout="hideUnderline(this);">
+							<a href="javascript:void(0);" class="navbar-link" onclick="openLink('../../design-brief/design-brief.html')">design brief</a>
+							<div class="underline"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="navbar-social-media">
+				<div id="navbar-social-media-homepage" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://www.wcpss.net/panthercreekhs')"><img src="../../navbar/imgs/web.png"></img></a>
+				</div>
+				<div id="navbar-social-media-twitter" class="navbar-expanded-social-media-icon">
+					<a href="javascript:void(0);" onclick="openLink('https://twitter.com/thepanthercreek?lang=en')"><img src="../../navbar/imgs/twitter.png"></img></a>
+				</div>
+			</div>
+			<div id="navbar-expanded-info">
+				<div>2019 NC TSA State Conference</div>
+				<div>2920-1</div>
+			</div>
+		</div><br><br><br><br>
+		<br><br><br><br>
+		
+		<div class="modules-section">
+			<div class="section-header">
+				<div class="section-header-title">Marketing and Entrepreneurship</div>
+				<img alt="section divider image" src="../../global-imgs/heading-divider.svg"></img>
+				<div class="section-header-description">These disciplines encompass activities of ideation of products and services, better use of resources, and the aspects of consumption of products and services. These activities prepare students with the knowledge and skills as specific as procedures for research and, at the same time, as general as the creativity needed in promotion.</div>
+			</div>
+			<br>
+			<center><div tabindex="0" onkeypress="openLink('../cte-programs.html');" onclick="openLink('../cte-programs.html');" class="button">Return to CTE Page</div></center>
+			<br><br>
+			<div class="drop-down-list">
+				<div class="drop-down-container">
+					<div class="drop-down" index="0">
+						<div>Entrepreneurship Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Startups aren't just at the heart of technology businesses, they're a key piece of American culture. Startups are exciting, dramatic, and if they offer the right business model and products, can explode into enormous corporations. But in order to have a successful startup, an understanding of entrepreneurship and what it means to be an entrepreneur is necessary to succeed. This course is about teaching necessary skills to carry an idea all the way into a real startup. On top of that, the conclusion of the class asks students to design a real startup business that is pitched to faculty and local business leaders. Business leaders and leading businesses both can sprout up from anywhere, but a good idea needs a great startup to support a business and truly make an entrepreneur what they are.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="1">
+						<div>Marketing</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">The heart of marketing is in distribution, marketing management, pricing and promotion of products. These topics are all directly covered in depth, and practiced in Panther Creek’s Marketing course. Students learn the fundamentals of what sells and how to sell it. Moreover, they key to a successful market manager is not only understanding all the above concepts, but putting them together and applying them to find out how to make the best profit off the product. Students learn this through analysing marketing strategies that are commonly used and applying them, as well as their own strategies in projects to display their knowledge and practice their skills.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="2">
+						<div>Sports and Entertainment Marketing I</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">One of the many paths to take off the initial Marketing course, this focus on sports and entertainment offers a connection to those passionate about sports and hoping to find them a place in their future career. Sports & Entertainment Marketing I is all about promotion sports and other events and ensuring these events generate maximum profit for the hosting organization. Surprisingly enough, most all of the skills first learned in Marketing are directly applicable, and through some fine tuning, can make it a great place to start a career in event marketing.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="3">
+						<div>Sports and Entertainment Marketing II Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">The second Sports & Entertainment Marketing course deals with new topics like contracts, client relations, event management, legal issues and sponsorships. On top of topics learned in the first course, the wider picture of event marketing comes into focus, and from here, students are a solid two steps into an understanding and career in any form marketing at all, especially one focused on sports and entertainment. In being familiar with the finer points of one expertise of marketing such as event marketing, an appreciation and better experience in any marketing in general is built up and fortified, meaning any future marketing expert has many paths to choose from and many courses they can pick up on. </div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="4">
+						<div>Strategic Marketing Honors</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Another follow up on basic Marketing, Strategic Marketing focuses on the many different strategies used by businesses, and analyses the effectiveness these strategies may have. A key concept as how the effectiveness on one strategy over the other may vary based on the context, be it marketing in retail, global, e-commerce, and other types of businesses. Strategic Marketing is all about building an approach to marketing from the ground up, that is unique to every business and product. Strategic Marketing challenges students to formulate their own strategies that will be a composition or extension of any commonly used strategy. Overall Strategic Marketing is important in teaching the application and professional experience needed to understand marketing as whole in business.</div>
+				</div>
+				<div class="drop-down-container">
+					<div class="drop-down" index="5">
+						<div>Marketing Advanced Studies</div>
+						<i class="down"></i>
+					</div>
+					<div class="drop-down-text">Not only is this class an excellent combination of Marketing and Entrepreneurship, titans in the business world, but this class also involves independent study with local businesses to give an extra layer of real world application, authenticity, and first hand knowledge. Students apply their knowledge of Marketing and Entrepreneurship and get to learn from actual successful business around the area to coach what success looks like, and how to get there by means of being a skilled entrepreneur, and having a solid marketing strategy. This course is a must for any student who has or hopes to have an incredible idea, and wants to take on the business world with their creation.</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../../navbar/navbar.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>
