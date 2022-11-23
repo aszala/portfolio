@@ -25,7 +25,7 @@ router.start()
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="nositelinkssearchbox" />
-	<script async src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<script async src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.js' crossorigin='anonymous'></script>
 </svelte:head>
 
 <svelte:component this="{page}" />
