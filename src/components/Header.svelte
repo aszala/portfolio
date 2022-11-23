@@ -18,6 +18,7 @@ getDocument("data", "about").then((data) => {
 			<ul id="links-list">
 				<li><a data-hover="publications">publications</a></li>
 				<li><a data-hover="experience">experience</a></li>
+				<li><a data-hover="education">education</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -141,12 +142,6 @@ getDocument("data", "about").then((data) => {
 	#modal a {
 		position: relative;
 		text-decoration: underline;
-	}
-	
-	#modal-info>button {
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 
 </style>

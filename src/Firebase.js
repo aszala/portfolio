@@ -67,3 +67,31 @@ export async function getPublications() {
 		return data;
 	}
 }
+
+export async function getExperiences() {
+	const collectionName = "experience_new"
+
+	const refID = `${collectionName}`;
+ 	// const cache = sessionStorage.getItem(refID);
+	const cache = false;
+
+	if (cache) {
+		return new Promise((resolve, reject) => {
+			resolve(JSON.parse(cache));
+		});
+	} else {
+		const publicationsRef = collection(db, collectionName);
+		const q = query(publicationsRef, orderBy("rank", "asc"));
+		const querySnapshot = await getDocs(q);
+	
+		let data = {};
+
+		querySnapshot.forEach((doc) => {
+			data[doc.id] = doc.data();
+		});
+
+		sessionStorage.setItem(refID, JSON.stringify(data));
+
+		return data;
+	}	
+}

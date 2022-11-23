@@ -1,6 +1,4 @@
 <script>
-    import { callbacks } from 'page';
-    import { validate_each_argument } from 'svelte/internal';
 import { getPublications } from '../Firebase';
 
 let publications = "loading";
@@ -38,6 +36,7 @@ getPublications().then((data) => {
 
 <section>
     <h1>Publications</h1>
+    <p><b>Note:</b> * indicates equal contribution</p>
     <div id="publications-container">
         {@html publications}
     </div>
