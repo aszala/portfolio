@@ -19,7 +19,12 @@ router.start()
 
 <svelte:head>
 	<title>{title}</title>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<meta name="description" content="Abhay Zala Homepage">
+	<meta name="author" content="Abhay Zala">
+	<link rel="canonical" href="https://aszala.com/" />
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google" content="nositelinkssearchbox" />
 	<script async src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </svelte:head>
 
