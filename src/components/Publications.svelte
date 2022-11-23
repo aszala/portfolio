@@ -20,7 +20,8 @@ getPublications().then((data) => {
             <div>
                 <h2>${value.title}</h2>
                 <p>${value.authors}</p>
-                <a class="button" href="${value.project_url}">Project Page</a> <a class="button" href="${value.url}">arXiv</a>
+                <p>${value.year} | ${value.conference}</p>
+                <a class="button" href="${value.project_url}" target="self">Project Page</a> <a class="button" href="${value.url}" target="self">Preprint</a>
                 <br><br>
                 <div>
                     ${abs}

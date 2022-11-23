@@ -1,7 +1,6 @@
 <script>
 import { getDocument } from '../Firebase'
 
-// let about = "I am a M.S. computer science undergraduate student and research assistant at The University of North Carolina at Chapel Hill, advised by Prof. Mohit Bansal.";
 let about = "loading";
 
 getDocument("data", "about").then((data) => {
@@ -13,7 +12,7 @@ getDocument("data", "about").then((data) => {
 <header>
 	<nav>
 		<div id="logo-container" class="nav-container">
-			<a href="/"><img id="logo" src="/images/logo.png" alt="Abhay Zala logo" /></a>
+			<a href="https://aszala.com"><img id="logo" src="/images/logo.png" alt="Abhay Zala logo" /></a>
 		</div>
 		<div id="links-container" class="nav-container">
 			<ul id="links-list">
@@ -39,7 +38,7 @@ getDocument("data", "about").then((data) => {
 			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra">Google Scholar</a>
 								| <a href="https://twitter.com/AbhayZala7">Twitter</a> | <a href="https://github.com/aszala/">Github</a>
 			<br><br>
-			<a class="button" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
+			<a class="button" target="self" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
 		</div>
 	</div>
 </header>
