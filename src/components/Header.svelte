@@ -37,7 +37,7 @@ getDocument("data", "about").then((data) => {
 			Email: <a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
 					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
 			<br><br>
-			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" data-hover="Google Scholar">Google Scholar</a>
+			<a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" data-hover="Google Scholar">Google Scholar</a>
 								| <a href="https://twitter.com/AbhayZala7" target="_blank" data-hover="Twitter">Twitter</a>
 								| <a href="https://github.com/aszala/" target="_blank" data-hover="Github">GitHub</a>
 			<br><br>
