@@ -41,7 +41,7 @@ getDocument("data", "about").then((data) => {
 								| <a href="https://twitter.com/AbhayZala7" target="_blank" data-hover="Twitter">Twitter</a>
 								| <a href="https://github.com/aszala/" target="_blank" data-hover="GitHub">GitHub</a>
 			<br><br>
-			<a class="button" target="_blank" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
+			<a class="button" target="_blank" href="https://aszala.com/abhay_zala_cv.pdf" type="button">Download CV</a>
 		</div>
 	</div>
 </header>
