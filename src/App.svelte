@@ -1,10 +1,11 @@
 
 <script>
 import router from 'page';
-import Main from './components/Main.svelte'
 
-import { initFirebase } from './Firebase'
+import { initFirebase } from './Firebase';
+initFirebase();
 
+import Main from './components/Main.svelte';
 let page = Main;
 let title = "Abhay Zala";
 
@@ -14,13 +15,12 @@ router('/:path', (ctx, next) => {
 
 router.start()
 
-initFirebase();
-
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script async src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </svelte:head>
 
 <svelte:component this="{page}" />
@@ -59,7 +59,6 @@ initFirebase();
 	:global(a) {
 		color: var(--link-color);
 		cursor: pointer;
-		
 		-webkit-transition: color 300ms;
 		-moz-transition: color 300ms;
 		transition: color 300ms;
@@ -83,6 +82,7 @@ initFirebase();
 		-moz-transition: max-width 300ms;
 		transition: max-width 300ms;
 		height: fit-content;
+		white-space:nowrap;
 	}
 
 	:global(a:hover::before) {

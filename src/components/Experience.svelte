@@ -37,7 +37,7 @@ getExperiences().then((data) => {
 
 </script>
 
-<section>
+<section id="experience">
     <h1>Experience</h1>
     <div id="experience-container">
         {@html experiences}
@@ -58,6 +58,7 @@ getExperiences().then((data) => {
         color: var(--link-color);
         position: relative;
         left: 25%;
+        width: 100%;
         /* transform: translateX(-50%); */
     }
 
@@ -113,9 +114,29 @@ getExperiences().then((data) => {
     }
 
     :global(.experience-content>hr) {
-        width: 80%;
+        width: 20%;
         position: relative;
-        left: -10%;
+        left: -40%;
     }
 
+
+    @media only screen and (max-width: 970px) {
+        :global(.experience) {
+            left: 5%;
+        }
+    }
+    
+    @media only screen and (max-width: 780px) {
+        :global(.experience-content) {
+            width: 50%;
+            min-width: 0;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        #experience {
+            width: 100%;
+            padding: 0;
+        }
+    }
 </style>

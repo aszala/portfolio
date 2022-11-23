@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, orderBy, query } from "firebase/firestore";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import { orderBy, query, collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 const sessionStorage = window.sessionStorage;
 export let db;
@@ -19,8 +19,8 @@ export function initFirebase() {
 	db = getFirestore();
 }
 
-export async function getDocument(collection, docID) {
-	const refID = `${collection}-${docID}`;
+export async function getDocument(collectionName, docID) {
+	const refID = `${collectionName}-${docID}`;
  	// const cache = sessionStorage.getItem(refID);
 	const cache = false;
 
@@ -29,7 +29,7 @@ export async function getDocument(collection, docID) {
 			resolve(JSON.parse(cache));
 		});
 	} else {
-		const docRef = doc(db, collection, docID);
+		const docRef = doc(db, collectionName, docID);
 		const docSnap = await getDoc(docRef);
 		const data = docSnap.data();
 
@@ -70,6 +70,34 @@ export async function getPublications() {
 
 export async function getExperiences() {
 	const collectionName = "experience_new"
+
+	const refID = `${collectionName}`;
+ 	// const cache = sessionStorage.getItem(refID);
+	const cache = false;
+
+	if (cache) {
+		return new Promise((resolve, reject) => {
+			resolve(JSON.parse(cache));
+		});
+	} else {
+		const publicationsRef = collection(db, collectionName);
+		const q = query(publicationsRef, orderBy("rank", "asc"));
+		const querySnapshot = await getDocs(q);
+	
+		let data = {};
+
+		querySnapshot.forEach((doc) => {
+			data[doc.id] = doc.data();
+		});
+
+		sessionStorage.setItem(refID, JSON.stringify(data));
+
+		return data;
+	}	
+}
+
+export async function getEducation() {
+	const collectionName = "education"
 
 	const refID = `${collectionName}`;
  	// const cache = sessionStorage.getItem(refID);

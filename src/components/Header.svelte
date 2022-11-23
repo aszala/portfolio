@@ -1,5 +1,6 @@
 <script>
-import { getDocument } from '../Firebase'
+import { getDocument } from '../Firebase';
+import { scrollIntoView } from '../utils';
 
 let about = "loading";
 
@@ -9,16 +10,16 @@ getDocument("data", "about").then((data) => {
 
 </script>
 
-<header>
+<header id="header">
 	<nav>
 		<div id="logo-container" class="nav-container">
 			<a href="https://aszala.com"><img id="logo" src="/images/logo.png" alt="Abhay Zala logo" /></a>
 		</div>
 		<div id="links-container" class="nav-container">
 			<ul id="links-list">
-				<li><a data-hover="publications">publications</a></li>
-				<li><a data-hover="experience">experience</a></li>
-				<li><a data-hover="education">education</a></li>
+				<li><a data-hover="publications" on:click|preventDefault={scrollIntoView}>publications</a></li>
+				<li><a data-hover="experience" on:click|preventDefault={scrollIntoView}>experience</a></li>
+				<li><a data-hover="education" on:click|preventDefault={scrollIntoView}>education</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -33,11 +34,12 @@ getDocument("data", "about").then((data) => {
 			<br>
 			<hr>
 			<br>
-			Email: <a href="mailto:aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
-					<a href="mailto:zala.abhay@gmail.com">zala.abhay@gmail.com</a>
+			Email: <a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
+					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
 			<br><br>
-			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra">Google Scholar</a>
-								| <a href="https://twitter.com/AbhayZala7">Twitter</a> | <a href="https://github.com/aszala/">Github</a>
+			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="self" data-hover="Google Scholar">Google Scholar</a>
+								| <a href="https://twitter.com/AbhayZala7" target="self" data-hover="Twitter">Twitter</a>
+								| <a href="https://github.com/aszala/" target="self" data-hover="Github">Github</a>
 			<br><br>
 			<a class="button" target="self" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
 		</div>
@@ -139,9 +141,27 @@ getDocument("data", "about").then((data) => {
 		margin: 20px 0;
 	}
 
-	#modal a {
+	#modal a:not(.button) {
 		position: relative;
-		text-decoration: underline;
+		padding: 10px 0;
+		text-decoration: none;
+	}
+
+	@media only screen and (max-width: 1025px) {
+		#modal {
+			flex-direction: column;
+			text-align: center;
+			width: 90%;
+		}
+
+		#modal>div {
+			padding: 10px;
+		}
+
+		#modal-info {
+			margin: auto;
+			width: 95%;
+		}
 	}
 
 </style>

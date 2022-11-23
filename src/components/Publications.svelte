@@ -34,7 +34,7 @@ getPublications().then((data) => {
 
 </script>
 
-<section>
+<section id="publications">
     <h1>Publications</h1>
     <p><b>Note:</b> * indicates equal contribution</p>
     <div id="publications-container">
@@ -75,4 +75,36 @@ getPublications().then((data) => {
 		position: relative;
         font-size: 1.3em;
 	}
+
+    @media only screen and (max-width: 1025px) {
+        :global(.publication) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #publications-container {
+            margin: auto;
+        }
+
+        :global(.publication>img) {
+            width: 80%;
+            margin: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 1680px) {
+        #publications {
+            width: 95%;
+            padding: 5px;
+            margin: auto;
+        }
+
+        #publications-container {
+            width: 100%;
+        }
+
+        :global(.publication > *) {
+            padding: 20px;
+        }
+    }
 </style>
