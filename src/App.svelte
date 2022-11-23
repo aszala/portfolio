@@ -7,7 +7,7 @@ initFirebase();
 
 import Main from './components/Main.svelte';
 let page = Main;
-let title = "Abhay Zala";
+let title = "Abhay Zala Homepage";
 
 router('/:path', (ctx, next) => {
 	router.redirect("/");
