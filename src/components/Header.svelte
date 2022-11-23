@@ -39,7 +39,7 @@ getDocument("data", "about").then((data) => {
 			<br><br>
 			Additional Links: <a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" data-hover="Google Scholar">Google Scholar</a>
 								| <a href="https://twitter.com/AbhayZala7" target="_blank" data-hover="Twitter">Twitter</a>
-								| <a href="https://github.com/aszala/" target="_blank" data-hover="Github">Github</a>
+								| <a href="https://github.com/aszala/" target="_blank" data-hover="Github">GitHub</a>
 			<br><br>
 			<a class="button" target="_blank" href="https://aszala.com/resume_abhay_zala.pdf" type="button">Download CV</a>
 		</div>
