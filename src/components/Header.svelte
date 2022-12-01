@@ -37,11 +37,11 @@ getDocument("data", "about").then((data) => {
 			<a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
 					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
 			<br><br>
-			<a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" data-hover="Google Scholar">Google Scholar</a>
-								| <a href="https://twitter.com/AbhayZala7" target="_blank" data-hover="Twitter">Twitter</a>
-								| <a href="https://github.com/aszala/" target="_blank" data-hover="GitHub">GitHub</a>
+			<a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" rel="noreferrer" data-hover="Google Scholar">Google Scholar</a>
+								| <a href="https://twitter.com/AbhayZala7" target="_blank" rel="noreferrer" data-hover="Twitter">Twitter</a>
+								| <a href="https://github.com/aszala/" target="_blank" rel="noreferrer" data-hover="GitHub">GitHub</a>
 			<br><br>
-			<a class="button" target="_blank" href="https://aszala.com/abhay_zala_cv.pdf" type="button">Download CV</a>
+			<a class="button" target="_blank" rel="noreferrer" href="https://aszala.com/abhay_zala_cv.pdf" type="button">Download CV</a>
 		</div>
 	</div>
 </header>
