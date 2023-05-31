@@ -9,7 +9,7 @@ getExperiences().then((data) => {
     for (const [key, value] of Object.entries(data)) {
         let main = "";
 
-        if (value.rank == 0) {
+        if (value.rank < 1) {
             main = "main";
         }
 
