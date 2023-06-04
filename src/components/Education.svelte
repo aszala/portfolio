@@ -1,5 +1,5 @@
 <script>
-import { getEducation } from '../Firebase';
+import { getEducation } from '../firebase';
 
 let educations = "loading";
 

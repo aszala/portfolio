@@ -1,5 +1,6 @@
 <script>
-import { getPublications } from '../Firebase';
+import { getPublications } from '../firebase';
+import { querySemanticScholar } from '../semantic_scholar';
 
 let publications = "loading";
 
@@ -16,7 +17,7 @@ getPublications().then((data) => {
         <div class="publication">
             <img src="./images/${value.image_name}" alt="Figure 1 of ${value.title}">
             <div>
-                <h2>${value.title}</h2>
+                <h2 class='publication-header'>${value.title}</h2>
                 <p>${value.authors}</p>
                 <p>${value.year} | ${value.conference}</p>
                 <a class="button" href="${value.project_url}" target="_blank">Project Page</a> <a class="button" href="${value.url}" target="_blank">Preprint</a>
@@ -32,17 +33,69 @@ getPublications().then((data) => {
     }
 });
 
+// let citationCount = "...";
+// let hIndex = "...";
+
+// querySemanticScholar("citationCount").then(data => {
+//    citationCount = data.citationCount;
+//     // hIndex = data.hIndex;
+// });
+
+
 </script>
 
 <section id="publications">
     <h1>Publications</h1>
-    <p><b>Note:</b> * indicates equal contribution</p>
+
+        <!-- <div class="metadata-content">
+            <p>h-index</p>
+            <div class="circle">
+                {hIndex}
+            </div>
+        </div> -->
+    <!-- <div id="metadata-container">
+        <div class="metadata-content">
+            <p>Research Citations</p>
+            <div class="circle">
+                {citationCount}
+            </div>
+        </div>
+    </div> -->
+
+    <div>* indicates equal contribution</div>
     <div id="publications-container">
         {@html publications}
     </div>
 </section>
 
 <style>
+
+    #metadata-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: auto;
+        max-width: 500px;
+    }
+
+    .metadata-content {
+        max-width: 65px;
+        margin-top: -65px;
+    }
+    .metadata-content>p {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .circle {
+        width: 100%;
+        height: 65px;
+        text-align: center;
+        border-radius: 50%;
+        border: solid 0px var(--accent-color);
+        font-size: 2em;
+    }
+
     #publications-container {
         width: 80%;
         display: flex;
@@ -60,6 +113,14 @@ getPublications().then((data) => {
 
     :global(.publication > *) {
         padding: 50px;
+    }
+
+    :global(.publication:first-of-type > *) {
+        padding-top: 0;
+    }
+
+    :global(.publication-header:first-of-type) {
+        margin-top: 0 !important;
     }
 
     :global(.publication > div > p) {
@@ -105,6 +166,10 @@ getPublications().then((data) => {
 
         :global(.publication > *) {
             padding: 20px;
+        }
+
+        :global(.publication:first-of-type > *) {
+            padding-top: 0;
         }
     }
 </style>

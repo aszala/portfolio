@@ -1,5 +1,5 @@
 <script>
-import { getExperiences } from '../Firebase';
+import { getExperiences } from '../firebase';
 
 let experiences = "loading";
 

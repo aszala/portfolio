@@ -4,6 +4,7 @@ import Header from './Header.svelte';
 import Publications from './Publications.svelte';
 import Experience from './Experience.svelte';
 import Education from './Education.svelte';
+    import TwitterFeed from './TwitterFeed.svelte';
 
 let y;
 </script>
@@ -15,6 +16,7 @@ let y;
 	<Publications />
 	<Experience />
 	<Education />
+	<TwitterFeed />
 	{#if y > 75}
 		<div data-hover="header" on:click|preventDefault={scrollIntoView} id="scroll-to-top">^</div>
 	{/if}

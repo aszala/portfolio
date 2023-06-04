@@ -1,5 +1,5 @@
 <script>
-import { getDocument } from '../Firebase';
+import { getDocument } from '../firebase';
 import { scrollIntoView } from '../utils';
 
 let about = "loading";
@@ -34,14 +34,20 @@ getDocument("data", "about").then((data) => {
 			<br>
 			<hr>
 			<br>
-			<a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
-					<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
-			<br><br>
-			<a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" rel="noreferrer" data-hover="Google Scholar">Google Scholar</a>
-								| <a href="https://twitter.com/AbhayZala7" target="_blank" rel="noreferrer" data-hover="Twitter">Twitter</a>
-								| <a href="https://github.com/aszala/" target="_blank" rel="noreferrer" data-hover="GitHub">GitHub</a>
-			<br><br>
-			<a class="button" target="_blank" rel="noreferrer" href="https://aszala.com/abhay_zala_cv.pdf" type="button">Download CV</a>
+			<div id="external-links">
+				<div>
+					<a href="mailto:aszala@cs.unc.edu" data-hover="aszala@cs.unc.edu">aszala@cs.unc.edu</a> |
+							<a href="mailto:zala.abhay@gmail.com" data-hover="zala.abhay@gmail.com">zala.abhay@gmail.com</a>
+					<br><br>
+					<a href="https://scholar.google.com/citations?user=8mfWxD8AAAAJ&hl=en&oi=sra" target="_blank" rel="noreferrer" data-hover="Google Scholar">Google Scholar</a>
+										| <a href="https://twitter.com/AbhayZala7" target="_blank" rel="noreferrer" data-hover="Twitter">Twitter</a>
+										| <a href="https://github.com/aszala/" target="_blank" rel="noreferrer" data-hover="GitHub">GitHub</a>
+										| <a href="http://linkedin.com/in/aszala/" target="_blank" rel="noreferrer" data-hover="LinkedIn">LinkedIn</a>
+				</div>
+				<div>
+					<a id="cv-button" class="button" target="_blank" rel="noreferrer" href="https://aszala.com/abhay_zala_cv.pdf" type="button">Download CV</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
@@ -52,7 +58,7 @@ getDocument("data", "about").then((data) => {
 		height: fit-content;
 		background: var(--main-bg-color);
 		position: relative;
-		margin-bottom: 100px;
+		margin-bottom: 25px;
 	}
 
 	nav {
@@ -117,6 +123,17 @@ getDocument("data", "about").then((data) => {
 		display: flex;
 	}
 
+	#external-links {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	#cv-button {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
 	#profile-image>img {
 		width: 300px;
 		height: 300px;
@@ -161,6 +178,10 @@ getDocument("data", "about").then((data) => {
 		#modal-info {
 			margin: auto;
 			width: 95%;
+		}
+
+		header {
+			margin-bottom: 100px;
 		}
 	}
 

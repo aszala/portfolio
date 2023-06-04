@@ -2,7 +2,7 @@
 <script>
 import router from 'page';
 
-import { initFirebase } from './Firebase';
+import { initFirebase } from './firebase';
 initFirebase();
 
 import Main from './components/Main.svelte';
@@ -26,6 +26,7 @@ router.start()
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="nositelinkssearchbox" />
 	<script async src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.js' crossorigin='anonymous'></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </svelte:head>
 
 <svelte:component this="{page}" />
