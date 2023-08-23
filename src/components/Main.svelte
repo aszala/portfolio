@@ -18,7 +18,7 @@ let y;
 	<Education />
 	<TwitterFeed />
 	{#if y > 75}
-		<div data-hover="header" on:click|preventDefault={scrollIntoView} id="scroll-to-top">^</div>
+		<div data-hover="header" on:click|preventDefault={scrollIntoView} on:keydown|preventDefault={scrollIntoView} id="scroll-to-top">^</div>
 	{/if}
 </main>
 
