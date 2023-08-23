@@ -18,12 +18,12 @@ let y;
 	<Education />
 	<TwitterFeed />
 	{#if y > 75}
-		<div data-hover="header" on:click|preventDefault={scrollIntoView} on:keydown|preventDefault={scrollIntoView} id="scroll-up">^</div>
+		<div data-hover="header" on:click|preventDefault={scrollIntoView} on:keydown|preventDefault={scrollIntoView} id="scroll-to-top">^</div>
 	{/if}
 </main>
 
 <style>
-	#scroll-up {
+	#scroll-to-top {
 		position: fixed;
 		bottom: 50px;
 		right: 50px;
