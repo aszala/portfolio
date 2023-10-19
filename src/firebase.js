@@ -51,7 +51,7 @@ export async function getPublications() {
 		});
 	} else {
 		const publicationsRef = collection(db, collectionName);
-		const q = query(publicationsRef, orderBy("year", "desc"));
+		const q = query(publicationsRef, orderBy("rank", "desc"));
 		const querySnapshot = await getDocs(q);
 	
 		let data = {};
